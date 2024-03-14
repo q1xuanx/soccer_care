@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Soccer_Care/1.0.0": {
+        "runtime": {
+          "Soccer_Care.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Soccer_Care/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

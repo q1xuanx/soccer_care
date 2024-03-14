@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Soccer_Care.props" />
+</Project>
