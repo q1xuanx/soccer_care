@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vtSQdR4n9d9mQCmp4Q7TsjMMJBDNqe2P3YwiXaPD5mjLBHo9XO9kDMJFxDWfMvAXR0E8JC7J8H4T7lN+ZzD6Jw==",
+  "dgSpecHash": "wyIWIMBl/T8a7zRqU4O9yVAU3RTYR/PEU4QtSLSdYQC2GM3A54V7OirNy4lKcoj4PS+vH79adJA/6CXTe+GDAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\Soccer_Care.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\HUTECH\\Nam3\\HK2\\LTW\\Soccer\\Soccer_Care\\Soccer_Care.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+  ],
   "logs": []
 }
