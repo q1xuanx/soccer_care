@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "_LayoutLogin";
+}
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <a asp-controller="User" asp-action="Login" class="inactive underlineHover fw-bold text-black">Sign In</a>
+        <h2 class="active fw-bold">Sign Up </h2>
+
+        <!-- Register Form -->
+        <form>
+            <input type="text" id="login" class="fadeIn second my-3" name="login" placeholder="Tên đăng nhập">
+            <input type="text" id="password" class="fadeIn third my-3" name="pass" placeholder="Mật khẩu">
+            <input type="text" id="passwordConfirm" class="fadeIn third my-3" name="passConfirm" placeholder="Nhập lại mật khẩu">
+            <input type="text" id="email" class="fadeIn third my-3" name="email" placeholder="Email">
+
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+
+    </div>
+</div>
