@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Soccer_Care.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<SoccerCareDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("SoccerCareConnection")));
 
 var app = builder.Build();
 

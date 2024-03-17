@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "egWSFBWPvIdlO478uQMeARbC4UhcK7t4/RCqtWpd1uheqfjA91Z7X3hNmIl/hLeW8jJSQCpRlIQ3lzEhsQ5ipQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\Soccer_Care.csproj",
@@ -228,16 +227,6 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
-=======
-  "dgSpecHash": "wyIWIMBl/T8a7zRqU4O9yVAU3RTYR/PEU4QtSLSdYQC2GM3A54V7OirNy4lKcoj4PS+vH79adJA/6CXTe+GDAQ==",
-  "success": true,
-  "projectFilePath": "E:\\HUTECH\\Nam3\\HK2\\LTW\\Soccer\\Soccer_Care\\Soccer_Care.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
->>>>>>> 671aa5d69a9290839849923c61d8562908d4689c
   ],
   "logs": []
 }
