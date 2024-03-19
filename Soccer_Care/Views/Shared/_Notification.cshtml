@@ -1,0 +1,34 @@
+﻿@inject IHttpContextAccessor httpContext
+@if(TempData["SuccessRegister"] != null)
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData["SuccessRegister"]')
+    </script>
+}
+@if (TempData["FailRegister"] != null)
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["FailRegister"]')
+    </script>
+}
+@if (httpContext.HttpContext.Session.GetString("SuccessLogin") != null)
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@httpContext.HttpContext.Session.GetString("SuccessLogin")')
+    </script>
+    httpContext.HttpContext.Session.Remove("SuccessLogin");
+}
+@if (TempData["LoginFail"] != null)
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["LoginFail"]')
+    </script>
+}

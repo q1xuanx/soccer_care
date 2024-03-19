@@ -12,12 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>Soccer Care</title>
-
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/assets/css/login.css">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    
 
 </head>
 
@@ -34,7 +33,7 @@
             </div>
         </div>
     </div>
-
+    <partial name="/Views/Shared/_Notification.cshtml"/>
     @RenderBody()
 
 

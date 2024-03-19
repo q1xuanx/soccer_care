@@ -256,3 +256,12 @@ C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\obj\Debug\net6.0\refint\Soccer_Ca
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\obj\Debug\net6.0\Soccer_Care.pdb
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\obj\Debug\net6.0\Soccer_Care.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\obj\Debug\net6.0\ref\Soccer_Care.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Blazored.Toast.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\System.IO.Pipelines.dll

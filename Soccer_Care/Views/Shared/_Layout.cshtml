@@ -1,4 +1,4 @@
-﻿
+﻿@inject IHttpContextAccessor accessor
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@
 
     <title>Soccer Care</title>
 
+    <!--Dropdown-->
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="/assets/css/templatemo-plot-listing.css">
     <link rel="stylesheet" href="/assets/css/animated.css">
     <link rel="stylesheet" href="/assets/css/owl.css">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
 </head>
 
 <body>
@@ -50,11 +51,26 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                             <li><a asp-controller="PitchBall" asp-action="Index">PitchBall</a></li>
                             <li><a asp-controller="Home" asp-action="Intro">Intro</a></li>
                             <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
-                            <li><div class="main-white-button"><a asp-controller="User" asp-action="Login">Đăng Nhập</a></div></li>
+                            @if (accessor.HttpContext.Session.GetString("User") != null)
+                            {
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" role="button" data-toggle="dropdown">Tài khoản</a>
+                                        <ul class= "dropdown-menu">
+                                            <li class="dropdown-item"><a>Hello: @accessor.HttpContext.Session.GetString("User")</a></li>
+                                            <li class="dropdown-item"><a asp-action="#">Thông tin</a></li>
+                                            <li class="dropdown-item"><a asp-action="#">Lịch sử đặt sân</a></li>
+                                            <li class="dropdown-item"><a asp-controller="User" asp-action="LogOut" class="main-white-button">Đăng Xuất</a></li>
+                                        </ul>
+                                    </li>
+                            }else
+                            {
+                                    <li><div class="main-white-button"><a asp-controller="User" asp-action="Login">Đăng Nhập</a></div></li>
+                            }
+                            
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -65,7 +81,7 @@
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
+    <partial name="/Views/Shared/_Notification.cshtml" />
     @RenderBody()
 
     <footer>
@@ -132,7 +148,7 @@
 
     <!-- Scripts -->
     <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/owl-carousel.js"></script>
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/imagesloaded.js"></script>

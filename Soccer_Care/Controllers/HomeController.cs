@@ -7,10 +7,12 @@ namespace Soccer_Care.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        IHttpContextAccessor contextAccessor;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpContextAccessor contextAccessor)
         {
             _logger = logger;
+            this.contextAccessor = contextAccessor;
         }
 
         public IActionResult Index()
@@ -22,12 +24,6 @@ namespace Soccer_Care.Controllers
         {
             return View();
         }
-        public IActionResult Test()
-        {
-            return View();
-        }
-
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

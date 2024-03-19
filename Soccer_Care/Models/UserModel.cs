@@ -15,7 +15,7 @@ namespace Soccer_Care.Models
         public string FullName { get;set; }
         [Required, Phone(ErrorMessage ="Không đúng định dạng số điện thoại")]
         public string PhoneNumber { get; set; }
-        public string AvatarURL { get; set; }
+        public string? AvatarURL { get; set; }
         
         public int IsBlock { get;set; }
 

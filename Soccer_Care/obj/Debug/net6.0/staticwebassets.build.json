@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rsEYuib0kYov/is3/ctcPvJhEP4rshC2TNpUHh+lnOo=",
+  "Hash": "eZ/KZvQtmLaWdlCU8ny+gy78cqQX+gDdI9Sny+5vhM0=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazored.toast\\4.2.0\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazored.toast\\4.2.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazored.toast\\4.2.0\\staticwebassets\\Blazored.Toast.bundle.scp.css"
+    },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Soccer_Care.styles.css",
       "SourceId": "Soccer_Care",
