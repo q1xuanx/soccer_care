@@ -1,12 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Soccer_Care.Models;
+using System.Data.Entity;
 
 namespace Soccer_Care.Views.Home.Components.ListPitchComponent
 {
     public class ListPitchComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        private readonly SoccerCareDbContext _context;
+
+        public ListPitchComponent(SoccerCareDbContext context)
         {
-            return View("ListPitchComponent");
+            _context = context;
+        }
+
+        public IViewComponentResult Invoke()
+        {
+            var pitch =  _context.FootBallFields.ToList();
+            return View("ListPitchComponent", pitch);
         }
     }
 }

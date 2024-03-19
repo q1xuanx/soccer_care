@@ -1,0 +1,48 @@
+﻿@model Soccer_Care.Models.FootBallFieldModel
+
+@{
+    ViewData["Title"] = "Xóa sân bóng";
+}
+
+<div class="flex-column d-flex p-lg-5 text-white">
+    
+    <div>
+        <div class="d-flex">
+            <div>
+                <h1>@ViewData["Title"]</h1>
+
+                <h3>Có chắc chắn xóa sân bóng?</h3>
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Address)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Gia)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Gia)
+                    </dd>
+                </dl>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="IDFootBallField" />
+                    <input type="submit" value="Xóa" class="btn btn-danger rounded border-end" />
+                    <a asp-action="ManagePitch" asp-controller="Admin" class="text-white btn btn-warning ml-3 rounded">Danh sách sân bóng</a>
+                </form>
+            </div>
+            <div>
+                <img class="w-75 h-55 mt-0 rounded" src="@Html.DisplayFor(model => model.HinhAnhSanBong)" />
+            </div>
+        </div>
+
+        
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@model Soccer_Care.Models.FootBallFieldModel
+@using Microsoft.AspNetCore.Mvc.Rendering;
+
+
+  <body>
+    <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="tm-block-title d-inline-block">Add Field Football</h2>
+              </div>
+            </div>
+                    <form asp-action="Create" class="form-create flex-column d-flex gap-2">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label"></label>
+                            <input asp-for="Address" type="text" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Gia" class="control-label"></label>
+                            <input asp-for="Gia" class="form-control" />
+                            <span asp-validation-for="Gia" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="HinhAnhSanBong" class="control-label"></label>
+                            <input asp-for="HinhAnhSanBong" type="text" class="form-control" />
+                            <span asp-validation-for="HinhAnhSanBong" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Username" class="control-label"></label>
+                            <input asp-for="Username" class="form-control" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="IDType" class="control-label"></label>
+                            <select asp-for="IDType" type="text" class="form-control h-50">
+                                <option value="1">Sân 5</option>
+                                <option value="2">Sân 7</option>
+                                <option value="3">Sân 11</option>
+                                <option value="4">Sân Futsal</option>
+                            </select>
+                            <span asp-validation-for="IDType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <input type="submit" value="Đăng ký" class="btn btn-primary" />
+                        </div>
+                    </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+

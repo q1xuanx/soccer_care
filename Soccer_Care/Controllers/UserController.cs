@@ -2,7 +2,7 @@
 
 namespace Soccer_Care.Controllers
 {
-    public class User : Controller
+    public class UserController : Controller
     {
         public IActionResult Login()
         {

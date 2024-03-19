@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/admin_folder/css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="/admin_folder/css/templatemo-style.css">
+
+    <link rel="stylesheet" href="/admin_folder/jquery-ui-datepicker/jquery-ui.min.css" type="text/css" />
 </head>
 
 <body id="reportsPage">
@@ -21,7 +23,7 @@
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
                 <a class="navbar-brand" href="index.html">
-                    <h1 class="tm-site-title mb-0">Product Admin</h1>
+                    <h1 class="tm-site-title mb-0">Football Admin</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,6 +107,18 @@
             </div>
         </footer>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+    <!-- https://jqueryui.com/download/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script>
+      $(function() {
+        $("#expire_date").datepicker();
+      });
+    </script>
+
 </body>
 
 </html>
