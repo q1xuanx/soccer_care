@@ -46,9 +46,9 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 /* clear fix */
 .grid:after {
-  content: '';
-  display: block;
-  clear: both;
+    content: '';
+    display: block;
+    clear: both;
 }
 
 /* ---- .grid-item ---- */
@@ -276,7 +276,7 @@ header
 }
 
 .header-area .main-nav a.logo {
-  background-image: url(../images/white-logo.png);
+  background-image: url(../images/logo.png);
   width: 166px;
   height: 58px;
   display: inline-block;
@@ -2077,4 +2077,9 @@ responsive
   .category-post .icon {
     transform: translateX(-22px);
   }
+}
+
+.listing-item .left-image .avatar-football{
+    width: 600px;
+    height: 400px
 }

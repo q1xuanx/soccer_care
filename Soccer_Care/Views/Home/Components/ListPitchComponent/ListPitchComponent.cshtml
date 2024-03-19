@@ -1,4 +1,9 @@
-﻿<div class="recent-listing">
+﻿@model IEnumerable<Soccer_Care.Models.FootBallFieldModel>
+@{
+    int i = 0;
+}
+
+<div class="recent-listing">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -11,179 +16,84 @@
                 <div class="owl-carousel owl-listing">
                     <div class="item">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>1. Sân bóng đá đại học Nông Lâm</h4></a>
-                                        <h6>by: NLU</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(18) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950 / month with taxes</span>
-                                        <span class="details">Details: <em>200K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 2 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
+                            @foreach(var item in Model)
+                            {
+                                i++;
+                                <div class="col-lg-12">
+                                    <div class="listing-item">
+                                        <div class="left-image">
+                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="@item.HinhAnhSanBong" alt=""></a>
+                                        </div>
+                                        <div class="right-content align-self-center">
+                                            <a href="#"><h4>@item.Name</h4></a>
+                                            <h6>by: @item.Username</h6>
+                                            <ul class="rate">
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li>(18) Reviews</li>
+                                            </ul>
+                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+                                            <span class="details">Price: <em>@item.Gia /H @item.IDType</em></span>
+                                            <ul class="info">
+                                                <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Sân 5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt=""> 2 Sân 7</li>
+                                            </ul>
+                                            <div class="main-white-button">
+                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>2. Sân bóng đá liên hợp</h4></a>
-                                        <h6>by: Liên hợp</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(24) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 / month with taxes</span>
-                                        <span class="details">Details: <em>230K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 3 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 1 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>3. Sân bóng Victoria</h4></a>
-                                        <h6>by: Victoria</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(36) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 / month with taxes</span>
-                                        <span class="details">Details: <em>200K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 3 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                @if(i == 3)
+                                {
+                                    break;
+                                }
+                            }
+                            
                         </div>
                     </div>
    
                     <div class="item">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>7. Sân bóng đại học HUTECH</h4></a>
-                                        <h6>by: HUTECH</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(24) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450 / month with taxes</span>
-                                        <span class="details">Details: <em>300K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 8 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 5 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
+                            @foreach(var item in Model.Skip(3).ToList())
+                            {
+                                i++;
+                                <div class="col-lg-12">
+                                    <div class="listing-item">
+                                        <div class="left-image">
+                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="@item.HinhAnhSanBong" alt=""></a>
+                                        </div>
+                                        <div class="right-content align-self-center">
+                                            <a href="#"><h4>@item.Name</h4></a>
+                                            <h6>by: @item.Username</h6>
+                                            <ul class="rate">
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li>(18) Reviews</li>
+                                            </ul>
+                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+                                            <span class="details">Price: <em>@item.Gia /H @item.IDType</em></span>
+                                            <ul class="info">
+                                                <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Sân 5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt=""> 2 Sân 7</li>
+                                            </ul>
+                                            <div class="main-white-button">
+                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>8. Sân bóng Thành Nam</h4></a>
-                                        <h6>by: Thành Nam</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(15) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520 / month with taxes</span>
-                                        <span class="details">Details: <em>180K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 5 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="listing-item">
-                                    <div class="left-image">
-                                        <a href="#"><img src="assets/images/ball_04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                        <a href="#"><h4>9. Sân bóng đá Win Sports</h4></a>
-                                        <h6>by: Win sport</h6>
-                                        <ul class="rate">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li>(20) Reviews</li>
-                                        </ul>
-                                        <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760 / month with taxes</span>
-                                        <span class="details">Details: <em>220K/H</em></span>
-                                        <ul class="info">
-                                            <li><img src="/assets/images/listing-icon-02.png" alt=""> 6 Sân 5</li>
-                                            <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Sân 7</li>
-                                        </ul>
-                                        <div class="main-white-button">
-                                            <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                @if (i == 6)
+                                {
+                                    break;
+                                }
+                            }
                         </div>
                     </div>
                 </div>
