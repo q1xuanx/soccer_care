@@ -17,6 +17,7 @@ namespace Soccer_Care.Models
         public DbSet<RatingModel> Ratings { get; set; }
         public DbSet<TypeFieldModel> TypeFields { get; set; }
         public DbSet<UserModel> User { get; set; }
+        public DbSet<ListFieldModel> listFields { get; set; }
 
     }
 }

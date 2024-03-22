@@ -16,18 +16,20 @@ namespace Soccer_Care.Models
         [Display(Name="Địa chỉ")]
         public string Address { get; set; }
         [Required]
+        public string HinhAnhDaiDien { get; set; }
+        [Required]
         [Display(Name = "Giá")]
         public float Gia { get; set; }
-        [Required]
-        [Display(Name="Hình Ảnh")]
-        public string HinhAnhSanBong { get; set; }
+
+        public List<ListFieldModel> ListField { get; set; }
+        public FootBallFieldModel()
+        {
+            this.ListField = new List<ListFieldModel>();
+        }
 
         //Thêm khóa ngoại
         public string Username { get; set; }
-        public string IDType { get; set; }
 
-        [ForeignKey("IDType")]
-        public TypeFieldModel Type { get; set; }
         [ForeignKey("Username")]
         public UserModel User { get; set; }
 

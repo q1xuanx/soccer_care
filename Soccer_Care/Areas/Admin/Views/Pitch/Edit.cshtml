@@ -33,9 +33,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="HinhAnhSanBong" class="control-label"></label>
-                            <input asp-for="HinhAnhSanBong" value="@Model.HinhAnhSanBong" type="text" class="form-control" />
-                            <span asp-validation-for="HinhAnhSanBong" class="text-danger"></span>
+                            <img src="@Model.HinhAnhDaiDien" />
+                            <input asp-for="HinhAnhDaiDien" class="form-control"/>
+                            
                         </div>
 
                         <div class="form-group">
@@ -44,24 +44,53 @@
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label asp-for="IDType" class="control-label"></label>
-                            <select asp-for="IDType" defaultValue="@Model.IDType" type="text" class="form-control h-50">
-                                <option value="1">Sân 5</option>
-                                <option value="2">Sân 7</option>
-                                <option value="3">Sân 11</option>
-                                <option value="4">Sân Futsal</option>
-                            </select>
-                            <span asp-validation-for="IDType" class="text-danger"></span>
-                        </div>
-
                         <div class="form-group mt-2">
                             <input type="submit" value="Cập nhật" class="btn btn-primary" />
                         </div>
                     </form>
+                    <div class="col-12">
+                        <h2 class="tm-block-title d-inline-block">Danh sách các sân</h2>
+                    </div>
+                    <table class="table table-hover tm-table-small tm-product-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">NAME</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">TYPE FEILD</th>
+                                <th scope="col">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.ListField)
+                            {
+                                <tr>
+                                    <td class="tm-product-name">@item.NameField</td>
+                                    <td>@item.DescriptionField</td>
+                                    <td>
+                                        <img src="@item.HinhAnhSanBong" height="150" width="130">
+                                    </td>
+                                    <td>
+                                        @item.Gia
+                                    </td>
+                                    <td>
+                                        @item.IDType
+                                    </td>
+                                    <td>
+                                        <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.IDField" class="tm-product-delete-link">
+                                            <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                        </a>
+                                        <a asp-action="Edit" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.IDField" class="tm-product-delete-link">
+                                            <i class="far fa-edit tm-product-delete-icon"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
 </body>

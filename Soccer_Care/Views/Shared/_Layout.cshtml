@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/assets/css/templatemo-plot-listing.css">
     <link rel="stylesheet" href="/assets/css/animated.css">
     <link rel="stylesheet" href="/assets/css/owl.css">
+    <link rel="stylesheet" href="/assets/css/drop.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
 </head>
 
@@ -52,23 +53,24 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li><a asp-controller="PitchBall" asp-action="Index">PitchBall</a></li>
+                            <li><a asp-controller="PitchBall" asp-action="Index">Sân bóng</a></li>
                             <li><a asp-controller="Home" asp-action="Intro">Intro</a></li>
                             <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
                             @if (accessor.HttpContext.Session.GetString("User") != null)
                             {
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" role="button" data-toggle="dropdown">Tài khoản</a>
-                                        <ul class= "dropdown-menu">
-                                            <li class="dropdown-item"><a>Hello: @accessor.HttpContext.Session.GetString("User")</a></li>
-                                            <li class="dropdown-item"><a asp-action="#">Thông tin</a></li>
-                                            <li class="dropdown-item"><a asp-action="#">Lịch sử đặt sân</a></li>
-                                            <li class="dropdown-item"><a asp-controller="User" asp-action="LogOut" class="main-white-button">Đăng Xuất</a></li>
-                                        </ul>
-                                    </li>
+                                <li class="dropdown">
+                                    <a onclick="myFunction()" class="dropbtn main-white-button">Tài khoản</a>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a asp-controller="User" asp-action="EditUser" asp-route-Username="@accessor.HttpContext.Session.GetString("User")" class="truncate">
+                                            Hello: @accessor.HttpContext.Session.GetString("User")
+                                        </a>
+                                        <a href="#" class="truncate">Lịch sử đặt sân </a>
+                                        <a asp-controller="User" asp-action="LogOut" class="truncate">Đăng xuất</a>
+                                    </div>
+                                </li>
                             }else
                             {
-                                    <li><div class="main-white-button"><a asp-controller="User" asp-action="Login">Đăng Nhập</a></div></li>
+                                 <li><div class="main-white-button"><a asp-controller="User" asp-action="Login">Đăng Nhập</a></div></li>
                             }
                             
                         </ul>
@@ -90,7 +92,7 @@
                 <div class="col-lg-4">
                     <div class="about">
                         <div class="logo">
-                            <img src="/assets/images/black-logo.png" alt="Plot Listing">
+                            <img src="/assets/images/black-logo.svg" height="150" alt="Plot Listing">
                         </div>
                         <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p>
                     </div>
@@ -148,11 +150,31 @@
 
     <!-- Scripts -->
     <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/owl-carousel.js"></script>
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/imagesloaded.js"></script>
     <script src="/assets/js/custom.js"></script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 
 </body>
 

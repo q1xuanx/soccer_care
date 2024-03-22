@@ -275,20 +275,20 @@ header
   background: transparent;
 }
 
-.header-area .main-nav a.logo {
-  background-image: url(../images/logo.png);
-  width: 166px;
-  height: 58px;
-  display: inline-block;
-  margin-top: 20px;
-}
+    .header-area .main-nav a.logo {
+        background-image: url(/assets/images/soccer_care1.svg);
+        width: 166px;
+        height: 70px;
+        display: inline-block;
+        margin-top: 20px;
+    }
 
 .background-header .main-nav a.logo {
-  background-image: url(../images/black-logo.png);
-  width: 164px;
-  height: 58px;
-  display: inline-block;
-  margin-top: 10px;
+    background-image: url(/assets/images/soccer_care1.svg);
+    width: 166px;
+    height: 70px;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .background-header .main-nav .nav {
@@ -2064,10 +2064,10 @@ responsive
   .main-banner ul.categories li a {
     color: transparent;
   }
-  .header-area .main-nav a.logo {
-    background-image: url(../images/black-logo.png);
-    float: left;
-  }
+    .header-area .main-nav a.logo {
+        background-image: url(/assets/images/soccer_care1.svg);
+        float: left;
+    }
   .header-area .logo {
     margin-left: 0px;
   }

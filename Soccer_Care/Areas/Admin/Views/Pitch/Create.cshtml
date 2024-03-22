@@ -1,7 +1,6 @@
 ﻿@model Soccer_Care.Models.FootBallFieldModel
 @using Microsoft.AspNetCore.Mvc.Rendering;
 
-
   <body>
     <div class="container tm-mt-big tm-mb-big">
       <div class="row">
@@ -19,42 +18,51 @@
                             <input asp-for="Name" class="form-control" />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
-
-                        <div class="form-group">
-                            <label asp-for="Address" class="control-label"></label>
-                            <input asp-for="Address" type="text" class="form-control" />
-                            <span asp-validation-for="Address" class="text-danger"></span>
+                        <div class="row">
+                            <div class="col">
+                                <select name="city" type="text" class="form-control h-auto">
+                                    <option value="TP.HCM">TP.HCM</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select name="district" type="text" class="form-control h-auto">
+                                    <option value="Quận 1">Quận 1</option>
+                                    <option value="Quận 3">Quận 3</option>
+                                    <option value="Quận 4">Quận 4</option>
+                                    <option value="Quận 5">Quận 5</option>
+                                    <option value="Quận 6">Quận 6</option>
+                                    <option value="Quận 7">Quận 7</option>
+                                    <option value="Quận 8">Quận 8</option>
+                                    <option value="Quận 9">Quận 9</option>
+                                    <option value="Quận 10">Quận 10</option>
+                                    <option value="Quận 11">Quận 11</option>
+                                    <option value="Quận 12">Quận 12</option>
+                                    <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                                    <option value="Quận Phú Nhuận">Quận Bình Thạnh</option>
+                                    <option value="Quận Tân Bình">Quận Bình Thạnh</option>
+                                    <option value="Quận Tân Phú">Quận Bình Thạnh</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="street" placeholder="Tên đường" class="form-control h-auto" />
+                            </div>
                         </div>
-
                         <div class="form-group">
-                            <label asp-for="Gia" class="control-label"></label>
-                            <input asp-for="Gia" class="form-control" />
-                            <span asp-validation-for="Gia" class="text-danger"></span>
+                            <input type="button" id="addChildBtn" value="Thêm các sân" class="btn btn-secondary" />
                         </div>
-
+                        <div id="addFieldCotains" class="form-group">
+                           
+                        </div>
                         <div class="form-group">
-                            <label asp-for="HinhAnhSanBong" class="control-label"></label>
-                            <input asp-for="HinhAnhSanBong" type="text" class="form-control" />
-                            <span asp-validation-for="HinhAnhSanBong" class="text-danger"></span>
+                            <label asp-for="HinhAnhDaiDien" class="control-label"></label>
+                            <input asp-for="HinhAnhDaiDien" class="form-control" />
+                            <span asp-validation-for="HinhAnhDaiDien" class="text-danger"></span>
                         </div>
-
                         <div class="form-group">
                             <label asp-for="Username" class="control-label"></label>
-                            <input asp-for="Username" class="form-control" />
+                            <input asp-for="Username" type="text" class="form-control" />
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
-
-                        <div class="form-group">
-                            <label asp-for="IDType" class="control-label"></label>
-                            <select asp-for="IDType" type="text" class="form-control h-50">
-                                <option value="1">Sân 5</option>
-                                <option value="2">Sân 7</option>
-                                <option value="3">Sân 11</option>
-                                <option value="4">Sân Futsal</option>
-                            </select>
-                            <span asp-validation-for="IDType" class="text-danger"></span>
-                        </div>
-
                         <div class="form-group mt-2">
                             <input type="submit" value="Đăng ký" class="btn btn-primary" />
                         </div>
@@ -65,4 +73,59 @@
     </div>
 
   </body>
+<script>
+        let x = 0;
+        document.getElementById("addChildBtn").addEventListener("click", function() {
+        var container = document.getElementById("addFieldCotains");
+        
+        var inputName = document.createElement("input"); 
+        inputName.type = "text";
+        inputName.name = "ListField[" + x + "].NameField";
+        inputName.placeholder = "Tên sân";
+        inputName.className = "form-control child-name ml-3";
+        container.append(inputName);
+        container.append(document.createElement("br"));
+
+        var inputDescrip = document.createElement("input");
+        inputDescrip.type = "text";
+        inputDescrip.name = "ListField[" + x + "].DescriptionField";
+        inputDescrip.placeholder = "Mô tả";
+        inputDescrip.className = "form-control child-name ml-3";
+        container.append(inputDescrip);
+        container.append(document.createElement("br"));
+
+        var urlHinhAnh = document.createElement("input");
+        urlHinhAnh.type = "text";
+        urlHinhAnh.name = "ListField[" + x + "].HinhAnhSanBong";
+        urlHinhAnh.placeholder = "URL hình ảnh";
+        urlHinhAnh.className = "form-control child-name ml-3";
+        container.append(urlHinhAnh);
+        container.append(document.createElement("br"));
+
+        var price = document.createElement("input"); 
+        price.type = "number"
+        price.name = "ListField[" + x + "].Gia";
+        price.placeholder = "Giá";
+        price.className = "form-control child-name ml-3";
+        container.append(price);
+        container.append(document.createElement("br"));
+
+        var select = document.createElement("select");
+        select.className = "form-control child-name ml-3";
+        select.name = "ListField[" + x + "].IDType";
+        select.style.height = "60px";
+        var arr = JSON.parse(@Html.Raw(Json.Serialize(ViewBag.TypeField)));
+        arr.forEach(function (i) {
+            var option = document.createElement("option"); 
+            option.value = i.IDType; 
+            option.text = i.NameType;
+            select.appendChild(option);
+        });
+        container.append(select);
+
+        container.append(document.createElement("br"));
+
+        x++;
+    });
+</script>
 

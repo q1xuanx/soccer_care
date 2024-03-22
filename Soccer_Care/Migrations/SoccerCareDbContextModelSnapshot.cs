@@ -100,13 +100,9 @@ namespace Soccer_Care.Migrations
                     b.Property<float>("Gia")
                         .HasColumnType("real");
 
-                    b.Property<string>("HinhAnhSanBong")
+                    b.Property<string>("HinhAnhDaiDien")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IDType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -117,8 +113,6 @@ namespace Soccer_Care.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("IDFootBallField");
-
-                    b.HasIndex("IDType");
 
                     b.HasIndex("Username");
 
@@ -145,6 +139,43 @@ namespace Soccer_Care.Migrations
                     b.HasIndex("Username");
 
                     b.ToTable("HistoryOrders");
+                });
+
+            modelBuilder.Entity("Soccer_Care.Models.ListFieldModel", b =>
+                {
+                    b.Property<string>("IDField")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DescriptionField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Gia")
+                        .HasColumnType("real");
+
+                    b.Property<string>("HinhAnhSanBong")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IDFootballField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IDType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("NameField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IDField");
+
+                    b.HasIndex("IDFootballField");
+
+                    b.HasIndex("IDType");
+
+                    b.ToTable("listFields");
                 });
 
             modelBuilder.Entity("Soccer_Care.Models.OrderFieldModel", b =>
@@ -305,19 +336,11 @@ namespace Soccer_Care.Migrations
 
             modelBuilder.Entity("Soccer_Care.Models.FootBallFieldModel", b =>
                 {
-                    b.HasOne("Soccer_Care.Models.TypeFieldModel", "Type")
-                        .WithMany()
-                        .HasForeignKey("IDType")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("Username")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Type");
 
                     b.Navigation("User");
                 });
@@ -339,6 +362,25 @@ namespace Soccer_Care.Migrations
                     b.Navigation("Bill");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Soccer_Care.Models.ListFieldModel", b =>
+                {
+                    b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
+                        .WithMany("ListField")
+                        .HasForeignKey("IDFootballField")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Soccer_Care.Models.TypeFieldModel", "Type")
+                        .WithMany()
+                        .HasForeignKey("IDType")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FootBall");
+
+                    b.Navigation("Type");
                 });
 
             modelBuilder.Entity("Soccer_Care.Models.OrderFieldModel", b =>
@@ -388,6 +430,11 @@ namespace Soccer_Care.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("Soccer_Care.Models.FootBallFieldModel", b =>
+                {
+                    b.Navigation("ListField");
                 });
 #pragma warning restore 612, 618
         }

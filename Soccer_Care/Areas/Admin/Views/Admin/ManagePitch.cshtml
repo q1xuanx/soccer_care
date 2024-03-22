@@ -27,7 +27,6 @@
                                     <td class="tm-product-name">@item.Name</td>
                                     <td>@item.Address</td>
                                     <td>@item.Gia</td>
-                                    <td>@item.IDType</td>
                                     <td>
                                         <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.IDFootBallField" class="tm-product-delete-link">
                                             <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -38,8 +37,6 @@
                                     </td>
                                 </tr>
                             }
-                            
-
                         </tbody>
                     </table>
                 </div>
@@ -47,7 +44,6 @@
                 <a asp-controller="Pitch" asp-action="Create" asp-area="Admin" class="btn btn-primary btn-block text-uppercase mb-3">Add new field</a>
             </div>
         </div>
-
     </div>
 </div>
 

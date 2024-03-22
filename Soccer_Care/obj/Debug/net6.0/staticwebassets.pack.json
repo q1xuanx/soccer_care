@@ -233,6 +233,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\animated.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\drop.css",
+      "PackagePath": "staticwebassets\\assets\\css\\drop.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\fontawesome.css",
       "PackagePath": "staticwebassets\\assets\\css\\fontawesome.css"
     },
@@ -329,8 +333,8 @@
       "PackagePath": "staticwebassets\\assets\\images\\banner-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.png",
-      "PackagePath": "staticwebassets\\assets\\images\\black-logo.png"
+      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\black-logo.svg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\heading-bg.jpg",
@@ -397,6 +401,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\search-icon-05.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\soccer_care1.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\soccer_care1.svg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-01.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\tabs-image-01.jpg"
     },
@@ -451,6 +459,14 @@
     {
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpeg",
+      "PackagePath": "staticwebassets\\images\\toilanhanne.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.png",
+      "PackagePath": "staticwebassets\\images\\toilanhanne.png"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\js\\site.js",

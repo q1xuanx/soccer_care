@@ -6,11 +6,13 @@ namespace Soccer_Care.Controllers
     public class UserController : Controller
     {
         SoccerCareDbContext scb;
-        ISession session; 
-        public UserController(SoccerCareDbContext scb, IHttpContextAccessor contextAccessor)
+        ISession session;
+        IWebHostEnvironment webHostEnvironment;
+        public UserController(SoccerCareDbContext scb, IHttpContextAccessor contextAccessor, IWebHostEnvironment webHostEnvironment)
         {
             this.scb = scb;
-            this.session = contextAccessor.HttpContext.Session;
+            session = contextAccessor.HttpContext.Session;
+            this.webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Login()
         {
@@ -65,6 +67,36 @@ namespace Soccer_Care.Controllers
         {
             session.Remove("User");
             session.Remove("Role");
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult EditUser(string Username)
+        {
+            var getUser = scb.User.FirstOrDefault(x => x.Username.Equals(Username));
+            if (getUser != null)
+            {
+                return View(getUser);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        public IActionResult ConfirmEdit(UserModel user, IFormFile NewImage)
+        {
+            if (session.GetString("User") == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            if (NewImage != null) {
+                var getPath = Path.Combine(webHostEnvironment.WebRootPath, "images");
+                string extension = Path.GetExtension(NewImage.FileName);
+                var saveImg = Path.Combine(getPath, user.Username + extension);
+                using (var fileStream = new FileStream(saveImg, FileMode.Create)) {
+                    NewImage.CopyTo(fileStream);
+                    user.AvatarURL = user.Username + extension;
+                }
+            }
+            scb.User.Update(user);
+            scb.SaveChangesAsync();
+            session.SetString("SuccessEdit", "Thay đổi thông tin thành công");
             return RedirectToAction("Index", "Home");
         }
     }

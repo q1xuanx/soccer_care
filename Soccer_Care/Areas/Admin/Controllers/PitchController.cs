@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using Soccer_Care.Models;
 using System.Data.Entity;
 using static System.Reflection.Metadata.BlobBuilder;
@@ -25,21 +26,30 @@ namespace Soccer_Care.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var typeField = _context.TypeFields.ToList();
-            ViewData["listType"] = new SelectList(typeField,  "Value", "Key");
+            ViewBag.TypeField = JsonConvert.SerializeObject(_context.TypeFields.ToList());
+           
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(FootBallFieldModel football)
+        public async Task<IActionResult> Create(FootBallFieldModel football, string city, string district, string street)
         {
+            string address = street + "," + district + "," + city;
+            football.Address = address;
             football.IDFootBallField = Guid.NewGuid().ToString();
             if(!ModelState.IsValid)
             {
+                float minPrice = 9999999;
+                foreach (ListFieldModel list in football.ListField){
+                    list.IDField = Guid.NewGuid().ToString();
+                    list.IDFootballField = football.IDFootBallField;
+                    if (list.Gia < minPrice) minPrice = list.Gia;
+                    _context.listFields.Add(list);                   
+                }
+                football.Gia = minPrice;
                 _context.FootBallFields.Add(football);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Admin");
-
             }
             return View(football);
         }
@@ -79,6 +89,8 @@ namespace Soccer_Care.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Context = _context;
+            ViewBag.ListField = _context.listFields.Where(i => i.IDFootballField == id).ToList();   
             return View(pitch);
         }
 
@@ -92,9 +104,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
                 f.Name = footBall.Name;
                 f.Address = footBall.Address;
                 f.Gia = footBall.Gia;
-                f.HinhAnhSanBong = footBall.HinhAnhSanBong;
                 f.Username = footBall.Username;
-                f.IDType = footBall.IDType;
                 _context.SaveChanges();
                 return RedirectToAction("ManagePitch","Admin");
             }

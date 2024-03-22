@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eZ/KZvQtmLaWdlCU8ny+gy78cqQX+gDdI9Sny+5vhM0=",
+  "Hash": "DXaFmqYVMyvP+cg5hmGn0XAmDZqe8XTOaZ+XzxIHUBY=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -1037,6 +1037,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\animated.css"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\drop.css",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "assets/css/drop.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\drop.css"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\fontawesome.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
@@ -1445,12 +1462,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\banner-bg.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.png",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
       "BasePath": "_content/Soccer_Care",
-      "RelativePath": "assets/images/black-logo.png",
+      "RelativePath": "assets/images/black-logo.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1459,7 +1476,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\black-logo.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\black-logo.svg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\heading-bg.jpg",
@@ -1734,6 +1751,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-05.png"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\soccer_care1.svg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "assets/images/soccer_care1.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\soccer_care1.svg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-01.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
@@ -1970,6 +2004,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpeg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/toilanhanne.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\toilanhanne.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.png",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/toilanhanne.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\toilanhanne.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\js\\site.js",

@@ -24,6 +24,15 @@
     </script>
     httpContext.HttpContext.Session.Remove("SuccessLogin");
 }
+@if (httpContext.HttpContext.Session.GetString("SuccessEdit") != null)
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@httpContext.HttpContext.Session.GetString("SuccessEdit")')
+    </script>
+    httpContext.HttpContext.Session.Remove("SuccessEdit");
+}
 @if (TempData["LoginFail"] != null)
 {
     <script src="/lib/jquery/dist/jquery.min.js"></script>
