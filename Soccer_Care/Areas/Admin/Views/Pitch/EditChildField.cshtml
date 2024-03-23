@@ -1,0 +1,64 @@
+﻿@model ListFieldModel
+
+<div class="modal fade" id="EditChildField-@Model.IDField" aria-labelledby="EditProductLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Edit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>  
+            <form asp-action="ConfirmEditChildField" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for="IDField" class="text-success"></label>
+                        <input asp-for="IDField" value="@Model.IDField" readonly class="form-control" />
+                        <span asp-validation-for="IDField" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NameField" class="text-success"></label>
+                        <input asp-for="NameField" value="@Model.NameField" type="text" class="form-control" />
+                        <span asp-validation-for="NameField" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="DescriptionField" class="text-success"></label>
+                        <input asp-for="DescriptionField" value="@Model.DescriptionField" type="text" class="form-control" />
+                        <span asp-validation-for="DescriptionField" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Gia" class="text-success" ></label>
+                        <input asp-for="Gia" value="@Model.Gia" class="form-control" />
+                        <span asp-validation-for="Gia" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="HinhAnhSanBong" class="text-success"></label>
+                        <img src="@Model.HinhAnhSanBong" width="300" />
+                        <input asp-for="HinhAnhSanBong" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IDType" class="text-success"></label>
+                        <select asp-for="IDType" class="form-control h-auto">
+                            @foreach(TypeFieldModel list in ViewBag.GetType){
+                                if(list.IDType == Model.IDType)
+                                {
+                                    <option value="@list.IDType" selected>@list.NameType</option>
+                                }else
+                                {
+                                    <option value="@list.IDType">@list.NameType</option>
+                                }
+                            }
+                            
+                        </select>
+                    </div>      
+                    <div class="form-group mt-2">
+                        <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                    </div>   
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>

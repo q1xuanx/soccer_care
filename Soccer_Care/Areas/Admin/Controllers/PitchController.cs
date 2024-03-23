@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Newtonsoft.Json;
 using Soccer_Care.Models;
 using System.Data.Entity;
@@ -89,7 +90,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewBag.Context = _context;
+            ViewBag.GetType = _context.TypeFields.ToList();
             ViewBag.ListField = _context.listFields.Where(i => i.IDFootballField == id).ToList();   
             return View(pitch);
         }
@@ -112,6 +113,12 @@ namespace Soccer_Care.Areas.Admin.Controllers
             {
                 return View();
             }
+        }
+
+        public IActionResult EditChildField(string id)
+        {
+            var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
+            return PartialView("EditChildField", find);
         }
     }
 }
