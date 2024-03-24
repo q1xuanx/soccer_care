@@ -22,9 +22,27 @@ namespace Soccer_Care.Controllers
             var listPitch = _context.FootBallFields.ToList();
             return View(listPitch);
         }
+
         public IActionResult ManageUser()
         {
-            return View();
+            var listUser = _context.User.ToList();
+            ViewBag.ListType = _context.Role.ToList();
+            return View(listUser);
+        }
+        [HttpPost]
+        public IActionResult SearchUser(String IDRole)
+        {
+            ViewBag.IDRole = IDRole;
+            ViewBag.ListType = _context.Role.ToList();
+            List<UserModel> listUser = new List<UserModel>();
+            if (IDRole != "0")
+            {
+                listUser = _context.User.Where(i => i.IDRole == IDRole).ToList();
+            }else
+            {
+                listUser = _context.User.ToList();
+            }
+            return View("ManageUser", listUser);
         }
     }
 }

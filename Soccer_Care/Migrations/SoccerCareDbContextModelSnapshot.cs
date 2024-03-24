@@ -240,7 +240,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasKey("IDRole");
 
-                    b.ToTable("RoleModel");
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("Soccer_Care.Models.TypeFieldModel", b =>

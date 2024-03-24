@@ -9,37 +9,38 @@
             </div>  
             <form asp-action="ConfirmEditChildField" method="post">
                 <div class="modal-body">
+                    <input asp-for="IDFootballField" value="@Model.IDFootballField" hidden/>
                     <div class="form-group">
-                        <label asp-for="IDField" class="text-success"></label>
+                        <label asp-for="IDField" class="text-primary"></label>
                         <input asp-for="IDField" value="@Model.IDField" readonly class="form-control" />
                         <span asp-validation-for="IDField" class="text-danger"></span>
                     </div>
-
                     <div class="form-group">
-                        <label asp-for="NameField" class="text-success"></label>
+                        <label asp-for="NameField" class="text-primary"></label>
                         <input asp-for="NameField" value="@Model.NameField" type="text" class="form-control" />
                         <span asp-validation-for="NameField" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="DescriptionField" class="text-success"></label>
+                        <label asp-for="DescriptionField" class="text-primary"></label>
                         <input asp-for="DescriptionField" value="@Model.DescriptionField" type="text" class="form-control" />
                         <span asp-validation-for="DescriptionField" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="Gia" class="text-success" ></label>
+                        <label asp-for="Gia" class="text-primary"></label>
                         <input asp-for="Gia" value="@Model.Gia" class="form-control" />
                         <span asp-validation-for="Gia" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="HinhAnhSanBong" class="text-success"></label>
+                        <label asp-for="HinhAnhSanBong" class="text-primary"></label>
+                        <br />
                         <img src="@Model.HinhAnhSanBong" width="300" />
                         <input asp-for="HinhAnhSanBong" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label asp-for="IDType" class="text-success"></label>
+                        <label asp-for="IDType" class="text-primary"></label>
                         <select asp-for="IDType" class="form-control h-auto">
                             @foreach(TypeFieldModel list in ViewBag.GetType){
                                 if(list.IDType == Model.IDType)

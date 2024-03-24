@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="Index">
+                            <a class="nav-link active" asp-area="Admin" asp-controller="Admin" asp-action="Index">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Dashboard
                                 <span class="sr-only"></span>
@@ -51,14 +51,14 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ManagePitch">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Admin" asp-action="ManagePitch">
                                 <i class="fas fa-calendar-check"></i>
                                 Quản lý sân
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="ManageUser">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Admin" asp-action="ManageUser">
                                 <i class="far fa-user"></i>
                                 Accounts
                             </a>
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </nav>
-        
+        <partial name="/Views/Shared/_Notification.cshtml" />
         @RenderBody()
 
 

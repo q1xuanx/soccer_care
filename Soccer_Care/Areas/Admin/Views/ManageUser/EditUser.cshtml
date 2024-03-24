@@ -1,0 +1,94 @@
+﻿@model Soccer_Care.Models.UserModel
+
+@{
+    ViewData["Title"] = "EditUser";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-block-title d-inline-block">Edit Field Football</h2>
+                    </div>
+                </div>
+                <form asp-action="ConfirmEditUser" method="post" enctype="multipart/form-data" class="form-create flex-column d-flex gap-2">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" readonly class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FullName" class="control-label"></label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AvatarURL" class="control-label"></label>
+                        <img id="tempImg" src="/images/@Model.AvatarURL" alt="Avatar" height="100" width="100">
+                        <input id="imgInp" type="file" name="NewImage" class="form-control" accept="image/*" onchange="previewAvatar(this)" />
+                        <span asp-validation-for="AvatarURL" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IsBlock" class="control-label"></label>
+                        <select asp-for="IsBlock" class="form-control h-auto">
+                            <option value="0">Bình thường</option>
+                            <option value="1">Đã bị chặn</option>
+                        </select>
+                        <span asp-validation-for="IsBlock" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="IDRole" class="control-label"></label>
+                        <select asp-for="IDRole" class="custom-select">
+                            @foreach (RoleModel role in ViewBag.ListRole)
+                            {
+                                if (role.IDRole == ViewBag.IDRole)
+                                {
+                                    <option value="@role.IDRole" selected>@role.RoleName</option>
+                                }
+                                else
+                                {
+                                    <option value="@role.IDRole">@role.RoleName</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="IDRole" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a asp-area="Admin" asp-controller="Admin" asp-action="ManageUser" class="btn">Back to List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function previewAvatar(input) {
+        const preview = document.getElementById('tempImg');
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

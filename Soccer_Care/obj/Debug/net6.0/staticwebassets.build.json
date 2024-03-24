@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DXaFmqYVMyvP+cg5hmGn0XAmDZqe8XTOaZ+XzxIHUBY=",
+  "Hash": "SeolJWpwpz6QLlKUEEfVSmDplVFJmtwBYStbZVY+cTA=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -2021,6 +2021,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\toilanhanne.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/toilanhanne.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\toilanhanne.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.png",

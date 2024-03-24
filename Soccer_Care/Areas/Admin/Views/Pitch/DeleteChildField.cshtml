@@ -1,0 +1,19 @@
+﻿@model ListFieldModel
+
+<div class="modal fade" id="DeleteChildField-@Model.IDField" aria-labelledby="DeleteProductLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="ConfirmDeleteChildField" asp-route-id="@Model.IDField" method="post">
+                <div class="modal-body">
+                    <p>Xác nhận xóa: @Model.NameField</p>
+                    <input type="submit" value="Xóa" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

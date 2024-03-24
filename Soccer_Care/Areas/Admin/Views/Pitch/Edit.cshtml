@@ -15,6 +15,7 @@
                     </div>
                     <form asp-action="Edit" class="form-create flex-column d-flex gap-2">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input asp-for="IDFootBallField" value="@Model.IDFootBallField" hidden />
                         <div class="form-group">
                             <label asp-for="Name" class="control-label"></label>
                             <input asp-for="Name" value="@Model.Name" class="form-control" />
@@ -34,14 +35,14 @@
                         </div>
 
                         <div class="form-group">
-                            <img src="@Model.HinhAnhDaiDien" />
+                            <img src="@Model.HinhAnhDaiDien" height="400" width="450" class="m-2" />
                             <input asp-for="HinhAnhDaiDien" class="form-control"/>
                             
                         </div>
 
                         <div class="form-group">
                             <label asp-for="Username" class="control-label"></label>
-                            <input asp-for="Username" value="@Model.Username" class="form-control" />
+                            <input asp-for="Username" value="@Model.Username" class="form-control" readonly/>
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
 
@@ -79,9 +80,10 @@
                                         @item.IDType
                                     </td>
                                     <td>
-                                        <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.IDField" class="tm-product-delete-link">
+                                        <a type="button" class="tm-product-delete-link" data-target="@("#DeleteChildField-"+item.IDField)" asp-action="DeleteChildField" asp-route-id="@item.IDField" data-toggle="modal">
                                             <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                         </a>
+                                        @await Html.PartialAsync("DeleteChildField",item)
                                         <a type="button" class="tm-product-delete-link" data-target="@("#EditChildField-"+item.IDField)" asp-action="EditChildField" asp-route-id="@item.IDField" data-toggle="modal">
                                             <i class="far fa-edit tm-product-delete-icon"></i>
                                         </a>

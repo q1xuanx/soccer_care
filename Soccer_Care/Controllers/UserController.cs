@@ -99,5 +99,9 @@ namespace Soccer_Care.Controllers
             session.SetString("SuccessEdit", "Thay đổi thông tin thành công");
             return RedirectToAction("Index", "Home");
         }
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
     }
 }

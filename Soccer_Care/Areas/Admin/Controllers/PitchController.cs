@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Newtonsoft.Json;
 using Soccer_Care.Models;
 using System.Data.Entity;
+using System.Security.Authentication;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Soccer_Care.Areas.Admin.Controllers
@@ -75,6 +76,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
         {
             var pitch = await _context.FootBallFields.FindAsync(id);
             _context.FootBallFields.Remove(pitch);
+            _context.listFields.RemoveRange(pitch.ListField);
             await _context.SaveChangesAsync();
             return RedirectToAction("ManagePitch","Admin");
         }
@@ -97,15 +99,11 @@ namespace Soccer_Care.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(string id, FootBallFieldModel footBall)
+        public ActionResult Edit(FootBallFieldModel footBall)
         {
             try
             {
-                var f = _context.FootBallFields.FirstOrDefault(b => b.IDFootBallField == id);
-                f.Name = footBall.Name;
-                f.Address = footBall.Address;
-                f.Gia = footBall.Gia;
-                f.Username = footBall.Username;
+                _context.FootBallFields.Update(footBall);
                 _context.SaveChanges();
                 return RedirectToAction("ManagePitch","Admin");
             }
@@ -118,7 +116,36 @@ namespace Soccer_Care.Areas.Admin.Controllers
         public IActionResult EditChildField(string id)
         {
             var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
-            return PartialView("EditChildField", find);
+            if (find != null) return PartialView("EditChildField", find);
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult ConfirmEditChildField(ListFieldModel listField)
+        {
+            TempData["EditSuccess"] = "Đã cập nhật thành công";
+            _context.listFields.Update(listField);
+            _context.SaveChangesAsync();
+            return RedirectToAction("ManagePitch", "Admin", TempData["EditSuccess"]);
+        }
+        public IActionResult DeleteChildField(string id)
+        {
+            var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
+            if (find != null) return PartialView("DeleteChildField", find);
+            return NotFound();
+        }
+        [HttpPost]
+        public IActionResult ConfirmDeleteChildField(string id)
+        {
+            var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
+            if (find != null)
+            {
+                var findParent = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == find.IDFootballField);
+                _context.listFields.Remove(find);
+                _context.SaveChangesAsync();
+                return RedirectToAction("ManagePitch", "Admin", TempData["EditSuccess"]);
+            }
+            return NotFound();
         }
     }
 }
