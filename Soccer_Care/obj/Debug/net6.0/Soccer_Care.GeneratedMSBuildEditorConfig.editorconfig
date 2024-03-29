@@ -84,12 +84,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnRyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/PitchBall/DatSan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl0Y2hCYWxsXERhdFNhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/PitchBall/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl0Y2hCYWxsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/PitchBall/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl0Y2hCYWxsXFRoYW5rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/Shared/_LayoutEmpty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRFbXB0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/Soccer_Care/Soccer_Care/Views/Shared/_LayoutLogin.cshtml]

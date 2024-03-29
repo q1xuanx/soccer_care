@@ -1,5 +1,6 @@
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\appsettings.json
+C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\package-lock.json
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Soccer_Care.staticwebassets.runtime.json
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Soccer_Care.exe
 C:\Users\Admin\Desktop\Soccer_Care\Soccer_Care\bin\Debug\net6.0\Soccer_Care.deps.json
