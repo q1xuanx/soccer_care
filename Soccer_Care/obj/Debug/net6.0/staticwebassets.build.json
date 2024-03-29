@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7mm83aIwrWR3yDLUJzRQDPFr6goEO1TQjgUmwYa/UcQ=",
+  "Hash": "kvcAWFr9c7sP2PjvYbacXwGod0B6WeX7wwvzyC9WlNE=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -1535,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.woff"
+    },
+    {
+      "Identity": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "assets/images/background_ds.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\background_ds.png"
     },
     {
       "Identity": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",

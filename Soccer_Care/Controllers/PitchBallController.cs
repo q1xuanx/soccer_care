@@ -21,7 +21,16 @@ namespace Soccer_Care.Controllers
             var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
             return View(pitch);
         }
-        
+
+        public IActionResult DS(string id)
+        {
+            var listField = _context.listFields.Where(l => l.IDFootballField == id).ToList();
+            var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
+            string namef = pitch.Name.ToString();
+            ViewData["name"] = namef;
+            return View(listField);
+        }
+
 
         public IActionResult DatSanConfirm()
         {

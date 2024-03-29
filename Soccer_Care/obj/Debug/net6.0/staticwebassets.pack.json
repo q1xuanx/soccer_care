@@ -313,6 +313,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\slick.woff"
     },
     {
+      "Id": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
+      "PackagePath": "staticwebassets\\assets\\images\\background_ds.png"
+    },
+    {
       "Id": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
       "PackagePath": "staticwebassets\\assets\\images\\ball_01.webp"
     },
