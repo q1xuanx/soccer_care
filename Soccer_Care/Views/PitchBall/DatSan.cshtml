@@ -29,22 +29,11 @@
             <div class="d-flex gap-4">
                 <div class="form-group" style="flex: auto">
                     <label for="exampleFormControlSelect1">Thời gian đặt</label>
-                    <select class="form-control" required id="exampleFormControlSelect1">
-                        <option>17:00</option>
-                        <option>18:30</option>
-                        <option>20:00</option>
-                        <option>21:30</option>
-                        <option>23:00</option>
-                    </select>
+                    <input type="time" class="form-control" required id="time-input" placeholder="Time">
                 </div>
                 <div class="form-group" style="flex: auto">
-                    <label for="exampleFormControlSelect1">Loại sân</label>
-                    <select class="form-control" required id="exampleFormControlSelect1">
-                        <option>Sân 5</option>
-                        <option>Sân 7</option>
-                        <option>Sân 11</option>
-                        <option>Sân Futsal</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Ngày</label>
+                    <input type="date" class="form-control" required id="date-input" placeholder="Ngày">
                 </div>
             </div>
         </div>
@@ -54,7 +43,35 @@
 </div>
 
 <script>
-   
+    // Get today's date
+    var today = new Date().toISOString().split('T')[0];
 
+    // Set the min attribute of the date input field
+    document.getElementById('date-input').setAttribute('min', today);
+</script>
+
+<script>
+    var select = document.getElementById('time-input');
+    var startHour = 7;
+    var endHour = 22;
+    var stepMinutes = 30;
+
+    // Tạo danh sách các giờ và phút
+    var hours = [];
+    var minutes = ['00', '30'];
+
+    for (var h = startHour; h <= endHour; h++) {
+        hours.push(h.toString().padStart(2, '0'));
+    }
+
+    // Tạo các tùy chọn cho trường input
+    hours.forEach(function (hour) {
+        minutes.forEach(function (minute) {
+            var option = document.createElement('option');
+            option.text = hour + ':' + minute;
+            option.value = hour + ':' + minute;
+            select.add(option);
+        });
+    });
 </script>
 

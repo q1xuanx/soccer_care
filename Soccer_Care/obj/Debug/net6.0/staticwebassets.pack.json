@@ -313,7 +313,15 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\slick.woff"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
+=======
+      "Id": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
+      "PackagePath": "staticwebassets\\assets\\images\\background_ds.png"
+    },
+    {
+      "Id": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
+>>>>>>> 0562cebe463a1513cb2be181a20b352fc9f6123f
       "PackagePath": "staticwebassets\\assets\\images\\ball_01.webp"
     },
     {
