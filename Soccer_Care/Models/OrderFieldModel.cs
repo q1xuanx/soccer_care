@@ -11,6 +11,8 @@ namespace Soccer_Care.Models
         [Key]
         public string IDOrder { get; set; } 
         public string IDFootballField { get; set; }
+        [Required]
+        public string SoDienThoai { get;set; }
         public string Username { get;set; }
         [ForeignKey("Username")]
         public UserModel User { get; set; }

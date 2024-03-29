@@ -9,36 +9,36 @@
         <span class="font-weight-bold d-block">Giá: @Model.Gia</span>
         <span>Địa chỉ: @Model.Address</span>
     </div>
-    <form >
+    <form asp-action="DatSanConfirm"  method="post">
         <div class="d-flex flex-column gap-4">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" name="emailUser" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="d-flex gap-4">
                 <div class="form-group" style="flex: auto">
                     <label for="exampleInputPassword1">Username</label>
-                    <input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Username" value="@Model.Username" disabled>
+                    <input type="text" name="Username" class="form-control" required id="exampleInputPassword1" placeholder="Username" value="@accessor.HttpContext.Session.GetString("User")" readonly>
                 </div>
                 <div class="form-group" style="flex: auto">
                     <label for="exampleInputPassword1">Số Điện Thoại</label>
-                    <input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Phone">
+                    <input type="text" name="SDT" class="form-control" required id="exampleInputPassword1" placeholder="Phone">
                 </div>
             </div>
             <div class="d-flex gap-4">
                 <div class="form-group" style="flex: auto">
                     <label for="exampleFormControlSelect1">Thời gian đặt</label>
-                    <input type="time" class="form-control" required id="time-input" placeholder="Time">
+                    <input type="time" name="BeginTime" class="form-control" required id="time-input" placeholder="Time">
                 </div>
                 <div class="form-group" style="flex: auto">
                     <label for="exampleFormControlSelect1">Ngày</label>
-                    <input type="date" class="form-control" required id="date-input" placeholder="Ngày">
+                    <input type="date" name="Date" class="form-control" required id="date-input" placeholder="Ngày">
                 </div>
             </div>
         </div>
         
-        <button asp-action="DatSanConfirm" asp-controller="PitchBall" type="submit" class="btn btn-primary mt-3 justify-content-end">Xác nhận</button>
+        <button asp-action="DatSanConfirm" asp-controller="PitchBall" asp-route-id="@Model.IDFootBallField" type="submit" class="btn btn-primary mt-3 justify-content-end">Xác nhận</button>
     </form>
 </div>
 

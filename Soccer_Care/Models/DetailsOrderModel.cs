@@ -9,7 +9,7 @@ namespace Soccer_Care.Models
         public string IDDetails {get; set; }
         public string IDOrder {get; set; }
         [Required(ErrorMessage ="Chọn ngày giờ bắt đầu")]
-        public DateTime StartTime { get; set; }
+        public String StartTime { get; set; }
         [Required(ErrorMessage ="Vui lòng cung cấp giờ kết thúc")]
         public DateTime DateTime { get; set; }
 

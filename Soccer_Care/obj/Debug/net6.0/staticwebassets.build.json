@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "SeolJWpwpz6QLlKUEEfVSmDplVFJmtwBYStbZVY+cTA=",
-=======
-  "Hash": "kvcAWFr9c7sP2PjvYbacXwGod0B6WeX7wwvzyC9WlNE=",
->>>>>>> 0562cebe463a1513cb2be181a20b352fc9f6123f
+  "Hash": "p0eDn1VaLkBqoK2uSOpFfpSLLgBrN1NsIH+R+RbWq+8=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -1381,20 +1377,15 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.woff"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
-=======
-      "Identity": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/background_ds.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1403,8 +1394,7 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\background_ds.png"
     },
     {
-      "Identity": "E:\\HUTECH\\LAP TRINH WEB\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
->>>>>>> 0562cebe463a1513cb2be181a20b352fc9f6123f
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",

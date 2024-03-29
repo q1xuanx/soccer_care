@@ -56,8 +56,9 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("StartTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IDDetails");
 
@@ -124,7 +125,7 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("IDHistory")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IDBill")
+                    b.Property<string>("IDFootballField")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -134,7 +135,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasKey("IDHistory");
 
-                    b.HasIndex("IDBill");
+                    b.HasIndex("IDFootballField");
 
                     b.HasIndex("Username");
 
@@ -186,6 +187,10 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("IDFootballField")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SoDienThoai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -347,9 +352,9 @@ namespace Soccer_Care.Migrations
 
             modelBuilder.Entity("Soccer_Care.Models.HistoryOrderModel", b =>
                 {
-                    b.HasOne("Soccer_Care.Models.BillModel", "Bill")
+                    b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
                         .WithMany()
-                        .HasForeignKey("IDBill")
+                        .HasForeignKey("IDFootballField")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -359,7 +364,7 @@ namespace Soccer_Care.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Bill");
+                    b.Navigation("FootBall");
 
                     b.Navigation("User");
                 });

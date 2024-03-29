@@ -8,11 +8,11 @@ namespace Soccer_Care.Models
         [Key]
         public string IDHistory { get; set; }
         public string Username { get; set; }
-        public string IDBill { get; set; }
+        public string IDFootballField { get;set; }
 
         [ForeignKey("Username")]
         public UserModel User { get; set; }
-        [ForeignKey("IDBill")]
-        public BillModel Bill { get; set; }
+        [ForeignKey("IDFootballField")]
+        public FootBallFieldModel FootBall { get; set; }
     }
 }
