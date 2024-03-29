@@ -34,7 +34,8 @@ namespace Soccer_Care.Controllers
 
         public IActionResult DatSanConfirm()
         {
-           
+
+            
             return View("Thanks");
         }
     }
