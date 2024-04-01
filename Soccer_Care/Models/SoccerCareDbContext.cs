@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Soccer_Care.Models
 {
-    public class SoccerCareDbContext : DbContext
+    public class SoccerCareDbContext : IdentityDbContext<UserModel>
     {
         public SoccerCareDbContext(DbContextOptions options) : base(options) { 
             

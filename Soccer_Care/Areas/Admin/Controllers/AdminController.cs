@@ -1,16 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 
 namespace Soccer_Care.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,Partner")]
     public class AdminController : Controller
     {
         private readonly SoccerCareDbContext _context;
-
-        public AdminController(SoccerCareDbContext context)
+        private readonly UserManager<UserModel> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public AdminController(SoccerCareDbContext context, UserManager<UserModel> userManager, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult Index()
@@ -25,23 +32,18 @@ namespace Soccer_Care.Controllers
 
         public IActionResult ManageUser()
         {
-            var listUser = _context.User.ToList();
-            ViewBag.ListType = _context.Role.ToList();
+            var listUser = _context.Users.ToList();
+            var listRole = _roleManager.Roles.ToList();
+            ViewBag.ListType = listRole;
             return View(listUser);
         }
         [HttpPost]
         public IActionResult SearchUser(String IDRole)
         {
-            ViewBag.IDRole = IDRole;
-            ViewBag.ListType = _context.Role.ToList();
-            List<UserModel> listUser = new List<UserModel>();
-            if (IDRole != "0")
-            {
-                listUser = _context.User.Where(i => i.IDRole == IDRole).ToList();
-            }else
-            {
-                listUser = _context.User.ToList();
-            }
+            var listUser = _userManager.GetUsersInRoleAsync(IDRole).Result.ToList();
+            var listRole = _roleManager.Roles.ToList();
+            ViewBag.RoleId = IDRole;
+            ViewBag.ListType = listRole;
             return View("ManageUser", listUser);
         }
     }

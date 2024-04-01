@@ -15,21 +15,7 @@
                 </div>
                 <form asp-action="ConfirmEditUser" method="post" enctype="multipart/form-data" class="form-create flex-column d-flex gap-2">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
-                        <label asp-for="Username" class="control-label"></label>
-                        <input asp-for="Username" readonly class="form-control" />
-                        <span asp-validation-for="Username" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="FullName" class="control-label"></label>
-                        <input asp-for="FullName" class="form-control" />
-                        <span asp-validation-for="FullName" class="text-danger"></span>
-                    </div>
+                    
                     <div class="form-group">
                         <label asp-for="PhoneNumber" class="control-label"></label>
                         <input asp-for="PhoneNumber" class="form-control" />
@@ -51,21 +37,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="IDRole" class="control-label"></label>
-                        <select asp-for="IDRole" class="custom-select">
-                            @foreach (RoleModel role in ViewBag.ListRole)
-                            {
-                                if (role.IDRole == ViewBag.IDRole)
-                                {
-                                    <option value="@role.IDRole" selected>@role.RoleName</option>
-                                }
-                                else
-                                {
-                                    <option value="@role.IDRole">@role.RoleName</option>
-                                }
-                            }
-                        </select>
-                        <span asp-validation-for="IDRole" class="text-danger"></span>
+                        
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Save" class="btn btn-primary" />

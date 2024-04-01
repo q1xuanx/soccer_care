@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 
 namespace Soccer_Care.Controllers
 {
+ 
     public class PitchBallController : Controller
     {
         IHttpContextAccessor contextAccessor;
@@ -15,7 +17,7 @@ namespace Soccer_Care.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DatSan(string id)
         {
             if (contextAccessor.HttpContext.Session.GetString("User") == null)
@@ -25,7 +27,7 @@ namespace Soccer_Care.Controllers
             var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
             return View(pitch);
         }
-
+        [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DS(string id)
         {
             var listField = _context.listFields.Where(l => l.IDFootballField == id).ToList();
@@ -34,7 +36,7 @@ namespace Soccer_Care.Controllers
             ViewData["name"] = namef;
             return View(listField);
         }
-
+        [Authorize(Roles = "Admin,Partner,User")]
         [HttpPost]
         public IActionResult DatSanConfirm(String id, String emailUser, String Username, String SDT, String BeginTime, DateTime Date)
         {

@@ -62,23 +62,7 @@
                             <li><a asp-controller="PitchBall" asp-action="Index">Sân bóng</a></li>
                             <li><a asp-controller="Home" asp-action="Intro">Intro</a></li>
                             <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
-                            @if (accessor.HttpContext.Session.GetString("User") != null)
-                            {
-                                <li class="dropdown">
-                                    <a onclick="myFunction()" class="dropbtn main-white-button">Tài khoản</a>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <a asp-controller="User" asp-action="EditUser" asp-route-Username="@accessor.HttpContext.Session.GetString("User")" class="truncate">
-                                            Hello: @accessor.HttpContext.Session.GetString("User")
-                                        </a>
-                                        <a href="#" class="truncate">Lịch sử đặt sân </a>
-                                        <a asp-controller="User" asp-action="LogOut" class="truncate">Đăng xuất</a>
-                                    </div>
-                                </li>
-                            }else
-                            {
-                                 <li><div class="main-white-button"><a asp-controller="User" asp-action="Login">Đăng Nhập</a></div></li>
-                            }
-                            
+                            <li><partial name="_LoginPartial.cshtml"></partial></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -155,8 +139,7 @@
 
 
     <!-- Scripts -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>t>
     <script src="/assets/js/owl-carousel.js"></script>
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/imagesloaded.js"></script>

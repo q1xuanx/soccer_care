@@ -1,0 +1,39 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <a class="inactive underlineHover fw-bold text-black" id="login" asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+            <h2 class="active fw-bold">Register </h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+                <input asp-for="Input.Email" type="text" class="fadeIn third my-3" autocomplete="username" aria-required="true" placeholder="Email" />
+                <br />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+          
+                <input asp-for="Input.Password" type="password"  class="fadeIn third my-3" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                <br />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                <input asp-for="Input.ConfirmPassword" type="password" class="fadeIn third my-3" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+                <br />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            
+                <input type="tel" class="fadeIn third my-3" asp-for="Input.SDT" placeholder="Số điện thoại">
+                <br />
+                <span asp-validation-for="Input.SDT" class="text-danger"></span>
+
+                <input type="text" class="fadeIn third my-3"  asp-for="Input.FullName" placeholder="Họ và tên">
+                <br />
+                <span class="alert-danger" asp-validation-for="Input.FullName"></span>
+            <br />
+            <input id="registerSubmit" type="submit" value="Đăng ký"></input>
+        </form>
+    </div>
+</div>

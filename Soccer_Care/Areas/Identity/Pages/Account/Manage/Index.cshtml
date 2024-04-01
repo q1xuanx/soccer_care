@@ -1,7 +1,9 @@
-﻿@model UserModel
+﻿@page
+@model IndexModel
 @{
-    ViewData["Title"] = "EditUser";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+    Layout = "/Views/Shared/_Layout.cshtml";
 }
 <div class="page-heading">
     <div class="container">
@@ -14,50 +16,44 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row justify-content-center align-content-center">
         <div class="col-lg-6">
-            <form asp-action="ConfirmEdit" method="post" class="border p-4 rounded-shadow" enctype="multipart/form-data">
+            <form id="profile-form" method="post" class="border p-4 rounded-shadow" enctype="multipart/form-data">
+                <div class="form-group row mb-4">
+                    <label for="fullname" class="col-sm-3 col-form-label">Full Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Username" value="@Model.Username" readonly class="form-control">
+                    </div>
+                </div>
                 <div class="form-group row mb-4">
                     <label for="avatar" class="col-sm-3 col-form-label">Avatar</label>
                     <div class="col-sm-9">
-                        <img id="tempImg" src="/images/@Model.AvatarURL" alt="Avatar" class="img-thumbnail form-control" style="max-width: 100px; max-height: 100px;">
-                        <input id="imgInp" type="file" name="NewImage" class="form-control" accept="image/*" onchange="previewAvatar(this)" />
-                    </div>
-                </div>
-                <div class="form-group row mb-4">
-                    <label for="username" class="col-sm-3 col-form-label">Username</label>
-                    <div class="col-sm-9">
-                        <input type="text" asp-for="Username" value="@Model.Username" class="form-control" readonly>
-                    </div>
-                </div>
-                <div class="form-group row mb-4">
-                    <label for="password" class="col-sm-3 col-form-label">Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" asp-for="Password" value="@Model.Password" class="form-control">
+                        <img id="tempImg" src="/images/@Model.Input.ImagePic" alt="Avatar" class="img-thumbnail form-control" style="max-width: 100px; max-height: 100px;">
+                        <input id="imgInp" type="file" asp-for="Input.Image" class="form-control" accept="image/*" onchange="previewAvatar(this)" />
                     </div>
                 </div>
                 <div class="form-group row mb-4">
                     <label for="fullname" class="col-sm-3 col-form-label">Full Name</label>
                     <div class="col-sm-9">
-                        <input type="text" asp-for="FullName" value="@Model.FullName" class="form-control">
+                        <input type="text" asp-for="Input.fullName" value="@Model.Input.fullName" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row mb-4">
                     <label for="phonenumber" class="col-sm-3 col-form-label">Phone Number</label>
                     <div class="col-sm-9">
-                        <input type="text" asp-for="PhoneNumber" value="@Model.PhoneNumber" class="form-control">
+                        <input type="text" asp-for="Input.PhoneNumber" value="@Model.Input.PhoneNumber" class="form-control">
                     </div>
                 </div>
-                <input type="hidden" asp-for="IsBlock" value="@Model.IsBlock">
-                <input type="hidden" asp-for="IDRole" value="@Model.IDRole">
+                <input type="hidden" asp-for="Input.IsBlock" value="@Model.Input.IsBlock">
                 <input type="submit" class="btn btn-primary" value="Xác nhận"></input>
                 <a asp-controller="Home" class="btn btn-secondary ml-3" asp-action="Index">Back Home</a>
             </form>
         </div>
     </div>
 </div>
-
+<partial name="_StatusMessage" for="StatusMessage" />
 <script>
     function previewAvatar(input) {
         const preview = document.getElementById('tempImg');

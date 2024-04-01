@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 
 namespace Soccer_Care.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ManageUserController : Controller
     {
 
@@ -16,13 +18,13 @@ namespace Soccer_Care.Areas.Admin.Controllers
         }
         public IActionResult EditUser(string username)
         {
-            var find = _context.User.FirstOrDefault(i => i.Username.Equals(username));
+            /*var find = _context.User.FirstOrDefault(i => i.Username.Equals(username));
             ViewBag.ListRole = _context.Role.ToList();
             if (find == null)
             {
                 return NotFound();
-            }
-            return View(find);
+            }*/
+            return View();
         }
         [HttpPost]
         public IActionResult ConfirmEditUser(UserModel user, IFormFile NewImage)
@@ -31,7 +33,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
             //{
               //  return RedirectToAction("Index", "Home");
             //}
-            if (NewImage != null)
+           /* if (NewImage != null)
             {
                 var getPath = Path.Combine(webHostEnvironment.WebRootPath, "images");
                 string extension = Path.GetExtension(NewImage.FileName);
@@ -43,7 +45,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
                 }
             }
             _context.User.Update(user);
-            _context.SaveChangesAsync();
+            _context.SaveChangesAsync();*/
             return RedirectToAction("ManageUser", "Admin");
         }
     }

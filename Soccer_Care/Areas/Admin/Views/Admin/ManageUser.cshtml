@@ -1,4 +1,5 @@
-﻿@model List<UserModel>
+﻿@using Microsoft.AspNetCore.Identity;
+@model List<UserModel>
 @{
     ViewData["Title"] = "ManageUser";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -10,14 +11,14 @@
                 <h2 class="tm-block-title">List of Accounts</h2>
                 <p class="text-white">Accounts</p>
                 <select name="IDRole" class="custom-select">
-                    @foreach(RoleModel role in ViewBag.ListType)
+                    @foreach(IdentityRole role in ViewBag.ListType)
                     {
-                        if (role.IDRole == ViewBag.IDRole)
+                        if (role.Name == ViewBag.RoleID)
                         {
-                            <option value="@role.IDRole" selected>@role.RoleName</option>
+                            <option value="@role.Name" selected>@role.Name</option>
                         }else
                         {
-                            <option value="@role.IDRole">@role.RoleName</option>
+                            <option value="@role.Name">@role.Name</option>
                         }
                     }
                 </select>
@@ -29,7 +30,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Username</th>
-                        <th scope="col">Password</th>
                         <th scope="col">Full name</th>
                         <th scope="col">Phone number</th>
                         <th scope="col">Avatar</th>
@@ -40,18 +40,17 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td class="tm-product-name">@item.Username</td>
-                            <td>@item.Password</td>
+                            <td>@item.UserName</td>
                             <td>@item.FullName</td>
                             <td>@item.PhoneNumber</td>
                             <td>
                                 <img src="/images/@item.AvatarURL" height="100" width="100">
                             </td>
                             <td>
-                                <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.Username" class="tm-product-delete-link">
+                                <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
-                                <a asp-area="Admin" asp-controller="ManageUser" asp-action="EditUser" asp-route-username="@item.Username" class="tm-product-delete-link">
+                                <a asp-area="Admin" asp-controller="ManageUser" asp-action="EditUser" asp-route-username="" class="tm-product-delete-link">
                                     <i class="far fa-edit tm-product-delete-icon"></i>
                                 </a>
                             </td>
