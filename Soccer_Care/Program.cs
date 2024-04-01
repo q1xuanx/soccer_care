@@ -7,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<SoccerCareDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("SoccerCareConnection")));
+builder.Services.AddDbContext<SoccerCareDbContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("SoccerCareConnection"));
+    option.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+ });
 
 builder.Services.AddIdentity<UserModel, IdentityRole>().AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<SoccerCareDbContext>();
 builder.Services.AddRazorPages();

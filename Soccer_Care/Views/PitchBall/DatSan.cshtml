@@ -1,13 +1,12 @@
-﻿@model Soccer_Care.Models.FootBallFieldModel
-@inject IHttpContextAccessor accessor
+﻿@model Soccer_Care.Models.ListFieldModel
 
 <div style="height: 100px;"></div>
 
 <div class="p-4">
     <div class="my-5">
-        <h2>Sân bóng: @Model.Name</h2>
+        <h2>Sân bóng: @Model.NameField</h2>
         <span class="font-weight-bold d-block">Giá: @Model.Gia</span>
-        <span>Địa chỉ: @Model.Address</span>
+        <span>Địa chỉ: @Model.FootBall.Gia</span>
     </div>
     <form asp-action="DatSanConfirm"  method="post">
         <div class="d-flex flex-column gap-4">
@@ -18,9 +17,10 @@
             </div>
             <div class="d-flex gap-4">
                 <div class="form-group" style="flex: auto">
-                    <label for="exampleInputPassword1">Username</label>
-                    <input type="text" name="Username" class="form-control" required id="exampleInputPassword1" placeholder="Username" value="@accessor.HttpContext.Session.GetString("User")" readonly>
+                    <label for="exampleInputPassword1">Email chủ sân</label>
+                    <input type="text" name="Username" class="form-control" required id="exampleInputPassword1" placeholder="Username" value="@Model.FootBall.Username" readonly>
                 </div>
+                 <input type="text" name= "IDOwner" class="form-control" required id="exampleInputPassword1" value="@Model.FootBall.IDUserOwner" hidden>
                 <div class="form-group" style="flex: auto">
                     <label for="exampleInputPassword1">Số Điện Thoại</label>
                     <input type="text" name="SDT" class="form-control" required id="exampleInputPassword1" placeholder="Phone">
@@ -37,8 +37,7 @@
                 </div>
             </div>
         </div>
-        
-        <button asp-action="DatSanConfirm" asp-controller="PitchBall" asp-route-id="@Model.IDFootBallField" type="submit" class="btn btn-primary mt-3 justify-content-end">Xác nhận</button>
+        <button asp-action="DatSanConfirm" asp-controller="PitchBall" asp-route-id="@Model.IDField" asp-route-idParentField ="@Model.IDFootballField" type="submit" class="btn btn-primary mt-3 justify-content-end">Xác nhận</button>
     </form>
 </div>
 

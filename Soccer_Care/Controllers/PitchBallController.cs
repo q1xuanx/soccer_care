@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
+using System.Net.NetworkInformation;
 
 namespace Soccer_Care.Controllers
 {
@@ -9,22 +11,21 @@ namespace Soccer_Care.Controllers
     {
         IHttpContextAccessor contextAccessor;
         private readonly SoccerCareDbContext _context;
-        public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context) {
+        private readonly UserManager<UserModel> _userManager;
+        public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context, UserManager<UserModel> userManager) {
             this.contextAccessor = contextAccessor;
             this._context = context;
+            this._userManager = userManager;
         }
         public IActionResult Index()
         {
             return View();
         }
         [Authorize(Roles = "Admin,Partner,User")]
-        public IActionResult DatSan(string id)
+        public IActionResult DatSan(string idField)
         {
-            if (contextAccessor.HttpContext.Session.GetString("User") == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
-            var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
+            var pitch = _context.listFields.FirstOrDefault(f => f.IDField == idField);
+            pitch.FootBall = _context.FootBallFields.Where(f => f.IDFootBallField == pitch.IDFootballField).FirstOrDefault();
             return View(pitch);
         }
         [Authorize(Roles = "Admin,Partner,User")]
@@ -38,11 +39,8 @@ namespace Soccer_Care.Controllers
         }
         [Authorize(Roles = "Admin,Partner,User")]
         [HttpPost]
-        public IActionResult DatSanConfirm(String id, String emailUser, String Username, String SDT, String BeginTime, DateTime Date)
+        public IActionResult DatSanConfirm(String id, String emailUser, String Username, String IDOwner,String SDT, String BeginTime, DateTime Date, String idParentField)
         {
-
-            /*            TimeSpan end = DateTime.Parse(BeginTime).AddHours(1).AddMinutes(30).TimeOfDay;
-                        TimeSpan beforeBegin = DateTime.Parse(BeginTime).AddHours(-1).AddMinutes(-30).TimeOfDay;*/
             TimeSpan timeCurrent = DateTime.Parse(BeginTime).TimeOfDay;
             var getIDOrder = _context.OrderField.Where(i => i.IDFootballField == id).Select(i => i.IDOrder).ToList();
             if (getIDOrder != null) {
@@ -64,9 +62,12 @@ namespace Soccer_Care.Controllers
             }
             OrderFieldModel order = new OrderFieldModel();
             order.IDOrder = Guid.NewGuid().ToString();
-            order.IDFootballField = id;
+            order.IDFootballField = idParentField;
             order.Username = Username;
+            order.IDOwner = IDOwner;
             order.SoDienThoai = SDT;
+            order.IDChildField = id;
+
 
             DetailsOrderModel details = new DetailsOrderModel();
             details.IDOrder = order.IDOrder;
@@ -74,10 +75,13 @@ namespace Soccer_Care.Controllers
             details.StartTime = BeginTime; 
             details.DateTime = Date;
 
+
+
             HistoryOrderModel history = new HistoryOrderModel();
-            history.IDFootballField = id;
+            history.IDFootballField = idParentField;
             history.Username = Username;
             history.IDHistory = Guid.NewGuid().ToString();
+            history.IDUser = _userManager.FindByNameAsync(User.Identity.Name).Result.Id;
 
             _context.OrderField.Add(order);
             _context.DetailsOrder.Add(details);

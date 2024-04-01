@@ -118,10 +118,15 @@ namespace Soccer_Care.Areas.Identity.Pages.Account
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 var getRole = await _userManager.FindByEmailAsync(Input.Email);
-                var isAdmin = await _userManager.IsInRoleAsync(getRole,"Admin");
-                var isPartner = await _userManager.IsInRoleAsync(getRole, "Partner");
                 if (result.Succeeded)
                 {
+                    var isAdmin = false; 
+                    var isPartner = false;
+                    if (getRole != null)
+                    {
+                        isAdmin = await _userManager.IsInRoleAsync(getRole, "Admin");
+                        isPartner = await _userManager.IsInRoleAsync(getRole, "Partner");
+                    }
                     if (isAdmin || isPartner)
                     {
                         string who = "";

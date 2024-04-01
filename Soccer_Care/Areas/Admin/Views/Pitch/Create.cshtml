@@ -1,5 +1,7 @@
 ﻿@model Soccer_Care.Models.FootBallFieldModel
 @using Microsoft.AspNetCore.Mvc.Rendering;
+@using Microsoft.AspNetCore.Identity;
+
 
   <body>
     <div class="container tm-mt-big tm-mb-big">
@@ -60,7 +62,7 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="Username" class="control-label"></label>
-                            <input asp-for="Username" type="text" class="form-control" />
+                            <input asp-for="Username" value="@User.Identity.Name" type="text" readonly class="form-control" />
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
                         <div class="form-group mt-2">

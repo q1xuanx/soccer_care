@@ -8,8 +8,8 @@
     <div class="row tm-content-row">
         <div class="col-12 tm-block-col">
             <form asp-action="SearchUser" class="tm-bg-primary-dark tm-block tm-block-h-auto">
-                <h2 class="tm-block-title">List of Accounts</h2>
-                <p class="text-white">Accounts</p>
+                <h2 class="tm-block-title">Tìm User theo quyền </h2>
+                <p class="text-white">Vai trò</p>
                 <select name="IDRole" class="custom-select">
                     @foreach(IdentityRole role in ViewBag.ListType)
                     {
@@ -47,10 +47,10 @@
                                 <img src="/images/@item.AvatarURL" height="100" width="100">
                             </td>
                             <td>
-                                <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="" class="tm-product-delete-link">
+                                <a asp-action="Delete" asp-controller="Pitch" asp-area="Admin" asp-route-id="@item.Id" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
-                                <a asp-area="Admin" asp-controller="ManageUser" asp-action="EditUser" asp-route-username="" class="tm-product-delete-link">
+                                <a asp-area="Admin" asp-controller="ManageUser" asp-action="EditUser" asp-route-id="@item.Id" class="tm-product-delete-link">
                                     <i class="far fa-edit tm-product-delete-icon"></i>
                                 </a>
                             </td>

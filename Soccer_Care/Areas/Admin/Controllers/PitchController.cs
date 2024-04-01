@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
@@ -16,10 +17,11 @@ namespace Soccer_Care.Areas.Admin.Controllers
     {
 
         private readonly SoccerCareDbContext _context;
-
-        public PitchController(SoccerCareDbContext context)
+        private readonly UserManager<UserModel> _userManager;
+        public PitchController(SoccerCareDbContext context, UserManager<UserModel> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -39,6 +41,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
         public async Task<IActionResult> Create(FootBallFieldModel football, string city, string district, string street)
         {
             string address = street + "," + district + "," + city;
+            football.IDUserOwner = _userManager.FindByEmailAsync(football.Username).Result.Id;
             football.Address = address;
             football.IDFootBallField = Guid.NewGuid().ToString();
             if(!ModelState.IsValid)

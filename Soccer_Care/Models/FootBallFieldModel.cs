@@ -29,8 +29,8 @@ namespace Soccer_Care.Models
 
         //Thêm khóa ngoại
         public string Username { get; set; }
-
-        [ForeignKey("Username")]
+        public string IDUserOwner { get; set; }
+        [ForeignKey("IDUserOwner")]
         public UserModel User { get; set; }
 
     }

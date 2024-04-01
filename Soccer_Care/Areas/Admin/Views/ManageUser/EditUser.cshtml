@@ -1,4 +1,5 @@
-﻿@model Soccer_Care.Models.UserModel
+﻿@using Microsoft.AspNetCore.Identity;
+@model Soccer_Care.Models.UserModel
 
 @{
     ViewData["Title"] = "EditUser";
@@ -15,10 +16,27 @@
                 </div>
                 <form asp-action="ConfirmEditUser" method="post" enctype="multipart/form-data" class="form-create flex-column d-flex gap-2">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    
+                    <div class="form-group">
+                        <input asp-for="Id" value="@Model.Id" hidden class="form-control" />
+                        <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="PasswordHash" value="@Model.PasswordHash" hidden class="form-control" />
+                        <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="UserName" class="control-label"></label>
+                        <input asp-for="UserName" value="@Model.UserName" class="form-control" readonly />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FullName" class="control-label"></label>
+                        <input asp-for="FullName" value="@Model.FullName" class="form-control" readonly />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
                     <div class="form-group">
                         <label asp-for="PhoneNumber" class="control-label"></label>
-                        <input asp-for="PhoneNumber" class="form-control" />
+                        <input asp-for="PhoneNumber" value="@Model.PhoneNumber" class="form-control"/>
                         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -37,7 +55,20 @@
                     </div>
 
                     <div class="form-group">
-                        
+                        <label name="Role" class="control-label"></label>
+                        <select name="Role" class="form-control">
+                            @foreach (IdentityRole role in ViewBag.ListRole)
+                            {
+                                if (role.Name.Equals(ViewBag.CurrentRole))
+                                {
+                                    <option value="@role.Name" selected>@role.Name</option>
+                                }
+                                else
+                                {
+                                    <option value="@role.Name">@role.Name</option>
+                                }
+                            }
+                        </select>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Save" class="btn btn-primary" />

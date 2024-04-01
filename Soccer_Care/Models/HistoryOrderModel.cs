@@ -9,8 +9,9 @@ namespace Soccer_Care.Models
         public string IDHistory { get; set; }
         public string Username { get; set; }
         public string IDFootballField { get;set; }
-
-        [ForeignKey("Username")]
+        
+        public string IDUser { get; set; }
+        [ForeignKey("IDUser")]
         public UserModel User { get; set; }
         [ForeignKey("IDFootballField")]
         public FootBallFieldModel FootBall { get; set; }

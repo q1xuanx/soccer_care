@@ -22,7 +22,12 @@ namespace Soccer_Care.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var find = _context.DetailsOrder.ToList();
+            foreach(DetailsOrderModel details in find)
+            {
+                details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+            }
+            return View(find);
         }
         public IActionResult ManagePitch()
         {

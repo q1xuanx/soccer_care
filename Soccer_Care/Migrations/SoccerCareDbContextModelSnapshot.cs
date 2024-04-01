@@ -238,17 +238,21 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IDUserOwner")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IDFootBallField");
 
-                    b.HasIndex("Username");
+                    b.HasIndex("IDUserOwner");
 
                     b.ToTable("FootBallFields");
                 });
@@ -262,15 +266,19 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("IDUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IDHistory");
 
                     b.HasIndex("IDFootballField");
 
-                    b.HasIndex("Username");
+                    b.HasIndex("IDUser");
 
                     b.ToTable("HistoryOrders");
                 });
@@ -317,7 +325,15 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("IDOrder")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("IDChildField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("IDFootballField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IDOwner")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -327,13 +343,15 @@ namespace Soccer_Care.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IDOrder");
 
+                    b.HasIndex("IDChildField");
+
                     b.HasIndex("IDFootballField");
 
-                    b.HasIndex("Username");
+                    b.HasIndex("IDOwner");
 
                     b.ToTable("OrderField");
                 });
@@ -567,7 +585,7 @@ namespace Soccer_Care.Migrations
                 {
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("Username")
+                        .HasForeignKey("IDUserOwner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -584,7 +602,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("Username")
+                        .HasForeignKey("IDUser")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -614,6 +632,12 @@ namespace Soccer_Care.Migrations
 
             modelBuilder.Entity("Soccer_Care.Models.OrderFieldModel", b =>
                 {
+                    b.HasOne("Soccer_Care.Models.ListFieldModel", "ListField")
+                        .WithMany()
+                        .HasForeignKey("IDChildField")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
                         .WithMany()
                         .HasForeignKey("IDFootballField")
@@ -622,11 +646,13 @@ namespace Soccer_Care.Migrations
 
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("Username")
+                        .HasForeignKey("IDOwner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("FootBall");
+
+                    b.Navigation("ListField");
 
                     b.Navigation("User");
                 });
