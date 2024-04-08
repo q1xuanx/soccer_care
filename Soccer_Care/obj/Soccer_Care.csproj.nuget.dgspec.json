@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {}
+    "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {}
   },
   "projects": {
-    "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {
+    "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+        "projectUniqueName": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
         "projectName": "Soccer_Care",
-        "projectPath": "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+        "projectPath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\obj\\",
+        "outputPath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,9 +4,10 @@
 @{
     Layout = "_LayoutDS";
     var name = ViewData["name"];
+    var address = ViewData["address"];
 }
 
-<div style="background: url('/assets/images/background_ds.png') no-repeat center center fixed; width: 100%; height: 100%; margin: 0;
+@* <div style="background: url('/assets/images/background_ds.png') no-repeat center center fixed; width: 100%; height: 100%; margin: 0;
       padding: 0; height: 100vh">
     <div class="d-flex justify-content-center align-items-center h-100 flex-column gap-4">
         <div class=" p-5 w-50 text-center font-weight-bold" style="border-radius: 20px; background: #009432;">
@@ -25,4 +26,108 @@
         </div>
     </div>
 
+</div> *@
+
+<div class="mb-5">
+    <div class="d-flex justify-content-center align-items-center h-100 flex-column gap-4">
+        <div class=" p-5 text-center font-weight-bold" style="border-radius: 20px; ">
+            <h2 style="color: #000; font-family: 'Helvetica',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;">@name</h2>
+            <span class="fw-bold">
+               Địa chỉ: @address
+            </span>
+        </div>
+    </div>
+
 </div>
+
+@foreach (var item in Model)
+{
+    <div class="shadow p-3 mb-5 bg-body rounded">
+        <div class="d-flex p-4 rounded">
+            <div>
+                <img class="img-san" src="@item.HinhAnhSanBong" alt="sanbong" />
+            </div>
+            <div class="ms-5 d-flex align-items-center">
+                <div class="d-flex flex-column gap-3">
+                    <h3 class="">@item.NameField</h3>
+                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                    </ul>
+                    <span class="fw-bold">Price: @item.Gia</span>
+                    <span class="fw-bold">Mô tả: @item.DescriptionField</span>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-primary">Rating</button>
+                        <a asp-action="DatSan" asp-controller="PitchBall" asp-route-idfield="@item.IDField" class="btn btn-success">Đặt sân</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+}
+
+<div class="row d-flex w-main">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-0 border" >
+            <div class="card-body p-4">
+                <form class="form-outline mb-4 d-flex flex-column gap-2">
+                    <input type="text" id="addANote" class="form-control" placeholder="Type comment..." />
+                    <input type="text" id="addStar" class="form-control" placeholder="Nhập điểm số từ 1 - 5..." />
+                    <input type="submit" class="btn btn-primary" value="Comment" />
+                </form>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>Đây chỉ là comment test ( 5 sao )</p>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZPCIPbfHTGfZPJ561VYHgYJ_d-GHOrKvg9YJJ5ddZQ&s" alt="avatar" width="25"
+                                     height="25" />
+                                <div>
+                                    <p class="small mb-0 ms-2">Takis Tech</p>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@* <div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="d-flex p-4 rounded">
+        <div>
+            <img class="img-san" src="https://datsantructuyen.vn/images/products/2022/09/14/large/sanbong_hvtc_1663128292.jpeg" alt="sanbong" />
+        </div>
+        <div class="ms-5 d-flex align-items-center">
+            <div class="d-flex flex-column gap-3">
+                <h3 class="">Sân Bóng Đại Học Quốc Gia TP.HCM</h3>
+                <ul class="list-star d-flex gap-2 p-0 m-0">
+                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                </ul>
+                <span class="fw-bold">Price: 300K</span>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-primary">Rating</button>
+                    <button class="btn btn-success">Đặt sân</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div> *@

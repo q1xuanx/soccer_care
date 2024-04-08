@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xGrO7jnikDSPDBnxoRSHSDltl8UwYTwpJ/dAEqWfRYf+FLVtHM3gKCyzjQghKqQ/l6QAWJLAft+aU1i6DN30+g==",
+  "dgSpecHash": "otyaFgD17iMMQibJ84BcuGRNJSSg42ome8D6g5/qX4CVUuu+26YU75KVb7rNvMFZy8RQN6MacHsIryYMS+KA0g==",
   "success": true,
-  "projectFilePath": "E:\\HUTECH\\Nam3\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+  "projectFilePath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\blazored.toast\\4.2.0\\blazored.toast.4.2.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
