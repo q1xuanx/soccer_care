@@ -104,7 +104,6 @@ namespace Soccer_Care.Controllers
             }
             return View(hisOrder);
         }
-    }
 		public async Task<IActionResult> Vnpay(string id, string order, string detail)
 		{
             var orderModel = _context.OrderField.FirstOrDefault(o => o.IDOrder == order);
