@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "t9NgTAQZtYbxWYu47tzSyJ5N37lOR/Nsho+pu1GIhpwHryUcWJeqcn1oVPFiIWcEfCzu43a7AVuluM6GH2f6Lw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\Soccer_Care.csproj",
+=======
+  "dgSpecHash": "otyaFgD17iMMQibJ84BcuGRNJSSg42ome8D6g5/qX4CVUuu+26YU75KVb7rNvMFZy8RQN6MacHsIryYMS+KA0g==",
+  "success": true,
+  "projectFilePath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+>>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\blazored.toast\\4.2.0\\blazored.toast.4.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

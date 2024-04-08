@@ -12,8 +12,8 @@ using Soccer_Care.Models;
 namespace Soccer_Care.Migrations
 {
     [DbContext(typeof(SoccerCareDbContext))]
-    [Migration("20240401154238_v5")]
-    partial class v5
+    [Migration("20240408083503_InitWebDB")]
+    partial class InitWebDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -267,7 +267,7 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("IDHistory")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IDFootballField")
+                    b.Property<string>("IDDetails")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -281,7 +281,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasKey("IDHistory");
 
-                    b.HasIndex("IDFootballField");
+                    b.HasIndex("IDDetails");
 
                     b.HasIndex("IDUser");
 
@@ -338,15 +338,11 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IDOwner")
+                    b.Property<string>("IDUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("SoDienThoai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -356,7 +352,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasIndex("IDFootballField");
 
-                    b.HasIndex("IDOwner");
+                    b.HasIndex("IDUser");
 
                     b.ToTable("OrderField");
                 });
@@ -599,9 +595,9 @@ namespace Soccer_Care.Migrations
 
             modelBuilder.Entity("Soccer_Care.Models.HistoryOrderModel", b =>
                 {
-                    b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
+                    b.HasOne("Soccer_Care.Models.DetailsOrderModel", "DetailsOrder")
                         .WithMany()
-                        .HasForeignKey("IDFootballField")
+                        .HasForeignKey("IDDetails")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -611,7 +607,7 @@ namespace Soccer_Care.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("FootBall");
+                    b.Navigation("DetailsOrder");
 
                     b.Navigation("User");
                 });
@@ -651,7 +647,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("IDOwner")
+                        .HasForeignKey("IDUser")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -3,8 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 using Soccer_Care.Services;
-using System.Net.NetworkInformation;
-using WebApplication1.Services;
+
 
 namespace Soccer_Care.Controllers
 {
@@ -38,7 +37,9 @@ namespace Soccer_Care.Controllers
             var listField = _context.listFields.Where(l => l.IDFootballField == id).ToList();
             var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
             string namef = pitch.Name.ToString();
+            string addressf = pitch.Address.ToString();
             ViewData["name"] = namef;
+            ViewData["address"] = addressf;
             return View(listField);
         }
         [Authorize(Roles = "Admin,Partner,User")]

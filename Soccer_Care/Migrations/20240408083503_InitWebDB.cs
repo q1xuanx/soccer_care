@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Soccer_Care.Migrations
 {
-    public partial class renew : Migration
+    public partial class InitWebDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -220,35 +220,9 @@ namespace Soccer_Care.Migrations
                         column: x => x.Username,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_FieldLike_FootBallFields_IDFootballField",
-                        column: x => x.IDFootballField,
-                        principalTable: "FootBallFields",
-                        principalColumn: "IDFootBallField",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HistoryOrders",
-                columns: table => new
-                {
-                    IDHistory = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IDFootballField = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IDUser = table.Column<string>(type: "nvarchar(450)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HistoryOrders", x => x.IDHistory);
-                    table.ForeignKey(
-                        name: "FK_HistoryOrders_AspNetUsers_IDUser",
-                        column: x => x.IDUser,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_HistoryOrders_FootBallFields_IDFootballField",
                         column: x => x.IDFootballField,
                         principalTable: "FootBallFields",
                         principalColumn: "IDFootBallField",
@@ -302,7 +276,7 @@ namespace Soccer_Care.Migrations
                         column: x => x.Username,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Ratings_FootBallFields_IDField",
                         column: x => x.IDField,
@@ -317,20 +291,19 @@ namespace Soccer_Care.Migrations
                 {
                     IDOrder = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SoDienThoai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IDFootballField = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IDChildField = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IDOwner = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IDUser = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrderField", x => x.IDOrder);
                     table.ForeignKey(
-                        name: "FK_OrderField_AspNetUsers_IDOwner",
-                        column: x => x.IDOwner,
+                        name: "FK_OrderField_AspNetUsers_IDUser",
+                        column: x => x.IDUser,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_OrderField_FootBallFields_IDFootballField",
                         column: x => x.IDFootballField,
@@ -350,6 +323,7 @@ namespace Soccer_Care.Migrations
                 columns: table => new
                 {
                     IDDetails = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    isThanhToan = table.Column<int>(type: "int", nullable: false),
                     IDOrder = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     StartTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -362,7 +336,7 @@ namespace Soccer_Care.Migrations
                         column: x => x.IDOrder,
                         principalTable: "OrderField",
                         principalColumn: "IDOrder",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -382,7 +356,33 @@ namespace Soccer_Care.Migrations
                         column: x => x.IDOrderDetails,
                         principalTable: "DetailsOrder",
                         principalColumn: "IDDetails",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HistoryOrders",
+                columns: table => new
+                {
+                    IDHistory = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IDDetails = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IDUser = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HistoryOrders", x => x.IDHistory);
+                    table.ForeignKey(
+                        name: "FK_HistoryOrders_AspNetUsers_IDUser",
+                        column: x => x.IDUser,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_HistoryOrders_DetailsOrder_IDDetails",
+                        column: x => x.IDDetails,
+                        principalTable: "DetailsOrder",
+                        principalColumn: "IDDetails",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -450,9 +450,9 @@ namespace Soccer_Care.Migrations
                 column: "IDUserOwner");
 
             migrationBuilder.CreateIndex(
-                name: "IX_HistoryOrders_IDFootballField",
+                name: "IX_HistoryOrders_IDDetails",
                 table: "HistoryOrders",
-                column: "IDFootballField");
+                column: "IDDetails");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HistoryOrders_IDUser",
@@ -480,9 +480,9 @@ namespace Soccer_Care.Migrations
                 column: "IDFootballField");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderField_IDOwner",
+                name: "IX_OrderField_IDUser",
                 table: "OrderField",
-                column: "IDOwner");
+                column: "IDUser");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ratings_IDField",

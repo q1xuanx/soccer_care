@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\Soccer_Care.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\Soccer_Care.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\",
+=======
+    "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {}
+  },
+  "projects": {
+    "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+        "projectName": "Soccer_Care",
+        "projectPath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\Soccer_Care.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\",
+>>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
