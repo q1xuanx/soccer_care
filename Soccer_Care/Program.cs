@@ -2,6 +2,8 @@ using Blazored.Toast;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Soccer_Care.Models;
+using Soccer_Care.Services;
+using WebApplication1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +14,11 @@ builder.Services.AddDbContext<SoccerCareDbContext>(option => {
     option.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
  });
 
+builder.Services.AddSingleton<IVnPayService, VnPayService>();
+
 builder.Services.AddIdentity<UserModel, IdentityRole>().AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<SoccerCareDbContext>();
 builder.Services.AddRazorPages();
-builder.Services.AddSession(opt => opt.IdleTimeout = TimeSpan.FromHours(1));
+builder.Services.AddSession(opt => opt.IdleTimeout = TimeSpan.FromSeconds(30));
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 var app = builder.Build();
@@ -52,7 +56,7 @@ using (var scope = app.Services.CreateScope())
 app.MapAreaControllerRoute(
 name: "Admin",
 areaName: "Admin",
-pattern: "Admin/{controller=Admin}/{action=Index}/{id?}");
+pattern: "Admin/{controller=Admin}/{action=Index}/{id?}/{order?}/{detail?}");
 
 app.MapControllerRoute(
 name: "default",

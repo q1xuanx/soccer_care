@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
+using Soccer_Care.Services;
 using System.Net.NetworkInformation;
+using WebApplication1.Services;
 
 namespace Soccer_Care.Controllers
 {
@@ -12,11 +14,13 @@ namespace Soccer_Care.Controllers
         IHttpContextAccessor contextAccessor;
         private readonly SoccerCareDbContext _context;
         private readonly UserManager<UserModel> _userManager;
-        public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context, UserManager<UserModel> userManager) {
+		private readonly IVnPayService _vnPayService;
+		public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context, UserManager<UserModel> userManager, IVnPayService vnPayService) {
             this.contextAccessor = contextAccessor;
             this._context = context;
             this._userManager = userManager;
-        }
+			_vnPayService = vnPayService;
+		}
         public IActionResult Index()
         {
             return View();
@@ -88,7 +92,60 @@ namespace Soccer_Care.Controllers
             _context.HistoryOrders.Add(history);
 
             _context.SaveChanges();
-            return View("Thanks");
+            return View("Thanks", details);
         }
-    }
+
+		public async Task<IActionResult> Vnpay(string id, string order, string detail)
+		{
+            var orderModel = _context.OrderField.FirstOrDefault(o => o.IDOrder == order);
+            var childFiled = _context.listFields.FirstOrDefault(x => x.IDField == orderModel.IDChildField);
+            
+			var vnPayModel = new VnPaymentRequestModel
+			{
+				Amount = childFiled.Gia,
+				CreatedDate = DateTime.Now,
+				Description = $"Minh Chien 0392845906",
+				FullName = "Nguyen Minh Chien",
+				OrderId = new Random().Next(1000, 100000)
+			};
+
+			var detailModel = _context.DetailsOrder.FirstOrDefault(d => d.IDDetails == detail);
+			if(detailModel != null)
+            {
+				detailModel.isThanhToan = 1;
+			}
+		    _context.DetailsOrder.Update(detailModel);
+            _context.SaveChanges();
+			return Redirect(_vnPayService.CreatePaymentUrl(HttpContext, vnPayModel));
+
+		}
+		public IActionResult PaymentSuccess()
+		{
+			return View("ThanksPayment");
+		}
+
+		public IActionResult PaymentFail()
+		{
+			return View("PaymentFaild");
+		}
+
+
+		public IActionResult PaymentCallBack()
+		{
+			var response = _vnPayService.PaymentExecute(Request.Query);
+
+			if (response == null || response.VnPayResponseCode != "00")
+			{
+				TempData["Message"] = $"Lỗi thanh toán VN Pay: {response.VnPayResponseCode}";
+				return RedirectToAction("PaymentFail");
+			}
+
+
+			// Lưu đơn hàng vô database
+
+
+			TempData["Message"] = $"Thanh toán VNPay thành công";
+			return RedirectToAction("PaymentSuccess");
+		}
+	}
 }

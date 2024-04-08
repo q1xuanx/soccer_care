@@ -193,6 +193,9 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("isThanhToan")
+                        .HasColumnType("int");
+
                     b.HasKey("IDDetails");
 
                     b.HasIndex("IDOrder");
