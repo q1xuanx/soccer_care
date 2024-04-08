@@ -12,7 +12,7 @@
         <div class="d-flex flex-column gap-4">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="emailUser" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" name="emailUser" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" value="@User.Identity.Name">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="d-flex gap-4">
@@ -20,7 +20,6 @@
                     <label for="exampleInputPassword1">Email chủ sân</label>
                     <input type="text" name="Username" class="form-control" required id="exampleInputPassword1" placeholder="Username" value="@Model.FootBall.Username" readonly>
                 </div>
-                 <input type="text" name= "IDOwner" class="form-control" required id="exampleInputPassword1" value="@Model.FootBall.IDUserOwner" hidden>
                 <div class="form-group" style="flex: auto">
                     <label for="exampleInputPassword1">Số Điện Thoại</label>
                     <input type="text" name="SDT" class="form-control" required id="exampleInputPassword1" placeholder="Phone">

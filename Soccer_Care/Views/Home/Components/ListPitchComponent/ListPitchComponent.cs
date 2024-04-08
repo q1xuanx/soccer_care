@@ -16,6 +16,7 @@ namespace Soccer_Care.Views.Home.Components.ListPitchComponent
         public IViewComponentResult Invoke()
         {
             var pitch =  _context.FootBallFields.ToList();
+            ViewBag.ListPitch = _context.listFields.ToList();
             return View("ListPitchComponent", pitch);
         }
     }

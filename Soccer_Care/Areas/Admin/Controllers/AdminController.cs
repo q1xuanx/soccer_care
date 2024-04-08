@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Blazored.Toast.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Common;
 using Soccer_Care.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Soccer_Care.Controllers
 {
@@ -20,12 +24,48 @@ namespace Soccer_Care.Controllers
             _roleManager = roleManager;
         }
 
+        [HttpGet]
+        public async Task<List<object>> GetTotals()
+        {
+            var gerCurrUser = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            var getRoleOfUser = await _userManager.IsInRoleAsync(gerCurrUser, "Admin");
+            string currentDay = DateTime.Now.ToString("dd/MM/yyyy");
+            List<object> list = new List<object>();
+            list.Add(currentDay);
+            if (getRoleOfUser)
+            {
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today).Select(i => i.IDOrder).ToList();
+                double total = 0;
+                foreach (string order in listOrder)
+                {
+                    var findOrder = _context.OrderField.FirstOrDefault(i => i.IDOrder == order);
+                    findOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == findOrder.IDChildField);
+                    total += findOrder.ListField.Gia * 1.5;
+                }
+                list.Add(total);
+            }
+            else
+            {
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id).Select(i => i.IDOrder).ToList();
+                double total = 0;
+                foreach(string order in listOrder)
+                {
+                    var findOrder = _context.OrderField.FirstOrDefault(i => i.IDOrder == order);
+                    findOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == findOrder.IDChildField);
+                    total += findOrder.ListField.Gia * 1.5;
+                }
+                list.Add(total);
+            }
+
+            return list;
+        }
         public IActionResult Index()
         {
             var find = _context.DetailsOrder.ToList();
-            foreach(DetailsOrderModel details in find)
+            foreach (DetailsOrderModel details in find)
             {
                 details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
             }
             return View(find);
         }

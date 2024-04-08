@@ -8,12 +8,13 @@ namespace Soccer_Care.Models
         [Key]
         public string IDHistory { get; set; }
         public string Username { get; set; }
-        public string IDFootballField { get;set; }
+        public string IDDetails { get; set; }
         
         public string IDUser { get; set; }
         [ForeignKey("IDUser")]
         public UserModel User { get; set; }
-        [ForeignKey("IDFootballField")]
-        public FootBallFieldModel FootBall { get; set; }
+
+        [ForeignKey("IDDetails")]
+        public DetailsOrderModel DetailsOrder { get; set; } 
     }
 }

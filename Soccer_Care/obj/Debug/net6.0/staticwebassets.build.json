@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VLwqjW5THomMPINnzPMaod8ue0uoxRmfN55SbZqloSE=",
+  "Hash": "woJlW8/fm0TCgj1KhDnst1WpzSz9baHiSlLJbsKwZFI=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -3041,6 +3041,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\cc7b043d-ebfc-4809-951c-84cb3920bda5.jpeg",

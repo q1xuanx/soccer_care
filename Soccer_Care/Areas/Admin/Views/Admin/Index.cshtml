@@ -15,7 +15,7 @@
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
             <div class="tm-bg-primary-dark tm-block">
                 <h2 class="tm-block-title">Doanh thu</h2>
-                <canvas id="lineChart"></canvas>
+                <canvas id="myChart"></canvas>
             </div>
         </div>
         <div class="col-12 tm-block-col">
@@ -26,22 +26,27 @@
                         <tr>
                             <th scope="col">Mã đặt sân.</th>
                             <th scope="col">Số điện thoại</th>
+                            <th scope="col">Tên người đặt</th>
                             <th scope="col">Ngày đặt</th>
                             <th scope="col">Giờ Đặt</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                      
                             @foreach(DetailsOrderModel detailsOrderModel in Model){
+                            <tr>
                                 <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
                                 @if(detailsOrderModel.Order != null)
                                 {
                                     <td>@detailsOrderModel.Order.SoDienThoai</td>
                                 }
+                                <td>@detailsOrderModel.Order.User.FullName</td>
                                 <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
+                            
                                 <td>@detailsOrderModel.StartTime</td>
+                            </tr>
                             }
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -49,37 +54,38 @@
     </div>
 </div>
 
-<script src="/admin_folder/js/jquery-3.3.1.min.js"></script>
-<!-- https://jquery.com/download/ -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="/admin_folder/js/moment.min.js"></script>
-<!-- https://momentjs.com/ -->
-<script src="admin_folder/js/Chart.min.js"></script>
-<!-- http://www.chartjs.org/docs/latest/ -->
+<script src="/admin_folder/js/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/admin_folder/js/bootstrap.min.js"></script>
-<!-- https://getbootstrap.com/ -->
 <script src="/admin_folder/js/tooplate-scripts.js"></script>
-<script>
-    Chart.defaults.global.defaultFontColor = 'white';
-    let ctxLine,
-        ctxBar,
-        ctxPie,
-        optionsLine,
-        optionsBar,
-        optionsPie,
-        configLine,
-        configBar,
-        configPie,
-        lineChart;
-    barChart, pieChart;
-    // DOM is ready
-    $(function () {
-        drawLineChart(); // Line Chart
-        drawBarChart(); // Bar Chart
-        drawPieChart(); // Pie Chart
 
-        $(window).resize(function () {
-            updateLineChart();
-            updateBarChart();
+<script type="text/javascript">
+    $(document).ready(function(){ 
+        $.ajax({
+            type: "GET",
+            url: "/Admin/Admin/GetTotals",
+            data: "",
+            contextType: "aplication/json, charset=utf8",
+            dataType: "json",
+            success: OnSuccess,
         });
+        function OnSuccess(data) {
+            const barChart = document.getElementById('myChart');
+            var _data = data;
+            var _labels = _data[0];
+            var _chartData = _data[1];
+            var colors = ['Blue'];
+            new Chart(barChart, {
+                type: 'bar',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        label: 'Doanh thu', backgroundColor: colors, data: [_chartData], borderWidth: 1
+                    }] 
+                }
+            });
+        }
     })
 </script>

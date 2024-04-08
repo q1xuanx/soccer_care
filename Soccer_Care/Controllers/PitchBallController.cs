@@ -39,7 +39,7 @@ namespace Soccer_Care.Controllers
         }
         [Authorize(Roles = "Admin,Partner,User")]
         [HttpPost]
-        public IActionResult DatSanConfirm(String id, String emailUser, String Username, String IDOwner,String SDT, String BeginTime, DateTime Date, String idParentField)
+        public async Task<IActionResult> DatSanConfirm(String id, String emailUser, String Username,String SDT, String BeginTime, DateTime Date, String idParentField)
         {
             TimeSpan timeCurrent = DateTime.Parse(BeginTime).TimeOfDay;
             var getIDOrder = _context.OrderField.Where(i => i.IDFootballField == id).Select(i => i.IDOrder).ToList();
@@ -63,8 +63,7 @@ namespace Soccer_Care.Controllers
             OrderFieldModel order = new OrderFieldModel();
             order.IDOrder = Guid.NewGuid().ToString();
             order.IDFootballField = idParentField;
-            order.Username = Username;
-            order.IDOwner = IDOwner;
+            order.IDUser = _userManager.FindByNameAsync(emailUser).Result.Id;
             order.SoDienThoai = SDT;
             order.IDChildField = id;
 
@@ -78,7 +77,7 @@ namespace Soccer_Care.Controllers
 
 
             HistoryOrderModel history = new HistoryOrderModel();
-            history.IDFootballField = idParentField;
+            history.IDDetails = details.IDDetails;
             history.Username = Username;
             history.IDHistory = Guid.NewGuid().ToString();
             history.IDUser = _userManager.FindByNameAsync(User.Identity.Name).Result.Id;
@@ -89,6 +88,17 @@ namespace Soccer_Care.Controllers
 
             _context.SaveChanges();
             return View("Thanks");
+        }
+        public async Task<IActionResult> HistoryOrder(String name)
+        {
+            List<HistoryOrderModel> hisOrder = _context.HistoryOrders.Where(i => i.IDUser == name).ToList();
+            foreach(HistoryOrderModel his in hisOrder)
+            {
+                his.DetailsOrder = _context.DetailsOrder.Where(i => i.IDDetails.Equals(his.IDDetails)).FirstOrDefault();
+                his.DetailsOrder.Order = _context.OrderField.Where(i => i.IDOrder.Equals(his.DetailsOrder.IDOrder)).FirstOrDefault();
+                his.DetailsOrder.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == his.DetailsOrder.Order.IDFootballField);
+            }
+            return View(hisOrder);
         }
     }
 }

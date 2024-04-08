@@ -12,12 +12,11 @@ namespace Soccer_Care.Models
         public string IDOrder { get; set; } 
         [Required]
         public string SoDienThoai { get;set; }
-        public string Username { get;set; }
         public string IDFootballField { get; set; }
         public string IDChildField { get; set; }
-        public string IDOwner { get; set; }
+        public string IDUser { get; set; }
 
-        [ForeignKey("IDOwner")]
+        [ForeignKey("IDUser")]
         public UserModel User { get; set; }
 
         [ForeignKey("IDFootballField")]

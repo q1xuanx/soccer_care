@@ -1,0 +1,54 @@
+﻿@model List<Soccer_Care.Models.HistoryOrderModel>
+
+@{
+    ViewData["Title"] = "HistoryOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="top-text header-text">
+                    <h2>Lịch sử đặt sân</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sân
+            </th>
+            <th>
+                Ngày đặt
+            </th>
+            <th>
+                Thời gian
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailsOrder.Order.FootBall.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailsOrder.DateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailsOrder.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailsOrder.Order.FootBall.Address)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
