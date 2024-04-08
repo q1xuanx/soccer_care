@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Soccer_Care.Models;
 
@@ -11,9 +12,10 @@ using Soccer_Care.Models;
 namespace Soccer_Care.Migrations
 {
     [DbContext(typeof(SoccerCareDbContext))]
-    partial class SoccerCareDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240401154238_v5")]
+    partial class v5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -265,7 +267,7 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("IDHistory")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IDDetails")
+                    b.Property<string>("IDFootballField")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -279,7 +281,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasKey("IDHistory");
 
-                    b.HasIndex("IDDetails");
+                    b.HasIndex("IDFootballField");
 
                     b.HasIndex("IDUser");
 
@@ -336,11 +338,15 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IDUser")
+                    b.Property<string>("IDOwner")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("SoDienThoai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -350,7 +356,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasIndex("IDFootballField");
 
-                    b.HasIndex("IDUser");
+                    b.HasIndex("IDOwner");
 
                     b.ToTable("OrderField");
                 });
@@ -593,9 +599,9 @@ namespace Soccer_Care.Migrations
 
             modelBuilder.Entity("Soccer_Care.Models.HistoryOrderModel", b =>
                 {
-                    b.HasOne("Soccer_Care.Models.DetailsOrderModel", "DetailsOrder")
+                    b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
                         .WithMany()
-                        .HasForeignKey("IDDetails")
+                        .HasForeignKey("IDFootballField")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -605,7 +611,7 @@ namespace Soccer_Care.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("DetailsOrder");
+                    b.Navigation("FootBall");
 
                     b.Navigation("User");
                 });
@@ -645,7 +651,7 @@ namespace Soccer_Care.Migrations
 
                     b.HasOne("Soccer_Care.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("IDUser")
+                        .HasForeignKey("IDOwner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
