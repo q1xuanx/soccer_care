@@ -26,7 +26,7 @@ namespace Soccer_Care.Models
         {
             this.ListField = new List<ListFieldModel>();
         }
-
+        public int isDisable { get; set; }
         //Thêm khóa ngoại
         public string Username { get; set; }
         public string IDUserOwner { get; set; }

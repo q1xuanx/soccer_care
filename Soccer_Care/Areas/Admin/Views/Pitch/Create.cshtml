@@ -13,7 +13,7 @@
                 <h2 class="tm-block-title d-inline-block">Add Field Football</h2>
               </div>
             </div>
-                    <form asp-action="Create" class="form-create flex-column d-flex gap-2">
+                    <form asp-action="Create" class="form-create flex-column d-flex gap-2" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group">
                             <label asp-for="Name" class="control-label"></label>
@@ -56,8 +56,8 @@
                            
                         </div>
                         <div class="form-group">
-                            <label asp-for="HinhAnhDaiDien" class="control-label"></label>
-                            <input asp-for="HinhAnhDaiDien" class="form-control" />
+                            <label class="control-label">Hình Ảnh Đại Diện</label>
+                            <input name="ImageFile" accept="image/*" class="form-control" type="file" />
                             <span asp-validation-for="HinhAnhDaiDien" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -78,56 +78,83 @@
 <script>
         let x = 0;
         document.getElementById("addChildBtn").addEventListener("click", function() {
-        var container = document.getElementById("addFieldCotains");
-        
-        var inputName = document.createElement("input"); 
-        inputName.type = "text";
-        inputName.name = "ListField[" + x + "].NameField";
-        inputName.placeholder = "Tên sân";
-        inputName.className = "form-control child-name ml-3";
-        container.append(inputName);
-        container.append(document.createElement("br"));
+            var container = document.getElementById("addFieldCotains");
+            var group = document.createElement("div");
+            group.className = "field-group";
 
-        var inputDescrip = document.createElement("input");
-        inputDescrip.type = "text";
-        inputDescrip.name = "ListField[" + x + "].DescriptionField";
-        inputDescrip.placeholder = "Mô tả";
-        inputDescrip.className = "form-control child-name ml-3";
-        container.append(inputDescrip);
-        container.append(document.createElement("br"));
+            var inputName = document.createElement("input"); 
+            inputName.type = "text";
+            inputName.name = "ListField[" + x + "].NameField";
+            inputName.placeholder = "Tên sân";
+            inputName.className = "form-control child-name ml-3";
+            group.append(inputName);
+            group.append(document.createElement("br"));
 
-        var urlHinhAnh = document.createElement("input");
-        urlHinhAnh.type = "text";
-        urlHinhAnh.name = "ListField[" + x + "].HinhAnhSanBong";
-        urlHinhAnh.placeholder = "URL hình ảnh";
-        urlHinhAnh.className = "form-control child-name ml-3";
-        container.append(urlHinhAnh);
-        container.append(document.createElement("br"));
+            var inputDescrip = document.createElement("input");
+            inputDescrip.type = "text";
+            inputDescrip.name = "ListField[" + x + "].DescriptionField";
+            inputDescrip.placeholder = "Mô tả";
+            inputDescrip.className = "form-control child-name ml-3";
+            group.append(inputDescrip);
+            group.append(document.createElement("br"));
 
-        var price = document.createElement("input"); 
-        price.type = "number"
-        price.name = "ListField[" + x + "].Gia";
-        price.placeholder = "Giá";
-        price.className = "form-control child-name ml-3";
-        container.append(price);
-        container.append(document.createElement("br"));
+            var urlHinhAnh = document.createElement("input");
+            urlHinhAnh.type = "file";
+            urlHinhAnh.name = "ListField[" + x + "].FileImage";
+            urlHinhAnh.placeholder = "URL hình ảnh";
+            urlHinhAnh.className = "form-control child-name ml-3";
+            urlHinhAnh.accept = "image/*";
+            group.append(urlHinhAnh);
+            group.append(document.createElement("br"));
 
-        var select = document.createElement("select");
-        select.className = "form-control child-name ml-3";
-        select.name = "ListField[" + x + "].IDType";
-        select.style.height = "60px";
-        var arr = JSON.parse(@Html.Raw(Json.Serialize(ViewBag.TypeField)));
-        arr.forEach(function (i) {
-            var option = document.createElement("option"); 
-            option.value = i.IDType; 
-            option.text = i.NameType;
-            select.appendChild(option);
+            var price = document.createElement("input"); 
+            price.type = "number"
+            price.name = "ListField[" + x + "].Gia";
+            price.placeholder = "Giá";
+            price.className = "form-control child-name ml-3";
+            group.append(price);
+            group.append(document.createElement("br"));
+
+            var select = document.createElement("select");
+            select.className = "form-control child-name ml-3";
+            select.name = "ListField[" + x + "].IDType";
+            select.style.height = "60px";
+            var arr = JSON.parse(@Html.Raw(Json.Serialize(ViewBag.TypeField)));
+            arr.forEach(function (i) {
+                var option = document.createElement("option"); 
+                option.value = i.IDType; 
+                option.text = i.NameType;
+                select.appendChild(option);
+            });
+            group.append(select);
+
+            group.append(document.createElement("br"));
+
+            var removeBtn = document.createElement("button");
+            removeBtn.textContent = "Xóa";
+            removeBtn.className = "btn btn-danger ml-3";
+            removeBtn.type = "button";
+            removeBtn.addEventListener("click", function () {
+            container.removeChild(group);
+            var groups = document.getElementsByClassName("field-group");
+            for (var i = 0; i < groups.length; i++) {
+                var inputs = groups[i].getElementsByTagName("input");
+                var selects = groups[i].getElementsByTagName("select");
+                for (var j = 0; j < inputs.length; j++) {
+                    inputs[j].name = "ListField[" + i + "]." + inputs[j].name.split(".")[1];
+                }
+                for (var k = 0; k < selects.length; k++) {
+                    selects[k].name = "ListField[" + i + "]." + selects[k].name.split(".")[1];
+                }
+            }
+            x--;
         });
-        container.append(select);
-
-        container.append(document.createElement("br"));
-
+        group.appendChild(removeBtn);
+        group.append(document.createElement("br"));
+        container.appendChild(group);
         x++;
     });
 </script>
+
+
 

@@ -253,6 +253,9 @@ namespace Soccer_Care.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("isDisable")
+                        .HasColumnType("int");
+
                     b.HasKey("IDFootBallField");
 
                     b.HasIndex("IDUserOwner");
@@ -313,6 +316,9 @@ namespace Soccer_Care.Migrations
                     b.Property<string>("NameField")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("isDisable")
+                        .HasColumnType("int");
 
                     b.HasKey("IDField");
 
@@ -659,7 +665,7 @@ namespace Soccer_Care.Migrations
             modelBuilder.Entity("Soccer_Care.Models.RatingModel", b =>
                 {
                     b.HasOne("Soccer_Care.Models.FootBallFieldModel", "FootBall")
-                        .WithMany()
+                        .WithMany("ratings")
                         .HasForeignKey("IDField")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -678,6 +684,8 @@ namespace Soccer_Care.Migrations
             modelBuilder.Entity("Soccer_Care.Models.FootBallFieldModel", b =>
                 {
                     b.Navigation("ListField");
+
+                    b.Navigation("ratings");
                 });
 #pragma warning restore 612, 618
         }

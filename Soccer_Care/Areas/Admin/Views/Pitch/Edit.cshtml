@@ -13,7 +13,7 @@
                             <h2 class="tm-block-title d-inline-block">Edit Field Football</h2>
                         </div>
                     </div>
-                    <form asp-action="Edit" class="form-create flex-column d-flex gap-2">
+                    <form asp-action="Edit" method="post" class="form-create flex-column d-flex gap-2" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <input asp-for="IDFootBallField" value="@Model.IDFootBallField" hidden />
                         <div class="form-group">
@@ -35,9 +35,8 @@
                         </div>
 
                         <div class="form-group">
-                            <img src="@Model.HinhAnhDaiDien" height="400" width="450" class="m-2" />
-                            <input asp-for="HinhAnhDaiDien" class="form-control"/>
-                            
+                            <img id="tempImg" src="/images/@Model.HinhAnhDaiDien" height="400" width="450" class="m-2" />
+                            <input type="file" accept="image/*" name="ImageFile" class="form-control" onchange="previewAvatar(this)" />
                         </div>
 
                         <div class="form-group">
@@ -71,7 +70,7 @@
                                     <td class="tm-product-name">@item.NameField</td>
                                     <td>@item.DescriptionField</td>
                                     <td>
-                                        <img src="@item.HinhAnhSanBong" height="150" width="130">
+                                        <img src="/images/@item.HinhAnhSanBong" height="150" width="130">
                                     </td>
                                     <td>
                                         @item.Gia
@@ -98,3 +97,29 @@
         </div>
     </div>
 </body>
+<script>
+    function previewAvatar(input) {
+        const preview = document.getElementById('tempImg');
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<script>
+    function previewAvatar(input) {
+        const preview = document.getElementById('tempImg1');
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

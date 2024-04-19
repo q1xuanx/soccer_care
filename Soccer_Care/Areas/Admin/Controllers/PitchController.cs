@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Newtonsoft.Json;
 using Soccer_Care.Models;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Security.Authentication;
 using static System.Reflection.Metadata.BlobBuilder;
@@ -18,10 +19,12 @@ namespace Soccer_Care.Areas.Admin.Controllers
 
         private readonly SoccerCareDbContext _context;
         private readonly UserManager<UserModel> _userManager;
-        public PitchController(SoccerCareDbContext context, UserManager<UserModel> userManager)
+        IWebHostEnvironment env;
+        public PitchController(SoccerCareDbContext context, UserManager<UserModel> userManager, IWebHostEnvironment env)
         {
             _context = context;
             _userManager = userManager;
+            this.env = env;
         }
 
         public IActionResult Index()
@@ -38,12 +41,26 @@ namespace Soccer_Care.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(FootBallFieldModel football, string city, string district, string street)
+        public async Task<IActionResult> Create(FootBallFieldModel football, string city, string district, string street, IFormFile ImageFile)
         {
             string address = street + "," + district + "," + city;
             football.IDUserOwner = _userManager.FindByEmailAsync(football.Username).Result.Id;
             football.Address = address;
             football.IDFootBallField = Guid.NewGuid().ToString();
+            if (ImageFile != null)
+            {
+                var folderPath = Path.Combine(env.WebRootPath, "images");
+                var getExtension = Path.GetExtension(ImageFile.FileName);
+                var ImagePath = Path.Combine(folderPath, football.IDFootBallField + getExtension);
+                using (var fileStream = new FileStream(ImagePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(fileStream);
+                    football.HinhAnhDaiDien = football.IDFootBallField + getExtension;
+                }
+            }else
+            {
+                football.HinhAnhDaiDien = "no_img";
+            }
             if(!ModelState.IsValid)
             {
                 float minPrice = 9999999;
@@ -51,6 +68,21 @@ namespace Soccer_Care.Areas.Admin.Controllers
                     list.IDField = Guid.NewGuid().ToString();
                     list.IDFootballField = football.IDFootBallField;
                     if (list.Gia < minPrice) minPrice = list.Gia;
+                    if (list.FileImage != null)
+                    {
+                        var FolderPath = Path.Combine(env.WebRootPath, "images");
+                        var GetExtension = Path.GetExtension(list.FileImage.FileName);
+                        var ImagePath = Path.Combine(FolderPath, list.IDField + GetExtension);
+                        using (var fileStream = new FileStream(ImagePath, FileMode.Create))
+                        {
+                            list.FileImage.CopyTo(fileStream);
+                            list.HinhAnhSanBong = list.IDField + GetExtension;
+                        }
+                    }
+                    else
+                    {
+                        list.HinhAnhSanBong = "no_img";
+                    }
                     _context.listFields.Add(list);                   
                 }
                 football.Gia = minPrice;
@@ -80,8 +112,8 @@ namespace Soccer_Care.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteConfirm(string id)
         {
             var pitch = await _context.FootBallFields.FindAsync(id);
-            _context.FootBallFields.Remove(pitch);
-            _context.listFields.RemoveRange(pitch.ListField);
+            pitch.isDisable = 1;
+            _context.FootBallFields.Update(pitch);
             await _context.SaveChangesAsync();
             return RedirectToAction("ManagePitch","Admin");
         }
@@ -104,11 +136,26 @@ namespace Soccer_Care.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(FootBallFieldModel footBall)
+        public ActionResult Edit(FootBallFieldModel footBall, IFormFile ImageFile)
         {
             try
             {
-                _context.FootBallFields.Update(footBall);
+                var editField = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == footBall.IDFootBallField);
+                if (ImageFile != null)
+                {
+                    var FolderPath = Path.Combine(env.WebRootPath, "images");
+                    var GetExtension = Path.GetExtension(ImageFile.FileName);
+                    var ImagePath = Path.Combine(FolderPath, editField.IDFootBallField + GetExtension);
+                    using (var fileStream = new FileStream(ImagePath, FileMode.Create))
+                    {
+                        ImageFile.CopyTo(fileStream);
+                        editField.HinhAnhDaiDien = editField.IDFootBallField + GetExtension;
+                    }
+                }
+                editField.Address = footBall.Address;
+                editField.Gia = footBall.Gia; 
+                editField.Name = footBall.Name;
+                _context.FootBallFields.Update(editField);
                 _context.SaveChanges();
                 return RedirectToAction("ManagePitch","Admin");
             }
@@ -117,7 +164,7 @@ namespace Soccer_Care.Areas.Admin.Controllers
                 return View();
             }
         }
-
+        //Mini field
         public IActionResult EditChildField(string id)
         {
             var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
@@ -126,9 +173,24 @@ namespace Soccer_Care.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult ConfirmEditChildField(ListFieldModel listField)
+        public IActionResult ConfirmEditChildField(ListFieldModel listField, IFormFile ImageFile)
         {
             TempData["EditSuccess"] = "Đã cập nhật thành công";
+            var getImg = _context.listFields.FirstOrDefault(i => i.IDField == listField.IDField);
+            if (ImageFile != null)
+            {
+                var FolderPath = Path.Combine(env.WebRootPath, "images");
+                var GetExtension = Path.GetExtension(ImageFile.FileName);
+                var ImagePath = Path.Combine(FolderPath, listField.IDField + GetExtension);
+                using (var fileStream = new FileStream(ImagePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(fileStream);
+                    listField.HinhAnhSanBong = listField.IDField + GetExtension;
+                }
+            }else
+            {
+                listField.HinhAnhSanBong = getImg.HinhAnhSanBong;
+            }
             _context.listFields.Update(listField);
             _context.SaveChangesAsync();
             return RedirectToAction("ManagePitch", "Admin", TempData["EditSuccess"]);
@@ -145,8 +207,8 @@ namespace Soccer_Care.Areas.Admin.Controllers
             var find = _context.listFields.FirstOrDefault(i => i.IDField == id);
             if (find != null)
             {
-                var findParent = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == find.IDFootballField);
-                _context.listFields.Remove(find);
+                find.isDisable = 1;
+                _context.listFields.Update(find);
                 _context.SaveChangesAsync();
                 return RedirectToAction("ManagePitch", "Admin", TempData["EditSuccess"]);
             }

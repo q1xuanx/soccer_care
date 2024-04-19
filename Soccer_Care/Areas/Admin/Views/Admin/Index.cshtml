@@ -14,7 +14,7 @@
     <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
             <div class="tm-bg-primary-dark tm-block">
-                <h2 class="tm-block-title">Doanh thu</h2>
+                <h2 class="tm-block-title">Doanh thu hôm nay</h2>
                 <canvas id="myChart"></canvas>
             </div>
         </div>
@@ -25,10 +25,12 @@
                     <thead>
                         <tr>
                             <th scope="col">Mã đặt sân.</th>
+                            <th scope="col">Tên Sân</th>
                             <th scope="col">Số điện thoại</th>
                             <th scope="col">Tên người đặt</th>
                             <th scope="col">Ngày đặt</th>
                             <th scope="col">Giờ Đặt</th>
+                            <th scope="col">Thanh Toán</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,17 +38,31 @@
                             @foreach(DetailsOrderModel detailsOrderModel in Model){
                             <tr>
                                 <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
+                                <td>@detailsOrderModel.Order.FootBall.Name | @detailsOrderModel.Order.ListField.NameField</td>
+                            
                                 @if(detailsOrderModel.Order != null)
                                 {
                                     <td>@detailsOrderModel.Order.SoDienThoai</td>
                                 }
                                 <td>@detailsOrderModel.Order.User.FullName</td>
                                 <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
-                            
                                 <td>@detailsOrderModel.StartTime</td>
-                            </tr>
+                                
+                                @if(detailsOrderModel.isThanhToan == 1){
+
+                                    <td>
+                                        <div class="tm-status-circle moving">
+                                        </div>Thanh Toán VNPAY
+                                    </td>
+                                }else
+                                {
+                                    <td>
+                                        <div class="tm-status-circle pending">
+                                        </div>Thanh Toán Tại Sân
+                                    </td>
+                                }
+                            </tr>   
                             }
-                        
                     </tbody>
                 </table>
             </div>

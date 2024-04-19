@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Soccer_Care.Models.FootBallFieldModel>
 @{
     int i = 0;
-    List<FieldLikeModel> userLike = ViewBag.ListFieldLike;
+    List<FieldLikeModel> userLike = ViewBag.ListFieldLike;    
 }
 
 <style>
@@ -55,13 +55,21 @@
                                                 <li>(@item.ratings.Count()) Đánh Giá</li>
                                                 <li>
                                                     <button type="submit" class="box-btn">
-                                                        @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                        @if (userLike != null)
                                                         {
-                                                            <input data-idField="@item.IDFootBallField" hidden />
-                                                            <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                            @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                            {
+                                                                <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
+                                                                <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
+                                                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                                            }
                                                         }else
                                                         {
-                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
                                                             <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
                                                         }
                                                     </button>
@@ -149,7 +157,7 @@
     $(function ($) {
         $(document).on('click', '.box-btn', function (event) {
             var boxBtn = $(this);
-            var idField = boxBtn.find("input[data-idField]").data('idField');
+            var idField = $(this).closest('li').find('.idFieldInput').data('idfield');
             $.ajax({
                 url: '/PitchBall/isLiked', 
                 type: 'GET', 
@@ -164,7 +172,11 @@
                     }
                 }, 
                 error: function (xhr) {
-                    alert("error");
+                    if (xhr.status === 401) {
+                        alert("Vui lòng đăng nhập để thực hiện chức năng");
+                    } else {
+                        alert("Error");
+                    }
                 }
             });
         });

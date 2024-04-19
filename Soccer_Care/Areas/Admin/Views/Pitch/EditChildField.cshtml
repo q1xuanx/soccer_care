@@ -7,7 +7,7 @@
                 <h5>Edit</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>  
-            <form asp-action="ConfirmEditChildField" method="post">
+            <form asp-action="ConfirmEditChildField" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <input asp-for="IDFootballField" value="@Model.IDFootballField" hidden/>
                     <div class="form-group">
@@ -36,8 +36,8 @@
                     <div class="form-group">
                         <label asp-for="HinhAnhSanBong" class="text-primary"></label>
                         <br />
-                        <img src="@Model.HinhAnhSanBong" width="300" />
-                        <input asp-for="HinhAnhSanBong" class="form-control" />
+                        <img id="tempImg1" src="/images/@Model.HinhAnhSanBong" width="300" />
+                        <input type="file" accept="image/*" name="ImageFile" class="form-control" onchange="previewAvatar(this)" />
                     </div>
                     <div class="form-group">
                         <label asp-for="IDType" class="text-primary"></label>

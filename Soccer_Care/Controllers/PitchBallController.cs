@@ -35,7 +35,7 @@ namespace Soccer_Care.Controllers
         [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DS(string id)
         {
-            var field= _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == id);
+            var field= _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == id && i.isDisable == 0);
             if (field != null)
             {
                 field.ListField = _context.listFields.Where(i => i.IDFootballField.Equals(field.IDFootBallField)).ToList();
@@ -177,6 +177,7 @@ namespace Soccer_Care.Controllers
             }
             return isValid;
         }
+        [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult AddComments(String message, int Points, String IDFootballField)
         {
             var idUser = _userManager.GetUserAsync(User).Result.Id;
@@ -198,6 +199,7 @@ namespace Soccer_Care.Controllers
             }
             return PartialView(getList.OrderByDescending(i => i.Diem).ToList());
         }
+        [Authorize(Roles = "Admin,Partner,User")]
         public bool isLiked(string idFootballField)
         {
             var getID = _userManager.GetUserAsync(HttpContext.User).Result.Id;

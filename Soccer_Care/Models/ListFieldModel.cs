@@ -10,10 +10,13 @@ namespace Soccer_Care.Models
         [Required]
         public string NameField { get; set; }
         [Required]   
-        public string DescriptionField { get; set; }    
+        public string DescriptionField { get; set; }
         [Required]
         [Display(Name = "Hình Ảnh")]
         public string HinhAnhSanBong { get; set; }
+        public int isDisable { get; set; }
+        [NotMapped]
+        public IFormFile? FileImage { get; set; }
         public float Gia { get; set; }
         //Add foreign key
         public string IDFootballField { get; set; }

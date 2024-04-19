@@ -34,19 +34,19 @@ namespace Soccer_Care.Controllers
             list.Add(currentDay);
             if (getRoleOfUser)
             {
-                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today).Select(i => i.IDOrder).ToList();
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.isThanhToan == 1).Select(i => i.IDOrder).ToList();
                 double total = 0;
                 foreach (string order in listOrder)
                 {
                     var findOrder = _context.OrderField.FirstOrDefault(i => i.IDOrder == order);
-                    findOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == findOrder.IDChildField);
+                    findOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == findOrder.IDChildField );
                     total += findOrder.ListField.Gia * 1.5;
                 }
                 list.Add(total);
             }
             else
             {
-                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id).Select(i => i.IDOrder).ToList();
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id && i.isThanhToan == 1).Select(i => i.IDOrder).ToList();
                 double total = 0;
                 foreach(string order in listOrder)
                 {
@@ -56,7 +56,6 @@ namespace Soccer_Care.Controllers
                 }
                 list.Add(total);
             }
-
             return list;
         }
         public IActionResult Index()
@@ -66,12 +65,16 @@ namespace Soccer_Care.Controllers
             {
                 details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
                 details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
             }
+            
+            
             return View(find);
         }
         public IActionResult ManagePitch()
         {
-            var listPitch = _context.FootBallFields.ToList();
+            var listPitch = _context.FootBallFields.Where(i => i.isDisable == 0).ToList();
             return View(listPitch);
         }
 
