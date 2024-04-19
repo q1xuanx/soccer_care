@@ -30,10 +30,10 @@
 	</div>
 
 	<div class="mt-3 p-4">
-		<a asp-action="VnPay" asp-controller="PitchBall" asp-route-id="@Model.IDDetails" asp-route-order="@Model.IDOrder" asp-route-detail="@Model.IDDetails">Thanh toán VN PAY</a>
+		<a class="btn btn-success text-white" asp-action="VnPay" asp-controller="PitchBall" asp-route-id="@Model.IDDetails" asp-route-order="@Model.IDOrder" asp-route-detail="@Model.IDDetails">Thanh toán VN PAY</a>
 	</div>
 	<div class="mt-3 p4">
-		<a asp-action="Cod" asp-controller="PitchBall">Thanh toán tại sân</a>
+		<a class="btn btn-primary text-white" asp-action="Cod" asp-controller="PitchBall">Thanh toán tại sân</a>
 	</div>
 </body>
 </html>

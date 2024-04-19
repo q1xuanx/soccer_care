@@ -23,7 +23,22 @@ namespace Soccer_Care.Controllers
 		}
         public IActionResult Index()
         {
-            return View();
+            var pitch = _context.FootBallFields.ToList();
+            foreach (FootBallFieldModel field in pitch)
+            {
+                field.ListField = _context.listFields.Where(i => i.IDFootballField == field.IDFootBallField).ToList();
+                field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
+            }
+            var getUserId = "803c37cd-1073-4508-9398-0e2ecf49a142";
+            /*if (_userManager.GetUserAsync(HttpContext.User).Result.Id != null)
+            {
+                getUserId = _userManager.GetUserAsync(HttpContext.User).Result.Id;
+            }*/
+            if (getUserId != null)
+            {
+                ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId).ToList();
+            }
+            return View(pitch);
         }
         [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DatSan(string idField)
@@ -136,7 +151,12 @@ namespace Soccer_Care.Controllers
 			return Redirect(_vnPayService.CreatePaymentUrl(HttpContext, vnPayModel));
 
 		}
-		public IActionResult PaymentSuccess()
+
+        public async Task<IActionResult> Cod()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult PaymentSuccess()
 		{
 			return View("ThanksPayment");
 		}

@@ -15,7 +15,7 @@
             <div class="col-lg-8">
                 <div class="top-text header-text">
                     <h6>@Model.Name</h6>
-                    <h2>Address: @Model.Address</h2>
+                    <h2>Địa chỉ: @Model.Address</h2>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                         <li><i class="fa-solid fa-star icon-star"></i></li>
                         <li><i class="fa-solid fa-star icon-star"></i></li>
                     </ul>
-                    <span class="fw-bold">Price: @item.Gia đ</span>
+                    <span class="fw-bold">Giá: @item.Gia đ</span>
                     <span class="fw-bold">Mô tả: @item.DescriptionField</span>
                     <div class="d-flex gap-3"> 
                         <a asp-action="DatSan" asp-controller="PitchBall" asp-route-idfield="@item.IDField" class="btn btn-success">Đặt sân</a>
@@ -63,7 +63,7 @@
                                  src="/assets/images/black-logo.svg" alt="avatar" width="200"
                                  height="200" />
                             <div class="w-100">
-                                <h5>Add a comment</h5>
+                                <h5>Bình luận</h5>
                                 <select id="addStar" class="form-select">
                                     <option value="1">⭐</option>
                                     <option value="2">⭐⭐</option>
@@ -76,7 +76,7 @@
                                     <input id="idField" type="text" name="idField" value="@Model.IDFootBallField" hidden />
                                 </div>
                                 <div class="d-flex justify-content-between mt-3">
-                                    <input type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger" value="Send"/>
+                                    <input type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" value="Gửi"/>
                                 </div>
                             </div>
                         </form>
