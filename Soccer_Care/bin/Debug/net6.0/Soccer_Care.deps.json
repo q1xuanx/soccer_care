@@ -18,7 +18,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.28",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.28",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.28",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "Moment.js": "2.30.1"
         },
         "runtime": {
           "Soccer_Care.dll": {}
@@ -1704,6 +1705,7 @@
           }
         }
       },
+      "Moment.js/2.30.1": {},
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -3842,6 +3844,13 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "Moment.js/2.30.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LIrDTazK51DhrqkMOy97PyS1jWsUHAhaIUYgB4aQTLLUxizMjk0QRltNb535Qgs5IzN/uv1SbFr/qv3PFnkTOA==",
+      "path": "moment.js/2.30.1",
+      "hashPath": "moment.js.2.30.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

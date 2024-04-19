@@ -1020,14 +1020,15 @@ Recent Listing
 
 .recent-listing .item .right-content {
   display: inline-block;
-  padding: 60px;
+  padding: 40px;
 }
 
 .recent-listing .item .right-content ul.rate {
   position: absolute;
   right: 60px;
-  top: 60px;
+  top: 20px;
 }
+
 
 .recent-listing .item .right-content ul.rate li {
   display: inline-block;

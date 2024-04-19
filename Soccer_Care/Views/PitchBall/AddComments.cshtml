@@ -1,0 +1,95 @@
+﻿@model List<RatingModel>
+<hr />
+@foreach (RatingModel ratingModel in Model)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="d-flex flex-start">
+                <img class=" rounded-circle  shadow-1-strong me-3" src="/images/@ratingModel.User.AvatarURL" alt="avatar" style="height: 70px; width: 70px;" />
+                <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="text-primary fw-bold mb-0">
+                            @ratingModel.User.FullName
+                            <span class="text-dark ms-2">@ratingModel.Comments</span>
+                        </h6>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="small mb-0" style="color: #aaa;">
+                            <input data-user="@ratingModel.User.Id" hidden />
+                            <input data-comment="@ratingModel.IDDanhGia" hidden />
+                            <input data-field="@ratingModel.IDField" hidden />
+                            <a class="removeComment link-grey">Remove</a>
+                        </p>
+                        <div class="d-flex flex-row">
+                            @if (ratingModel.Diem == 1)
+                            {
+                                <ul class="list-star d-flex gap-2 p-0 m-0">
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                </ul>
+                            }
+                            else if (ratingModel.Diem == 2)
+                            {
+                                <ul class="list-star d-flex gap-2 p-0 m-0">
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                </ul>
+                            }
+                            else if (ratingModel.Diem == 3)
+                            {
+                                <ul class="list-star d-flex gap-2 p-0 m-0">
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                </ul>
+                            }
+                            else if (ratingModel.Diem == 4)
+                            {
+                                <ul class="list-star d-flex gap-2 p-0 m-0">
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                </ul>
+                            }
+                            else
+                            {
+                                <ul class="list-star d-flex gap-2 p-0 m-0">
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                    <li><i class="fa-solid fa-star icon-star"></i></li>
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/js/owl-carousel.js"></script>
+<script src="/assets/js/animation.js"></script>
+<script src="/assets/js/imagesloaded.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript">
+    $(".removeComment").on('click', function (event) {
+        var getID = $(this).siblings("input[data-user]").data('user');
+        var getIDComments = $(this).siblings("input[data-comment]").data('comment');
+        var getIDFootballField = $(this).siblings("input[data-field]").data('field');
+        $.ajax({
+            url: '/PitchBall/removeComment',
+            type: 'GET',
+            data: { idUser: getID, idDanhGia: getIDComments, IDFootballField: getIDFootballField },
+            success: function (data) {
+                $("#Comments").html(data);
+                toastr.success("Đã xóa đánh giá");
+            },
+            error: function (xhr) {
+                alert("error");
+            }
+        });
+    });
+</script>

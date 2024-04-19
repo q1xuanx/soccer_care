@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Humanizer.Bytes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
@@ -34,13 +35,19 @@ namespace Soccer_Care.Controllers
         [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DS(string id)
         {
-            var listField = _context.listFields.Where(l => l.IDFootballField == id).ToList();
-            var pitch = _context.FootBallFields.FirstOrDefault(f => f.IDFootBallField == id);
-            string namef = pitch.Name.ToString();
-            string addressf = pitch.Address.ToString();
-            ViewData["name"] = namef;
-            ViewData["address"] = addressf;
-            return View(listField);
+            var field= _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == id);
+            if (field != null)
+            {
+                field.ListField = _context.listFields.Where(i => i.IDFootballField.Equals(field.IDFootBallField)).ToList();
+                field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
+                foreach(RatingModel rate in field.ratings)
+                {
+                    rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
+                }
+                field.ratings.OrderByDescending(i => i.Diem).ToList();
+                return View(field);
+            }
+            return NotFound();
         }
         [Authorize(Roles = "Admin,Partner,User")]
         [HttpPost]
@@ -149,13 +156,133 @@ namespace Soccer_Care.Controllers
 				TempData["Message"] = $"Lỗi thanh toán VN Pay: {response.VnPayResponseCode}";
 				return RedirectToAction("PaymentFail");
 			}
-
-
 			// Lưu đơn hàng vô database
-
-
 			TempData["Message"] = $"Thanh toán VNPay thành công";
 			return RedirectToAction("PaymentSuccess");
 		}
-	}
+        public bool CheckIsValid(String IDFootballField)
+        {
+            var idUser = _userManager.GetUserAsync(User).Result.Id;
+            var isOrder = _context.HistoryOrders.Where(i => i.IDUser == idUser).Select(i => i.IDDetails).ToList();
+            bool isValid = false;
+            foreach (String dom in isOrder)
+            {
+                var getIDOrder = _context.DetailsOrder.FirstOrDefault(i => i.IDDetails == dom).IDOrder;
+                var check = _context.OrderField.FirstOrDefault(i => i.IDOrder == getIDOrder).IDFootballField;
+                if (check == IDFootballField)
+                {
+                    isValid = true;
+                    break;
+                }
+            }
+            return isValid;
+        }
+        public IActionResult AddComments(String message, int Points, String IDFootballField)
+        {
+            var idUser = _userManager.GetUserAsync(User).Result.Id;
+            
+            RatingModel ratingModel = new RatingModel()
+            {
+                IDDanhGia = Guid.NewGuid().ToString(),
+                Diem = Points,
+                Comments = message,
+                Username = idUser,
+                IDField = IDFootballField
+            };
+            _context.Ratings.Add(ratingModel);
+            _context.SaveChanges();
+            var getList = _context.Ratings.Where(i => i.IDField == IDFootballField).ToList();
+            foreach (RatingModel rate in getList)
+            {
+                rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
+            }
+            return PartialView(getList.OrderByDescending(i => i.Diem).ToList());
+        }
+        public bool isLiked(string idFootballField)
+        {
+            var getID = _userManager.GetUserAsync(HttpContext.User).Result.Id;
+            FieldLikeModel isValid = _context.FieldLike.FirstOrDefault(i => i.IDFootballField.Equals(idFootballField) && i.Username.Equals(getID));
+            if (isValid == null)
+            {
+                _context.FieldLike.Add(new FieldLikeModel()
+                {
+                    IDFieldLike = Guid.NewGuid().ToString(),
+                    IDFootballField = idFootballField,
+                    Username = getID
+                });
+                _context.SaveChanges();
+                return true;
+            }
+            _context.FieldLike.Remove(isValid);
+            _context.SaveChanges();
+            return false;
+        }
+        public IActionResult removeComment(string idUser, string idDanhGia, string IDFootballField)
+        {
+            bool getRole = User.IsInRole("Admin");
+            bool getPartner = User.IsInRole("Partner");
+            if (getRole) {
+                var findComment = _context.Ratings.FirstOrDefault(r => r.IDDanhGia == idDanhGia);
+                if (findComment != null)
+                {
+                    _context.Ratings.Remove(findComment);
+                    _context.SaveChanges();
+                    var getList = _context.Ratings.Where(i => i.IDField == IDFootballField).ToList();
+                    foreach (RatingModel rate in getList)
+                    {
+                        rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
+                    }
+                    return PartialView("AddComments", getList.OrderByDescending(i => i.Diem).ToList());
+                }
+                else
+                {
+                    return Content("Comment không tồn tại");
+                }
+            }else if (getPartner)
+            {
+                var checkIsOwner = _context.FootBallFields.FirstOrDefault(i => i.IDUserOwner == idUser && i.IDFootBallField == IDFootballField);
+                if (checkIsOwner != null)
+                {
+                    var findComment = _context.Ratings.FirstOrDefault(r => r.IDDanhGia == idDanhGia);
+                    if (findComment != null)
+                    {
+                        _context.Ratings.Remove(findComment);
+                        _context.SaveChanges();
+                        var getList = _context.Ratings.Where(i => i.IDField == IDFootballField).ToList();
+                        foreach (RatingModel rate in getList)
+                        {
+                            rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
+                        }
+                        return PartialView("AddComments", getList.OrderByDescending(i => i.Diem).ToList());
+                    }
+                    else
+                    {
+                        return Content("Bạn không được xóa comment của người khác");
+                    }
+                }else
+                {
+                    return Content("Comment không tồn tại");
+                }
+            }
+            else
+            {
+                var getId = _userManager.GetUserAsync(HttpContext.User).Result.Id;
+                var findComments = _context.Ratings.FirstOrDefault(i => i.Username == getId && i.IDDanhGia == idDanhGia);
+                if (findComments != null)
+                {
+                    _context.Ratings.Remove(findComments);
+                    _context.SaveChanges();
+                    var getList = _context.Ratings.Where(i => i.IDField == IDFootballField).ToList();
+                    foreach (RatingModel rate in getList)
+                    {
+                        rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
+                    }
+                    return PartialView("AddComments", getList.OrderByDescending(i => i.Diem).ToList());
+                }else
+                {
+                    return Content("Bạn không được xóa comment của người khác");
+                }
+            }
+        }
+    }
 }

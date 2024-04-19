@@ -33,5 +33,7 @@ namespace Soccer_Care.Models
         [ForeignKey("IDUserOwner")]
         public UserModel User { get; set; }
 
+        public List<RatingModel> ratings { get; set; }
+
     }
 }

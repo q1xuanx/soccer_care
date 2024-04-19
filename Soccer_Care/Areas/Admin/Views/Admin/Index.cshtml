@@ -40,7 +40,7 @@
                                 {
                                     <td>@detailsOrderModel.Order.SoDienThoai</td>
                                 }
-                                @* <td>@detailsOrderModel.Order.User.FullName</td> *@
+                                <td>@detailsOrderModel.Order.User.FullName</td>
                                 <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
                             
                                 <td>@detailsOrderModel.StartTime</td>
@@ -82,7 +82,7 @@
                 data: {
                     labels: _labels,
                     datasets: [{
-                        label: 'Doanh thu', backgroundColor: colors, data: [_chartData], borderWidth: 1
+                        label: 'Doanh thu hôm nay', backgroundColor: colors, data: [_chartData], borderWidth: 2
                     }] 
                 }
             });

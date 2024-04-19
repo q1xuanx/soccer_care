@@ -1,7 +1,31 @@
 ﻿@model IEnumerable<Soccer_Care.Models.FootBallFieldModel>
 @{
     int i = 0;
+    List<FieldLikeModel> userLike = ViewBag.ListFieldLike;
 }
+
+<style>
+    .box-btn {
+        float: left;
+        background: transparent;
+        font-size: 35px;
+        color: #4D4E56;
+        font-weight: 200;
+        cursor: pointer;
+        border-radius: 2px;
+        line-height: 0.5;
+        border: none;
+        outline: none;
+    }
+
+    .glyphicon {
+        transition: color .3s linear;
+    }
+
+    .box-btn .red {
+        color: red;
+    }
+</style>
 
 <div class="recent-listing">
     <div class="container">
@@ -26,28 +50,34 @@
                                         </div>
                                         <div class="right-content align-self-center">
                                             <a href="#"><h4>@item.Name</h4></a>
-                                            <h6>by: @item.Username</h6>
+                                            <h6><strong>Chủ sân</strong>: @item.Username</h6>
                                             <ul class="rate">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li>(18) Reviews</li>
+                                                <li>(@item.ratings.Count()) Đánh Giá</li>
+                                                <li>
+                                                    <button type="submit" class="box-btn">
+                                                        @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                        {
+                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                        }else
+                                                        {
+                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                                        }
+                                                    </button>
+                                                </li>
                                             </ul>
+                                            
                                             <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
                                     
                                             <ul class="info">
                                                 @{
-                                                    List<ListFieldModel> list = ViewBag.ListPitch;
+                                                    List<ListFieldModel> list = item.ListField;
                                                     int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
                                                     int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
-                                                    int count11 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "4").Count();
                                                 }
-                                                <li>Số sân 5: @count5</li>
-                                                <li>Số sân 7: @count7</li>
-                                                <li>Số sân 11: @count11</li>
-
+                                                <li><img src="/assets/images/listing-icon-02.png" alt=""/>Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt=""/>Số sân 7: @count7</li>
                                             </ul>
                                             <div class="main-white-button">
                                                 <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt ngay</a>
@@ -78,18 +108,21 @@
                                             <a href="#"><h4>@item.Name</h4></a>
                                             <h6>by: @item.Username</h6>
                                             <ul class="rate">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li>(18) Reviews</li>
+                                                <li>(@item.ratings.Count()) Đánh Giá</li>
                                             </ul>
+                                            <button type="submit" class="box-btn">
+                                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                            </button>
                                             <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
-                                         
+
                                             <ul class="info">
-                                                <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Sân 5</li>
-                                                <li><img src="/assets/images/listing-icon-03.png" alt=""> 2 Sân 7</li>
+                                                @{
+                                                    List<ListFieldModel> list = item.ListField;
+                                                    int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
+                                                    int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
+                                                }
+                                                <li><img src="/assets/images/listing-icon-02.png" alt="" />Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt="" />Số sân 7: @count7</li>
                                             </ul>
                                             <div class="main-white-button">
                                                 <a href="contact.html"><i class="fa fa-eye"></i> Đặt ngay</a>
@@ -109,3 +142,31 @@
         </div>
     </div>
 </div>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript">
+    $(function ($) {
+        $(document).on('click', '.box-btn', function (event) {
+            var boxBtn = $(this);
+            var idField = boxBtn.find("input[data-idField]").data('idField');
+            $.ajax({
+                url: '/PitchBall/isLiked', 
+                type: 'GET', 
+                data: {idFootballField : idField}, 
+                success: function(result) {
+                    if (result) {
+                        boxBtn.find('.glyphicon').removeClass('glyphicon-heart-empty').addClass('glyphicon-heart red');
+                        toastr.success("Đã Yêu Thích");
+                    }else {
+                        boxBtn.find('.glyphicon').removeClass('glyphicon-heart red').addClass('glyphicon-heart-empty');
+                        toastr.error("Đã Hủy Yêu Thích");
+                    }
+                }, 
+                error: function (xhr) {
+                    alert("error");
+                }
+            });
+        });
+    });
+</script>

@@ -62,11 +62,11 @@ namespace Soccer_Care.Controllers
         public IActionResult Index()
         {
             var find = _context.DetailsOrder.ToList();
-            /*foreach (DetailsOrderModel details in find)
+            foreach (DetailsOrderModel details in find)
             {
                 details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
                 details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
-            }*/
+            }
             return View(find);
         }
         public IActionResult ManagePitch()

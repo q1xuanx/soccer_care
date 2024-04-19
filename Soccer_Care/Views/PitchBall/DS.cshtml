@@ -1,46 +1,29 @@
-﻿@model List<Soccer_Care.Models.ListFieldModel>
+﻿@model FootBallFieldModel
 @inject IHttpContextAccessor accessor
 
-@{
-    Layout = "_LayoutDS";
-    var name = ViewData["name"];
-    var address = ViewData["address"];
-}
 
-@* <div style="background: url('/assets/images/background_ds.png') no-repeat center center fixed; width: 100%; height: 100%; margin: 0;
-      padding: 0; height: 100vh">
-    <div class="d-flex justify-content-center align-items-center h-100 flex-column gap-4">
-        <div class=" p-5 w-50 text-center font-weight-bold" style="border-radius: 20px; background: #009432;">
-            <h2>@name</h2>
-        </div>
-        <div class="d-flex flex-column gap-4">
-            @foreach(var item in Model)
-            {
-                <div class="d-flex gap-4">
-                    <span class=" d-block px-lg-5 py-lg-4  text-center font-weight-bold" style="border-radius: 20px; background: #009432;">@item.NameField</span>
-                    <a asp-action="DatSan" asp-controller="PitchBall" asp-route-idfield = "@item.IDField" class=" d-block px-lg-5 py-lg-4  text-center font-weight-bold text-decoration-none text-black" style="border-radius: 20px; background: #009432;">Đặt sân</a>
+<style>
+    .page-heading{
+        background-image: url(@Model.HinhAnhDaiDien);
+    }
+
+</style>
+
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="top-text header-text">
+                    <h6>@Model.Name</h6>
+                    <h2>Address: @Model.Address</h2>
                 </div>
-            }
-            
-            
+            </div>
         </div>
     </div>
-
-</div> *@
-
-<div class="mb-5">
-    <div class="d-flex justify-content-center align-items-center h-100 flex-column gap-4">
-        <div class=" p-5 text-center font-weight-bold" style="border-radius: 20px; ">
-            <h2 style="color: #000; font-family: 'Helvetica',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;">@name</h2>
-            <span class="fw-bold">
-               Địa chỉ: @address
-            </span>
-        </div>
-    </div>
-
 </div>
 
-@foreach (var item in Model)
+
+@foreach (var item in Model.ListField)
 {
     <div class="shadow p-3 mb-5 bg-body rounded">
         <div class="d-flex p-4 rounded">
@@ -57,77 +40,200 @@
                         <li><i class="fa-solid fa-star icon-star"></i></li>
                         <li><i class="fa-solid fa-star icon-star"></i></li>
                     </ul>
-                    <span class="fw-bold">Price: @item.Gia</span>
+                    <span class="fw-bold">Price: @item.Gia đ</span>
                     <span class="fw-bold">Mô tả: @item.DescriptionField</span>
-                    <div class="d-flex gap-3">
-                        <button class="btn btn-primary">Rating</button>
+                    <div class="d-flex gap-3"> 
                         <a asp-action="DatSan" asp-controller="PitchBall" asp-route-idfield="@item.IDField" class="btn btn-success">Đặt sân</a>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 }
 
-<div class="row d-flex w-main">
-    <div class="col-md-8 col-lg-6">
-        <div class="card shadow-0 border" >
-            <div class="card-body p-4">
-                <form class="form-outline mb-4 d-flex flex-column gap-2">
-                    <input type="text" id="addANote" class="form-control" placeholder="Type comment..." />
-                    <input type="text" id="addStar" class="form-control" placeholder="Nhập điểm số từ 1 - 5..." />
-                    <input type="submit" class="btn btn-primary" value="Comment" />
-                </form>
 
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p>Đây chỉ là comment test ( 5 sao )</p>
-
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZPCIPbfHTGfZPJ561VYHgYJ_d-GHOrKvg9YJJ5ddZQ&s" alt="avatar" width="25"
-                                     height="25" />
-                                <div>
-                                    <p class="small mb-0 ms-2">Takis Tech</p>
-                                    
+<section style="background-color: white;">
+    <div class="container my-5 py-5 text-dark">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-6">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <form id="addComments" class="d-flex flex-start w-100">
+                            <img class="rounded-circle shadow-1-strong me-3"
+                                 src="/assets/images/black-logo.svg" alt="avatar" width="200"
+                                 height="200" />
+                            <div class="w-100">
+                                <h5>Add a comment</h5>
+                                <select id="addStar" class="form-select">
+                                    <option value="1">⭐</option>
+                                    <option value="2">⭐⭐</option>
+                                    <option value="3">⭐⭐⭐</option>
+                                    <option value="4">⭐⭐⭐⭐</option>
+                                    <option value="5">⭐⭐⭐⭐⭐</option>
+                                </select>
+                                <div data-mdb-input-init class="form-outline">
+                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                    <input id="idField" type="text" name="idField" value="@Model.IDFootBallField" hidden />
+                                </div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <input type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger" value="Send"/>
                                 </div>
                             </div>
-                            
-                        </div>
+                        </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-</div>
+</section>
 
-@* <div class="shadow p-3 mb-5 bg-body rounded">
-    <div class="d-flex p-4 rounded">
-        <div>
-            <img class="img-san" src="https://datsantructuyen.vn/images/products/2022/09/14/large/sanbong_hvtc_1663128292.jpeg" alt="sanbong" />
-        </div>
-        <div class="ms-5 d-flex align-items-center">
-            <div class="d-flex flex-column gap-3">
-                <h3 class="">Sân Bóng Đại Học Quốc Gia TP.HCM</h3>
-                <ul class="list-star d-flex gap-2 p-0 m-0">
-                    <li><i class="fa-solid fa-star icon-star"></i></li>
-                    <li><i class="fa-solid fa-star icon-star"></i></li>
-                    <li><i class="fa-solid fa-star icon-star"></i></li>
-                    <li><i class="fa-solid fa-star icon-star"></i></li>
-                    <li><i class="fa-solid fa-star icon-star"></i></li>
-                </ul>
-                <span class="fw-bold">Price: 300K</span>
-                <div class="d-flex gap-3">
-                    <button class="btn btn-primary">Rating</button>
-                    <button class="btn btn-success">Đặt sân</button>
+
+
+
+<section style="background-color: #f7f6f6;">
+    <div class="container my-5 py-5 text-dark">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="text-dark mb-0">Các Đánh Giá Về Sân</h4>
+                </div>
+                <div id="Comments">
+                    @foreach (RatingModel ratingModel in Model.ratings)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex flex-start">
+                                    <img class=" rounded-circle  shadow-1-strong me-3" src="/images/@ratingModel.User.AvatarURL" alt="avatar" style="height: 70px; width: 70px;" />
+                                    <div class="w-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="text-primary fw-bold mb-0">
+                                                @ratingModel.User.FullName
+                                                <span class="text-dark ms-2">@ratingModel.Comments</span>
+                                            </h6>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="small mb-0" style="color: #aaa;">
+                                                <input data-user="@ratingModel.User.Id" hidden />
+                                                <input data-comment="@ratingModel.IDDanhGia" hidden />
+                                                <input data-field="@ratingModel.IDField" hidden />
+                                                <a class="removeComment link-grey">Remove</a>
+                                            </p>
+                                            <div class="d-flex flex-row">
+                                                @if (ratingModel.Diem == 1)
+                                                {
+                                                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                    </ul>
+                                                }
+                                                else if (ratingModel.Diem == 2)
+                                                {
+                                                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                    </ul>
+                                                }
+                                                else if (ratingModel.Diem == 3)
+                                                {
+                                                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                    </ul>
+                                                }
+                                                else if (ratingModel.Diem == 4)
+                                                {
+                                                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                    </ul>
+                                                }
+                                                else
+                                                {
+                                                    <ul class="list-star d-flex gap-2 p-0 m-0">
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                        <li><i class="fa-solid fa-star icon-star"></i></li>
+                                                    </ul>
+                                                }
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
-
         </div>
     </div>
+</section>
 
-</div> *@
+
+
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/js/owl-carousel.js"></script>
+<script src="/assets/js/animation.js"></script>
+<script src="/assets/js/imagesloaded.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript">
+    $("#addComments").submit(function (event) {
+        event.preventDefault();
+        var message = $("#message").val();
+        var points = $("#addStar").val();
+        var footballFieldID = $("#idField").val();
+        $.ajax({
+            url: '/PitchBall/CheckIsValid',
+            type:'GET',
+            data: { IDFootballField : footballFieldID},
+            success: function (result) {
+                if (result) {
+                    $.ajax({
+                        url: '/PitchBall/AddComments',
+                        type: 'GET', //phương thức truyền: GET/POST/...
+                        data: { message: message, Points: points, IDFootballField: footballFieldID }, // dữ liệu tham số gửi (nếu có)
+                        success: function (data) {
+                            $("#Comments").html(data);
+                            toastr.success("Đánh giá thành công");
+                        },
+                        error: function (xhr) {
+                            alert("error");
+                        }
+                    });
+                } else {
+                    toastr.error("Vui lòng đặt sân rồi để lại đánh giá bạn nhé <3");
+                }
+            },
+            error: function (xhr) {
+                alert("error");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(".removeComment").on('click', function (event) {
+        var getID = $(this).siblings("input[data-user]").data('user');
+        var getIDComments = $(this).siblings("input[data-comment]").data('comment');
+        var getIDFootballField = $(this).siblings("input[data-field]").data('field');
+        $.ajax({
+            url: '/PitchBall/removeComment',
+            type: 'GET',
+            data: { idUser: getID, idDanhGia: getIDComments, IDFootballField: getIDFootballField },
+            success : function (data) {
+                if (data == "Bạn không được xóa comment của người khác" || data == "Comment không tồn tại") {
+                    toastr.error(data);
+                }else {
+                    $("#Comments").html(data);
+                    toastr.success("Đã xóa đánh giá");
+                }
+            },
+            error: function (xhr) {
+                alert("error");
+            } 
+        });
+    });
+</script>

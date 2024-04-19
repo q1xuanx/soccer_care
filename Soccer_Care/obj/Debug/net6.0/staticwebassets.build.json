@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "woJlW8/fm0TCgj1KhDnst1WpzSz9baHiSlLJbsKwZFI=",
-=======
-  "Hash": "6ZDCNhFPIiALioS6bwoh0M0HY5bYjvu9+YG2oHjSyKI=",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
+  "Hash": "voW3+A+rMLO+shg26Wk8w/Ou09o77PRgOHA9bBpmPbQ=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -14,11 +10,7 @@
     {
       "Name": "Soccer_Care\\wwwroot",
       "Source": "Soccer_Care",
-<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "Pattern": "**"
     }
@@ -1062,17 +1054,10 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.28\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Soccer_Care.styles.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Soccer_Care.styles.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Computed",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "Soccer_Care.styles.css",
       "AssetKind": "All",
@@ -1083,7 +1068,6 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Soccer_Care.styles.css"
     },
     {
@@ -1091,15 +1075,6 @@
       "SourceId": "Soccer_Care",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-=======
-      "OriginalItemSpec": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Soccer_Care.styles.css"
-    },
-    {
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Soccer_Care.bundle.scp.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Computed",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "Soccer_Care.bundle.scp.css",
       "AssetKind": "All",
@@ -1110,7 +1085,6 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Soccer_Care.bundle.scp.css"
     },
     {
@@ -1118,15 +1092,6 @@
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "OriginalItemSpec": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Soccer_Care.bundle.scp.css"
-    },
-    {
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\css\\bootstrap.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1140,17 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\css\\fontawesome.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\css\\fontawesome.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/css/fontawesome.min.css",
       "AssetKind": "All",
@@ -1164,17 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\css\\fontawesome.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\css\\templatemo-style.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\css\\templatemo-style.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/css/templatemo-style.css",
       "AssetKind": "All",
@@ -1188,17 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\css\\templatemo-style.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\arrow-down.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\arrow-down.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/arrow-down.png",
       "AssetKind": "All",
@@ -1212,17 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\arrow-down.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\avatar.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\avatar.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/avatar.jpg",
       "AssetKind": "All",
@@ -1236,17 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\avatar.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\check-mark.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\check-mark.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/check-mark.png",
       "AssetKind": "All",
@@ -1260,17 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\check-mark.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-01.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-01.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/notification-01.jpg",
       "AssetKind": "All",
@@ -1284,17 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\notification-01.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-02.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-02.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/notification-02.jpg",
       "AssetKind": "All",
@@ -1308,17 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\notification-02.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-03.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\notification-03.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/notification-03.jpg",
       "AssetKind": "All",
@@ -1332,17 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\notification-03.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\img\\product-image.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\img\\product-image.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/img/product-image.jpg",
       "AssetKind": "All",
@@ -1356,17 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\img\\product-image.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\AUTHORS.txt",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\AUTHORS.txt",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/AUTHORS.txt",
       "AssetKind": "All",
@@ -1380,17 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\AUTHORS.txt"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\external\\jquery\\jquery.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\external\\jquery\\jquery.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/external/jquery/jquery.js",
       "AssetKind": "All",
@@ -1404,17 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\external\\jquery\\jquery.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_75_d0e5f5_1x400.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_75_d0e5f5_1x400.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png",
       "AssetKind": "All",
@@ -1428,17 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_75_d0e5f5_1x400.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_85_dfeffc_1x400.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_85_dfeffc_1x400.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png",
       "AssetKind": "All",
@@ -1452,17 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_85_dfeffc_1x400.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_95_fef1ec_1x400.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_95_fef1ec_1x400.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png",
       "AssetKind": "All",
@@ -1476,17 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_glass_95_fef1ec_1x400.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png",
       "AssetKind": "All",
@@ -1500,17 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png",
       "AssetKind": "All",
@@ -1524,17 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png",
       "AssetKind": "All",
@@ -1548,17 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_217bc0_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_217bc0_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png",
       "AssetKind": "All",
@@ -1572,17 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_217bc0_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_2e83ff_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_2e83ff_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png",
       "AssetKind": "All",
@@ -1596,17 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_2e83ff_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_469bdd_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_469bdd_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png",
       "AssetKind": "All",
@@ -1620,17 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_469bdd_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_6da8d5_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_6da8d5_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png",
       "AssetKind": "All",
@@ -1644,17 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_6da8d5_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_cd0a0a_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_cd0a0a_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png",
       "AssetKind": "All",
@@ -1668,17 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_cd0a0a_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_d8e7f3_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_d8e7f3_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png",
       "AssetKind": "All",
@@ -1692,17 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_d8e7f3_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_f9bd01_256x240.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_f9bd01_256x240.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png",
       "AssetKind": "All",
@@ -1716,17 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\images\\ui-icons_f9bd01_256x240.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\index.html",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\index.html",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/index.html",
       "AssetKind": "All",
@@ -1740,17 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\index.html"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.css",
       "AssetKind": "All",
@@ -1764,17 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.js",
       "AssetKind": "All",
@@ -1788,17 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.min.css",
       "AssetKind": "All",
@@ -1812,17 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.min.js",
       "AssetKind": "All",
@@ -1836,17 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.structure.css",
       "AssetKind": "All",
@@ -1860,17 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.structure.min.css",
       "AssetKind": "All",
@@ -1884,17 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.structure.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.theme.css",
       "AssetKind": "All",
@@ -1908,17 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/jquery-ui.theme.min.css",
       "AssetKind": "All",
@@ -1932,17 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\jquery-ui.theme.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\LICENSE.txt",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\LICENSE.txt",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/LICENSE.txt",
       "AssetKind": "All",
@@ -1956,17 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\package.json",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\jquery-ui-datepicker\\package.json",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/jquery-ui-datepicker/package.json",
       "AssetKind": "All",
@@ -1980,17 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\jquery-ui-datepicker\\package.json"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\js\\bootstrap.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\js\\bootstrap.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2004,17 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\js\\Chart.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\js\\Chart.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/js/Chart.min.js",
       "AssetKind": "All",
@@ -2028,17 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\js\\Chart.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\js\\jquery-3.3.1.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\js\\jquery-3.3.1.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/js/jquery-3.3.1.min.js",
       "AssetKind": "All",
@@ -2052,17 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\js\\jquery-3.3.1.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\js\\moment.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\js\\moment.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/js/moment.min.js",
       "AssetKind": "All",
@@ -2076,17 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\js\\moment.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\js\\tooplate-scripts.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\js\\tooplate-scripts.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/js/tooplate-scripts.js",
       "AssetKind": "All",
@@ -2100,17 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\js\\tooplate-scripts.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-brands-400.eot",
       "AssetKind": "All",
@@ -2124,17 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-brands-400.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-brands-400.svg",
       "AssetKind": "All",
@@ -2148,17 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-brands-400.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-brands-400.ttf",
       "AssetKind": "All",
@@ -2172,17 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-brands-400.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-brands-400.woff",
       "AssetKind": "All",
@@ -2196,17 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff2",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff2",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-brands-400.woff2",
       "AssetKind": "All",
@@ -2220,17 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-brands-400.woff2"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-regular-400.eot",
       "AssetKind": "All",
@@ -2244,17 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-regular-400.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-regular-400.svg",
       "AssetKind": "All",
@@ -2268,17 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-regular-400.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-regular-400.ttf",
       "AssetKind": "All",
@@ -2292,17 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-regular-400.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-regular-400.woff",
       "AssetKind": "All",
@@ -2316,17 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff2",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff2",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-regular-400.woff2",
       "AssetKind": "All",
@@ -2340,17 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-regular-400.woff2"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-solid-900.eot",
       "AssetKind": "All",
@@ -2364,17 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-solid-900.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-solid-900.svg",
       "AssetKind": "All",
@@ -2388,17 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-solid-900.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-solid-900.ttf",
       "AssetKind": "All",
@@ -2412,17 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-solid-900.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-solid-900.woff",
       "AssetKind": "All",
@@ -2436,17 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff2",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff2",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "admin_folder/webfonts/fa-solid-900.woff2",
       "AssetKind": "All",
@@ -2460,17 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\admin_folder\\webfonts\\fa-solid-900.woff2"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\animated.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\animated.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/animated.css",
       "AssetKind": "All",
@@ -2484,17 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\animated.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\drop.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\drop.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/drop.css",
       "AssetKind": "All",
@@ -2508,17 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\drop.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\fontawesome.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\fontawesome.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/fontawesome.css",
       "AssetKind": "All",
@@ -2532,17 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\fontawesome.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\login.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\login.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/login.css",
       "AssetKind": "All",
@@ -2556,17 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\login.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\owl.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\owl.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/owl.css",
       "AssetKind": "All",
@@ -2580,17 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\owl.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\css\\templatemo-plot-listing.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\css\\templatemo-plot-listing.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/css/templatemo-plot-listing.css",
       "AssetKind": "All",
@@ -2604,17 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\templatemo-plot-listing.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\Flaticon.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\Flaticon.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/Flaticon.woff",
       "AssetKind": "All",
@@ -2628,17 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\Flaticon.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/flexslider-icon.eot",
       "AssetKind": "All",
@@ -2652,17 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\flexslider-icon.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/flexslider-icon.svg",
       "AssetKind": "All",
@@ -2676,17 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\flexslider-icon.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/flexslider-icon.ttf",
       "AssetKind": "All",
@@ -2700,17 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\flexslider-icon.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\flexslider-icon.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/flexslider-icon.woff",
       "AssetKind": "All",
@@ -2724,17 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\flexslider-icon.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\FontAwesome.otf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\FontAwesome.otf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/FontAwesome.otf",
       "AssetKind": "All",
@@ -2748,17 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\FontAwesome.otf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/fontawesome-webfont.eot",
       "AssetKind": "All",
@@ -2772,17 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\fontawesome-webfont.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/fontawesome-webfont.svg",
       "AssetKind": "All",
@@ -2796,17 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\fontawesome-webfont.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -2820,17 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\fontawesome-webfont.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/fontawesome-webfont.woff",
       "AssetKind": "All",
@@ -2844,17 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\fontawesome-webfont.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/fontawesome-webfont.woff2",
       "AssetKind": "All",
@@ -2868,17 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\fontawesome-webfont.woff2"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.eot",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.eot",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/slick.eot",
       "AssetKind": "All",
@@ -2892,17 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.eot"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/slick.svg",
       "AssetKind": "All",
@@ -2916,17 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.ttf",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.ttf",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/slick.ttf",
       "AssetKind": "All",
@@ -2940,17 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.ttf"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.woff",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\fonts\\slick.woff",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/fonts/slick.woff",
       "AssetKind": "All",
@@ -2964,17 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\slick.woff"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\background_ds.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/background_ds.png",
       "AssetKind": "All",
@@ -2988,17 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\background_ds.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_01.webp",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/ball_01.webp",
       "AssetKind": "All",
@@ -3012,17 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\ball_01.webp"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_02.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_02.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/ball_02.jpg",
       "AssetKind": "All",
@@ -3036,17 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\ball_02.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_03.webp",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_03.webp",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/ball_03.webp",
       "AssetKind": "All",
@@ -3060,17 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\ball_03.webp"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\ball_04.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\ball_04.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/ball_04.jpg",
       "AssetKind": "All",
@@ -3084,17 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\ball_04.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\banner-bg.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\banner-bg.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/banner-bg.jpg",
       "AssetKind": "All",
@@ -3108,17 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\banner-bg.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\black-logo.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/black-logo.svg",
       "AssetKind": "All",
@@ -3132,17 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\black-logo.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\heading-bg.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\heading-bg.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/heading-bg.jpg",
       "AssetKind": "All",
@@ -3156,17 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\heading-bg.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-01.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-01.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-01.jpg",
       "AssetKind": "All",
@@ -3180,17 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-01.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-02.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-02.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-02.jpg",
       "AssetKind": "All",
@@ -3204,17 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-02.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-03.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-03.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-03.jpg",
       "AssetKind": "All",
@@ -3228,17 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-03.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-04.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-04.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-04.jpg",
       "AssetKind": "All",
@@ -3252,17 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-04.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-05.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-05.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-05.jpg",
       "AssetKind": "All",
@@ -3276,17 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-05.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-06.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-06.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-06.jpg",
       "AssetKind": "All",
@@ -3300,17 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-06.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-01.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-01.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-icon-01.png",
       "AssetKind": "All",
@@ -3324,17 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-icon-01.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-02.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-02.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-icon-02.png",
       "AssetKind": "All",
@@ -3348,17 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-icon-02.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-03.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-03.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-icon-03.png",
       "AssetKind": "All",
@@ -3372,17 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-icon-03.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-heading.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\listing-icon-heading.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/listing-icon-heading.png",
       "AssetKind": "All",
@@ -3396,17 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\listing-icon-heading.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-01.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-01.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/search-icon-01.png",
       "AssetKind": "All",
@@ -3420,17 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-01.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-02.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-02.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/search-icon-02.png",
       "AssetKind": "All",
@@ -3444,17 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-02.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-03.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-03.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/search-icon-03.png",
       "AssetKind": "All",
@@ -3468,17 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-03.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-04.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-04.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/search-icon-04.png",
       "AssetKind": "All",
@@ -3492,17 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-04.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-05.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\search-icon-05.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/search-icon-05.png",
       "AssetKind": "All",
@@ -3516,17 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search-icon-05.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\soccer_care1.svg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\soccer_care1.svg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/soccer_care1.svg",
       "AssetKind": "All",
@@ -3540,17 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\soccer_care1.svg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-01.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-01.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/tabs-image-01.jpg",
       "AssetKind": "All",
@@ -3564,17 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tabs-image-01.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-02.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-02.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/tabs-image-02.jpg",
       "AssetKind": "All",
@@ -3588,17 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tabs-image-02.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-03.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-03.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/tabs-image-03.jpg",
       "AssetKind": "All",
@@ -3612,17 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tabs-image-03.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-04.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-04.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/tabs-image-04.jpg",
       "AssetKind": "All",
@@ -3636,17 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tabs-image-04.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-05.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\tabs-image-05.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/tabs-image-05.jpg",
       "AssetKind": "All",
@@ -3660,17 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tabs-image-05.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\images\\white-logo.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\images\\white-logo.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/images/white-logo.png",
       "AssetKind": "All",
@@ -3684,17 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\white-logo.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\animation.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\animation.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/animation.js",
       "AssetKind": "All",
@@ -3708,17 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\animation.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\custom.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\custom.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/custom.js",
       "AssetKind": "All",
@@ -3732,17 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\custom.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\imagesloaded.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\imagesloaded.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/imagesloaded.js",
       "AssetKind": "All",
@@ -3756,17 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\imagesloaded.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\isotope.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\isotope.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/isotope.js",
       "AssetKind": "All",
@@ -3780,17 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\isotope.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\owl-carousel.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\owl-carousel.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/owl-carousel.js",
       "AssetKind": "All",
@@ -3804,17 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\owl-carousel.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\assets\\js\\tabs.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\assets\\js\\tabs.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "assets/js/tabs.js",
       "AssetKind": "All",
@@ -3828,23 +3009,15 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\tabs.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\css\\main.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\css\\main.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -3853,11 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\css\\site.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -3871,17 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\favicon.ico",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\favicon.ico",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -3895,21 +3060,32 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\24dc1fbe-dc97-400f-a791-5b145f07fdc2.jpeg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/24dc1fbe-dc97-400f-a791-5b145f07fdc2.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\24dc1fbe-dc97-400f-a791-5b145f07fdc2.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "images/28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -3918,17 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\cc7b043d-ebfc-4809-951c-84cb3920bda5.jpeg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\images\\cc7b043d-ebfc-4809-951c-84cb3920bda5.jpeg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "images/cc7b043d-ebfc-4809-951c-84cb3920bda5.jpeg",
       "AssetKind": "All",
@@ -3942,17 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cc7b043d-ebfc-4809-951c-84cb3920bda5.jpeg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpeg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpeg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "images/toilanhanne.jpeg",
       "AssetKind": "All",
@@ -3966,17 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\images\\toilanhanne.jpeg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpg",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "images/toilanhanne.jpg",
       "AssetKind": "All",
@@ -3990,17 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\images\\toilanhanne.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.png",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\images\\toilanhanne.png",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "images/toilanhanne.png",
       "AssetKind": "All",
@@ -4014,17 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\images\\toilanhanne.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\js\\site.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\js\\site.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -4038,17 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -4062,17 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -4086,17 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -4110,17 +3230,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -4134,17 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -4158,17 +3264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -4182,17 +3281,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -4206,17 +3298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -4230,17 +3315,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -4254,17 +3332,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -4278,17 +3349,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -4302,17 +3366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -4326,17 +3383,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -4350,17 +3400,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -4374,17 +3417,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -4398,17 +3434,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -4422,17 +3451,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -4446,17 +3468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -4470,17 +3485,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -4494,17 +3502,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -4518,17 +3519,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -4542,17 +3536,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -4566,17 +3553,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -4590,17 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -4614,17 +3587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -4638,17 +3604,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -4662,17 +3621,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -4686,17 +3638,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -4710,17 +3655,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -4734,17 +3672,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -4758,17 +3689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -4782,17 +3706,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -4806,17 +3723,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -4830,17 +3740,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -4854,17 +3757,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -4878,17 +3774,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -4902,17 +3791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -4926,17 +3808,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -4950,17 +3825,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -4974,17 +3842,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -4998,17 +3859,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -5022,17 +3876,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -5046,17 +3893,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -5070,17 +3910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -5094,17 +3927,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -5118,17 +3944,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -5142,17 +3961,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -5166,17 +3978,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -5190,17 +3995,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -5214,17 +4012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -5238,17 +4029,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -5262,17 +4046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -5286,17 +4063,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -5310,17 +4080,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -5334,17 +4097,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -5358,17 +4114,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -5382,17 +4131,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -5406,17 +4148,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -5430,17 +4165,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -5454,17 +4182,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/bootstrap/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -5478,17 +4199,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/bootstrap/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -5502,17 +4216,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/bootstrap/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -5526,17 +4233,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.js",
       "AssetKind": "All",
@@ -5550,17 +4250,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.min.js",
       "AssetKind": "All",
@@ -5574,17 +4267,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.min.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.min.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.min.map",
       "AssetKind": "All",
@@ -5598,17 +4284,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.min.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.slim.js",
       "AssetKind": "All",
@@ -5622,17 +4301,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.slim.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.slim.min.js",
       "AssetKind": "All",
@@ -5646,17 +4318,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.slim.min.js"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
-=======
-      "Identity": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
-      "SourceId": "Soccer_Care",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Project\\SoccerCare\\soccer_care\\Soccer_Care\\wwwroot\\",
->>>>>>> 554ee7c12a022e9d64209e10acd523695cc4f5ee
       "BasePath": "_content/Soccer_Care",
       "RelativePath": "vendor/jquery/jquery.slim.min.map",
       "AssetKind": "All",
