@@ -101,7 +101,7 @@
  *  Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
-  animation-duration: 5000ms;
+  animation-duration: 5000000000000000000ms;
   animation-fill-mode: both; }
 
 .owl-carousel .owl-animated-in {
@@ -123,7 +123,7 @@
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
-  transition: height 500ms ease-in-out; }
+  transition: height 50000000000000000ms ease-in-out; }
 
 /*
  * 	Owl Carousel - Lazy Load Plugin
@@ -135,7 +135,7 @@
 		 */ }
   .owl-carousel .owl-item .owl-lazy {
     opacity: 0;
-    transition: opacity 400ms ease; }
+    transition: opacity 40000000000000000000ms ease; }
   .owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
     max-height: 0; }
   .owl-carousel .owl-item img.owl-lazy {
@@ -161,7 +161,7 @@
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
-  transition: transform 100ms ease; }
+  transition: transform 10000000000000000000ms ease; }
 
 .owl-carousel .owl-video-play-icon:hover {
   -ms-transform: scale(1.3, 1.3);
@@ -177,7 +177,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  transition: opacity 400ms ease; }
+  transition: opacity 400000000000000ms ease; }
 
 .owl-carousel .owl-video-frame {
   position: relative;

@@ -24,8 +24,15 @@ namespace Soccer_Care.Views.Home.Components.ListPitchComponent
                 field.ListField = _context.listFields.Where(i => i.IDFootballField == field.IDFootBallField).ToList();
                 field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
             }
-            var getUserId = _userManager.GetUserAsync(HttpContext.User).Result.Id;
-            ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId).ToList();
+            var getUserId = "803c37cd-1073-4508-9398-0e2ecf49a142";
+            /*if (_userManager.GetUserAsync(HttpContext.User).Result.Id != null)
+            {
+                getUserId = _userManager.GetUserAsync(HttpContext.User).Result.Id;
+            }*/
+            if (getUserId != null)
+            {
+                ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId).ToList();
+            }
             return View("ListPitchComponent", pitch);
         }
         

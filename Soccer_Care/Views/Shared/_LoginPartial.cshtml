@@ -19,14 +19,16 @@
     }
 </style>
 <ul class="navbar-nav">
-
-    @if (SignInManager.IsSignedIn(User) && User.IsInRole("User"))
-{
     <li class="dropdown">
         <a onclick="myFunction()" class="dropbtn main-white-button">Tài khoản</a>
         <div id="myDropdown" class="dropdown-content">
             <a id="manage" class="truncate" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             <a asp-controller="PitchBall" asp-action="HistoryOrder" asp-route-name="@UserManager.GetUserId(User)" class="truncate">Lịch sử đặt sân </a>
+            @if (SignInManager.IsSignedIn(User) && !User.IsInRole("User"))
+            {
+                <a href="/admin/admin/Index" class="truncate">Quản trị viên</a>
+
+            }
             <a>
                 <form id="logoutForm" class="truncate" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                     <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
@@ -34,21 +36,8 @@
             </a>
         </div>
     </li>
-    }
-    else if (SignInManager.IsSignedIn(User) && !User.IsInRole("User"))
-    {
-            <li class="nav-item">
-                <a class="nav-link d-block">
-                Hello @UserManager.GetUserName(User) |  
-                <form id="logoutForm" class="truncate" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-                </form>
-                </a>
-            </li>
 
-            
-    }
-else
+@if (!SignInManager.IsSignedIn(User))
 {
         <li>
             <div class="main-white-button">

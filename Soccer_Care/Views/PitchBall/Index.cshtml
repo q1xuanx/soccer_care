@@ -1,6 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Đặt sân";
 }
+@model IEnumerable<Soccer_Care.Models.FootBallFieldModel>
+@{
+    int i = 0;
+    List<FieldLikeModel> userLike = ViewBag.ListFieldLike;
+}
+
+<style>
+    .box-btn {
+        float: left;
+        background: transparent;
+        font-size: 35px;
+        color: #4D4E56;
+        font-weight: 200;
+        cursor: pointer;
+        border-radius: 2px;
+        line-height: 0.5;
+        border: none;
+        outline: none;
+    }
+
+    .glyphicon {
+        transition: color .3s linear;
+    }
+
+    .box-btn .red {
+        color: red;
+    }
+</style>
 
 <div class="page-heading">
     <div class="container">
@@ -26,40 +54,12 @@
                                     <div class="first-thumb active">
                                         <div class="thumb">
                                             <span class="icon"><img src="/assets/images/search-icon-01.png" alt=""></span>
-
-                                      
-
-                                            Sân Futsal
+                                            Sân bóng
 
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="thumb">
-                                            <span class="icon"><img src="/assets/images/search-icon-02.png" alt=""></span>
-
                                  
-
-                                            Sân 5
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="thumb">
-                                            <span class="icon"><img src="/assets/images/search-icon-03.png" alt=""></span>
-
-                      
-
-                                            Sân 7
-                                        </div>
-                                    </div>
-                                    <div class="last-thumb">
-                                        <div class="thumb">
-                                            <span class="icon"><img src="/assets/images/search-icon-04.png" alt=""></span>
-
-                                            Sân 11
-
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -67,207 +67,108 @@
                                     <li class="active">
                                         <div>
                                             <div class="col-lg-12">
-                                                <div class="owl-carousel owl-listing">
-                                                    <div class="item">
-                                                        <div class="row">                                                          
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/listing-01.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt Sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Sunshine Paradise Apartment</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $600 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/listing-02.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Best one in this category</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $800 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Amazing Dj Party House</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Sunshine Villa Condo</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $450 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Gaming Studio Units</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $550 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Amazing Dj Party House</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $650 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- third page of first category -->
-                                                    <div class="item">
-                                                        <div class="row">
-
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Third Page Apartment</h4></a>
-                                                                        <h6>by: Real Estate Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $600 to $950 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                        
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>New Gaming Townhouse</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $840 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="listing-item">
-                                                                    <div class="left-image">
-                                                                        <a href="#"><img src="/assets/images/ball_04.jpg" alt=""></a>
-                                                                        <div class="hover-content">
-                                                                            <div class="main-white-button">
-                                                                                <a href="contact.html"><i class="fa fa-eye"></i> Đặt sân</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="right-content align-self-center">
-                                                                        <a href="#"><h4>Amazing Party Villa</h4></a>
-                                                                        <h6>by: Real ESTATE Agent</h6>
-                                                                        <span class="price"><div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
-                                                                        <span class="details">Details: <em>860 sq ft</em></span>
-
-                                                                        <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                <div class="owl-carousel owl-listing">
+                    <div class="item">
+                        <div class="row">
+                            @foreach(var item in Model)
+                            {
+                                i++;
+                                <div class="col-lg-12">
+                                    <div class="listing-item">
+                                        <div class="left-image">
+                                            <a href="#"><img class="avatar-football" style="width: 480px; height: 380px" src="@item.HinhAnhDaiDien" alt=""></a>
+                                        </div>
+                                        <div class="right-content align-self-center">
+                                            <a href="#"><h4>@item.Name</h4></a>
+                                            <h6><strong>Chủ sân</strong>: @item.Username</h6>
+                                            <ul class="rate">
+                                                <li>(@item.ratings.Count()) Đánh Giá</li>
+                                                <li>
+                                                    <button type="submit" class="box-btn">
+                                                        @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                        {
+                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                        }else
+                                                        {
+                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                                        }
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            
+                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+                                    
+                                            <ul class="info">
+                                                @{
+                                                    List<ListFieldModel> list = item.ListField;
+                                                    int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
+                                                    int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
+                                                }
+                                                <li><img src="/assets/images/listing-icon-02.png" alt=""/>Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt=""/>Số sân 7: @count7</li>
+                                            </ul>
+                                            <div class="main-white-button">
+                                                <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt ngay</a>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if(i == 3)
+                                {
+                                    break;
+                                }
+                            }
+                            
+                        </div>
+                    </div>
+   
+                    <div class="item">
+                        <div class="row">
+                            @foreach(var item in Model.Skip(3).ToList())
+                            {
+                                i++;
+                                <div class="col-lg-12">
+                                    <div class="listing-item">
+                                        <div class="left-image">
+                                            <a href="#"><img class="avatar-football" style="width: 480px; height: 380px" src="@item.HinhAnhDaiDien" alt=""></a>
+                                        </div>
+                                        <div class="right-content align-self-center">
+                                            <a href="#"><h4>@item.Name</h4></a>
+                                            <h6>by: @item.Username</h6>
+                                            <ul class="rate">
+                                                <li>(@item.ratings.Count()) Đánh Giá</li>
+                                            </ul>
+                                            <button type="submit" class="box-btn">
+                                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                            </button>
+                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+
+                                            <ul class="info">
+                                                @{
+                                                    List<ListFieldModel> list = item.ListField;
+                                                    int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
+                                                    int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
+                                                }
+                                                <li><img src="/assets/images/listing-icon-02.png" alt="" />Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/listing-icon-03.png" alt="" />Số sân 7: @count7</li>
+                                            </ul>
+                                                                            <div class="main-white-button">
+                                                                                <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt ngay</a>
+                                                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if (i == 6)
+                                {
+                                    break;
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
                                         </div>
                                     </li>
 
