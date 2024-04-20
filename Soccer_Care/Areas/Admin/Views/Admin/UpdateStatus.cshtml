@@ -1,0 +1,62 @@
+﻿@model List<DetailsOrderModel>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Mã đặt sân.</th>
+            <th scope="col">Tên Sân</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Tên người đặt</th>
+            <th scope="col">Ngày đặt</th>
+            <th scope="col">Giờ Đặt</th>
+            <th scope="col">Thanh Toán</th>
+            <th scope="col">Trạng Thái</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (DetailsOrderModel detailsOrderModel in Model)
+        {
+            <tr>
+                <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
+                <td>@detailsOrderModel.Order.FootBall.Name | @detailsOrderModel.Order.ListField.NameField</td>
+
+                @if (detailsOrderModel.Order != null)
+                {
+                    <td>@detailsOrderModel.Order.SoDienThoai</td>
+                }
+                <td>@detailsOrderModel.Order.User.FullName</td>
+                <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
+                <td>@detailsOrderModel.StartTime</td>
+                @if (detailsOrderModel.isThanhToan == 1)
+                {
+
+                    <td>
+                        <div class="tm-status-circle moving">
+                        </div>Thanh Toán VNPAY
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <div class="tm-status-circle pending">
+                        </div>Thanh Toán Tại Sân
+                    </td>
+                }
+                @if (detailsOrderModel.Status == "Đang Đến")
+                {
+                    <td>
+                        <select class="confirmUser">
+                            <option value="Đang Đến" selected>Đang Đến</option>
+                            <option value="Đã Đến">Đã Đến</option>
+                            <option value="Đã Hủy">Đã Đến</option>
+                        </select>
+                    </td>
+                }
+                else
+                {
+                    <td>@detailsOrderModel.Status</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

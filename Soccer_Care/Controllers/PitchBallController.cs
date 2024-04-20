@@ -1,43 +1,69 @@
-﻿using Humanizer.Bytes;
+﻿using Humanizer;
+using Humanizer.Bytes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 using Soccer_Care.Services;
+using System.Xml.Linq;
 
 
 namespace Soccer_Care.Controllers
 {
- 
+
     public class PitchBallController : Controller
     {
         IHttpContextAccessor contextAccessor;
         private readonly SoccerCareDbContext _context;
         private readonly UserManager<UserModel> _userManager;
-		private readonly IVnPayService _vnPayService;
-		public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context, UserManager<UserModel> userManager, IVnPayService vnPayService) {
+        private readonly IVnPayService _vnPayService;
+        public PitchBallController(IHttpContextAccessor contextAccessor, SoccerCareDbContext context, UserManager<UserModel> userManager, IVnPayService vnPayService) {
             this.contextAccessor = contextAccessor;
             this._context = context;
             this._userManager = userManager;
-			_vnPayService = vnPayService;
-		}
+            _vnPayService = vnPayService;
+        }
         public IActionResult Index()
         {
-            var pitch = _context.FootBallFields.ToList();
+            if (contextAccessor.HttpContext.Session.GetString("price1") != null)
+            {
+                var price1 = contextAccessor.HttpContext.Session.GetString("price1");
+                var price2 = contextAccessor.HttpContext.Session.GetString("price2");
+                var address = contextAccessor.HttpContext.Session.GetString("address");
+                List<FootBallFieldModel> pitchTemp = _context.FootBallFields.ToList();
+                List<FootBallFieldModel> pitch1 = new List<FootBallFieldModel>();
+                foreach (var item in pitchTemp)
+                {
+                    if (item.Address.Contains(address))
+                    {
+                        if (item.Gia >= float.Parse(price1) && item.Gia <= float.Parse(price2))
+                        {
+                            pitch1.Add(item);
+                        }
+                    }
+                }
+                foreach (FootBallFieldModel field in pitch1)
+                {
+                    field.ListField = _context.listFields.Where(i => i.IDFootballField == field.IDFootBallField).ToList();
+                    field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
+                }
+                var getUserId1 = _userManager.GetUserAsync(HttpContext.User);
+                if (getUserId1.Result == null) return View("ListPitchComponent", pitch1);
+                ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId1.Result.Id).ToList();
+                contextAccessor.HttpContext.Session.Remove("price1");
+                contextAccessor.HttpContext.Session.Remove("price2");
+                contextAccessor.HttpContext.Session.Remove("address");
+                return View(pitch1);
+            }
+            var pitch = _context.FootBallFields.Where(i => i.isDisable == 0).ToList();
             foreach (FootBallFieldModel field in pitch)
             {
                 field.ListField = _context.listFields.Where(i => i.IDFootballField == field.IDFootBallField).ToList();
                 field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
             }
-            var getUserId = "803c37cd-1073-4508-9398-0e2ecf49a142";
-            /*if (_userManager.GetUserAsync(HttpContext.User).Result.Id != null)
-            {
-                getUserId = _userManager.GetUserAsync(HttpContext.User).Result.Id;
-            }*/
-            if (getUserId != null)
-            {
-                ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId).ToList();
-            }
+            var getUserId = _userManager.GetUserAsync(HttpContext.User);
+            if (getUserId.Result == null) return View("ListPitchComponent", pitch);
+            ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId.Result.Id).ToList();
             return View(pitch);
         }
         [Authorize(Roles = "Admin,Partner,User")]
@@ -50,12 +76,12 @@ namespace Soccer_Care.Controllers
         [Authorize(Roles = "Admin,Partner,User")]
         public IActionResult DS(string id)
         {
-            var field= _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == id && i.isDisable == 0);
+            var field = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == id && i.isDisable == 0);
             if (field != null)
             {
                 field.ListField = _context.listFields.Where(i => i.IDFootballField.Equals(field.IDFootBallField)).ToList();
                 field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
-                foreach(RatingModel rate in field.ratings)
+                foreach (RatingModel rate in field.ratings)
                 {
                     rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
                 }
@@ -66,9 +92,18 @@ namespace Soccer_Care.Controllers
         }
         [Authorize(Roles = "Admin,Partner,User")]
         [HttpPost]
-        public async Task<IActionResult> DatSanConfirm(String id, String emailUser, String Username,String SDT, String BeginTime, DateTime Date, String idParentField)
+        public async Task<IActionResult> DatSanConfirm(String id, String emailUser, String Username, String SDT, String BeginTime, DateTime Date, String idParentField)
         {
+            
             TimeSpan timeCurrent = DateTime.Parse(BeginTime).TimeOfDay;
+            DateTime futureTime = DateTime.Parse(BeginTime).AddHours(1).AddMinutes(30); 
+            if (timeCurrent.Hours >= 21 || futureTime.Hour >= 21)
+            {
+                TempData["LoiDatSan"] = "Quá giờ đặt sân";
+                var pitch = _context.listFields.FirstOrDefault(f => f.IDField == id);
+                pitch.FootBall = _context.FootBallFields.Where(f => f.IDFootBallField == pitch.IDFootballField).FirstOrDefault();
+                return View("DatSan", pitch);
+            }
             var getIDOrder = _context.OrderField.Where(i => i.IDFootballField == id).Select(i => i.IDOrder).ToList();
             if (getIDOrder != null) {
                 foreach (var IdOrder in getIDOrder)
@@ -81,7 +116,8 @@ namespace Soccer_Care.Controllers
                         var getAfterBegin = DateTime.Parse(find.StartTime).AddHours(1).AddMinutes(30).TimeOfDay;
                         if ((timeCurrent < getAfterBegin && timeCurrent > getBeforeBegin))
                         {
-                            return Content("Loi dat san");
+                            TempData["LoiDatSan"] = "Giờ Đặt Sân Không Hợp Lệ";
+                            return View("DatSan", idParentField);
                         }
                     }
                     else continue;
@@ -100,6 +136,7 @@ namespace Soccer_Care.Controllers
             details.IDDetails = Guid.NewGuid().ToString();
             details.StartTime = BeginTime; 
             details.DateTime = Date;
+            details.Status = "Đang Đến";
 
 
 
@@ -115,6 +152,36 @@ namespace Soccer_Care.Controllers
 
             _context.SaveChanges();
             return View("Thanks", details);
+        }
+        public IActionResult CancelOrder(string id)
+        {
+            var order = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == id);
+            DateTime startTime = DateTime.Parse(order.StartTime);
+            DateTime currentTime = DateTime.Now;
+            TimeSpan timeDifference = startTime -  currentTime ;
+            if (timeDifference.TotalMinutes <= 30 && timeDifference.TotalMinutes >= 0)
+            {
+                return Content("Quá thời gian hủy sân");
+            }
+            else
+            {
+                order.Status = "Đã Hủy";
+                var getUser = _userManager.GetUserAsync(HttpContext.User).Result;
+                if (getUser == null)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                _context.DetailsOrder.Update(order);
+                _context.SaveChanges();
+                List<HistoryOrderModel> hisOrder = _context.HistoryOrders.Where(i => i.IDUser == getUser.Id).ToList();
+                foreach (HistoryOrderModel his in hisOrder)
+                {
+                    his.DetailsOrder = _context.DetailsOrder.Where(i => i.IDDetails.Equals(his.IDDetails)).FirstOrDefault();
+                    his.DetailsOrder.Order = _context.OrderField.Where(i => i.IDOrder.Equals(his.DetailsOrder.IDOrder)).FirstOrDefault();
+                    his.DetailsOrder.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == his.DetailsOrder.Order.IDFootballField);
+                }
+                return PartialView("CancelOrder", hisOrder);
+            }
         }
         public async Task<IActionResult> HistoryOrder(String name)
         {

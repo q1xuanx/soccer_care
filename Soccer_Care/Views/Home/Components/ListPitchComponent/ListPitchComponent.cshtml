@@ -46,7 +46,7 @@
                                 <div class="col-lg-12">
                                     <div class="listing-item">
                                         <div class="left-image">
-                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="@item.HinhAnhDaiDien" alt=""></a>
+                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="/images/@item.HinhAnhDaiDien" alt=""></a>
                                         </div>
                                         <div class="right-content align-self-center">
                                             <a href="#"><h4>@item.Name</h4></a>
@@ -84,6 +84,7 @@
                                                     int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
                                                     int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
                                                 }
+
                                                 <li><img src="/assets/images/listing-icon-02.png" alt=""/>Số sân 5: @count5</li>
                                                 <li><img src="/assets/images/listing-icon-03.png" alt=""/>Số sân 7: @count7</li>
                                             </ul>
@@ -110,7 +111,7 @@
                                 <div class="col-lg-12">
                                     <div class="listing-item">
                                         <div class="left-image">
-                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="@item.HinhAnhDaiDien" alt=""></a>
+                                            <a href="#"><img class="avatar-football" style="width: 600px; height: 380px" src="/images/@item.HinhAnhDaiDien" alt=""></a>
                                         </div>
                                         <div class="right-content align-self-center">
                                             <a href="#"><h4>@item.Name</h4></a>

@@ -17,6 +17,7 @@ namespace Soccer_Care.Models
         [Required(ErrorMessage ="Vui lòng cung cấp giờ kết thúc")]
         public DateTime DateTime { get; set; }
 
+        public string Status { get; set; }  
         [ForeignKey("IDOrder")]
         public OrderFieldModel Order { get; set; }   
     }

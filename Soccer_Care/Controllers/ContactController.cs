@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Mail;
 
 namespace Soccer_Care.Controllers
 {
@@ -15,5 +17,6 @@ namespace Soccer_Care.Controllers
         {
             return View();
         }
+        
     }
 }

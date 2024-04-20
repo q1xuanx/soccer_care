@@ -4,7 +4,7 @@
 
 <style>
     .page-heading{
-        background-image: url(@Model.HinhAnhDaiDien);
+        background-image: url(/images/@Model.HinhAnhDaiDien);
     }
 
 </style>
@@ -28,7 +28,7 @@
     <div class="shadow p-3 mb-5 bg-body rounded">
         <div class="d-flex p-4 rounded">
             <div>
-                <img class="img-san" src="@item.HinhAnhSanBong" alt="sanbong" />
+                <img class="img-san" src="/images/@item.HinhAnhSanBong" alt="sanbong" />
             </div>
             <div class="ms-5 d-flex align-items-center">
                 <div class="d-flex flex-column gap-3">
@@ -86,9 +86,6 @@
         </div>
     </div>
 </section>
-
-
-
 
 <section style="background-color: #f7f6f6;">
     <div class="container my-5 py-5 text-dark">
@@ -179,6 +176,8 @@
 <script src="/assets/js/animation.js"></script>
 <script src="/assets/js/imagesloaded.js"></script>
 <script src="/assets/js/custom.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script type="text/javascript">
     $("#addComments").submit(function (event) {

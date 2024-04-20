@@ -1,0 +1,83 @@
+﻿@model List<Soccer_Care.Models.HistoryOrderModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sân
+            </th>
+            <th>
+                Ngày đặt
+            </th>
+            <th>
+                Thời gian
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Trạng Thái
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsOrder.Order.FootBall.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsOrder.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsOrder.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsOrder.Order.FootBall.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsOrder.Status)
+                </td>
+                @if (item.DetailsOrder.Status == "Đang Đến")
+                {
+                    <td>
+                        <input data-idorder="@item.DetailsOrder.IDOrder" hidden>
+                        <button class="cancelBtn btn btn-danger">Hủy Đặt Sân</button>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/js/owl-carousel.js"></script>
+<script src="/assets/js/animation.js"></script>
+<script src="/assets/js/imagesloaded.js"></script>
+<script src="/assets/js/custom.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script type="text/javascript">
+    $(".cancelBtn").on('click', function (event) {
+        var getIDOrder = $(this).siblings("input[data-idorder]").data('idorder');
+        $.ajax({
+            url: '/PitchBall/CancelOrder',
+            type: 'GET',
+            data: { id: getIDOrder },
+            success: function (data) {
+                if (data == "Quá thời gian hủy sân") {
+                    toastr.error(data);
+                } else {
+                    $("#contentTable").html(data);
+                    toastr.success("Đã hủy sân thành công");
+                }
+            },
+            error(xhr) {
+                alert(xhr.response);
+            }
+        });
+    });
+</script>

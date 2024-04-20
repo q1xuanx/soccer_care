@@ -7,6 +7,7 @@ using NuGet.Common;
 using Soccer_Care.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 
 namespace Soccer_Care.Controllers
 {
@@ -34,7 +35,7 @@ namespace Soccer_Care.Controllers
             list.Add(currentDay);
             if (getRoleOfUser)
             {
-                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.isThanhToan == 1).Select(i => i.IDOrder).ToList();
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.isThanhToan == 1 || i.Status == "Đã Đến").Select(i => i.IDOrder).ToList();
                 double total = 0;
                 foreach (string order in listOrder)
                 {
@@ -46,7 +47,7 @@ namespace Soccer_Care.Controllers
             }
             else
             {
-                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id && i.isThanhToan == 1).Select(i => i.IDOrder).ToList();
+                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id && i.isThanhToan == 1 || i.Status == "Đã Đến").Select(i => i.IDOrder).ToList();
                 double total = 0;
                 foreach(string order in listOrder)
                 {
@@ -58,6 +59,26 @@ namespace Soccer_Care.Controllers
             }
             return list;
         }
+        public IActionResult UpdateStatus(String id, String value)
+        {
+            var getOrder = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == id); 
+            if(getOrder != null)
+            {
+                getOrder.Status = value;
+                _context.DetailsOrder.Update(getOrder);
+                _context.SaveChanges();
+                var find = _context.DetailsOrder.ToList();
+                foreach (DetailsOrderModel details in find)
+                {
+                    details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                    details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                    details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                    details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                }
+                return PartialView("UpdateStatus", find);
+            }
+            return NotFound();
+        }
         public IActionResult Index()
         {
             var find = _context.DetailsOrder.ToList();
@@ -68,8 +89,7 @@ namespace Soccer_Care.Controllers
                 details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
                 details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
             }
-            
-            
+                  
             return View(find);
         }
         public IActionResult ManagePitch()

@@ -21,50 +21,66 @@
         <div class="col-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                 <h2 class="tm-block-title">Danh sách User đang đặt sân</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Mã đặt sân.</th>
-                            <th scope="col">Tên Sân</th>
-                            <th scope="col">Số điện thoại</th>
-                            <th scope="col">Tên người đặt</th>
-                            <th scope="col">Ngày đặt</th>
-                            <th scope="col">Giờ Đặt</th>
-                            <th scope="col">Thanh Toán</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      
-                            @foreach(DetailsOrderModel detailsOrderModel in Model){
+                <div id="tableContent">
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
-                                <td>@detailsOrderModel.Order.FootBall.Name | @detailsOrderModel.Order.ListField.NameField</td>
+                                <th scope="col">Mã đặt sân.</th>
+                                <th scope="col">Tên Sân</th>
+                                <th scope="col">Số điện thoại</th>
+                                <th scope="col">Tên người đặt</th>
+                                <th scope="col">Ngày đặt</th>
+                                <th scope="col">Giờ Đặt</th>
+                                <th scope="col">Thanh Toán</th>
+                                <th scope="col">Trạng Thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                      
+                                @foreach(DetailsOrderModel detailsOrderModel in Model){
+                                <tr>
+                                    <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
+                                    <td>@detailsOrderModel.Order.FootBall.Name | @detailsOrderModel.Order.ListField.NameField</td>
                             
-                                @if(detailsOrderModel.Order != null)
-                                {
-                                    <td>@detailsOrderModel.Order.SoDienThoai</td>
-                                }
-                                <td>@detailsOrderModel.Order.User.FullName</td>
-                                <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
-                                <td>@detailsOrderModel.StartTime</td>
-                                
-                                @if(detailsOrderModel.isThanhToan == 1){
+                                    @if(detailsOrderModel.Order != null)
+                                    {
+                                        <td>@detailsOrderModel.Order.SoDienThoai</td>
+                                    }
+                                    <td>@detailsOrderModel.Order.User.FullName</td>
+                                    <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
+                                    <td>@detailsOrderModel.StartTime</td>
+                                    @if(detailsOrderModel.isThanhToan == 1){
 
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Thanh Toán VNPAY
-                                    </td>
-                                }else
-                                {
-                                    <td>
-                                        <div class="tm-status-circle pending">
-                                        </div>Thanh Toán Tại Sân
-                                    </td>
+                                        <td>
+                                            <div class="tm-status-circle moving">
+                                            </div>Thanh Toán VNPAY
+                                        </td>
+                                    }else
+                                    {
+                                        <td>
+                                            <div class="tm-status-circle pending">
+                                            </div>Thanh Toán Tại Sân
+                                        </td>
+                                    }
+                                    @if(detailsOrderModel.Status == "Đang Đến")
+                                    {
+                                        <td>
+                                            <select class="confirmUser">
+                                                <option value="Đang Đến" selected>Đang Đến</option>
+                                                <option value="Đã Đến">Đã Đến</option>
+                                                <option value="Đã Hủy">Đã Hủy</option>
+                                            </select>
+                                            <input data-idorder="@detailsOrderModel.IDOrder" hidden>
+                                        </td>
+                                    }else
+                                    {
+                                        <td>@detailsOrderModel.Status</td>
+                                    }
+                                </tr>   
                                 }
-                            </tr>   
-                            }
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -103,5 +119,30 @@
                 }
             });
         }
-    })
+        $(".confirmUser").change(function () {
+            var selectedValue = $(this).val();
+            var getID = $(this).siblings("input[data-idorder]").data('idorder');
+            $.ajax({
+                url: '/Admin/Admin/UpdateStatus',
+                type: 'GET',
+                data: { id: getID, value: selectedValue },
+                success: function(data){
+                    $("#tableContent").html(data); 
+                    if (selectValue == "Đã Đến") {
+                        $.ajax({
+                            type: "GET",
+                            url: "/Admin/Admin/GetTotals",
+                            data: "",
+                            contextType: "aplication/json, charset=utf8",
+                            dataType: "json",
+                            success: OnSuccess,
+                        });
+                    }
+                },
+                error: function (xhr) {
+                    alert(xhr.response);
+                }
+            })
+        });
+    });
 </script>

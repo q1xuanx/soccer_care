@@ -1023,6 +1023,20 @@ Recent Listing
   padding: 40px;
 }
 
+ul.rate {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+}
+
+    ul.rate li {
+        display: inline-block;
+    }
+
+l.rate li:last-child {
+    margin-left: 10px;
+}
+
 .recent-listing .item .right-content ul.rate {
   position: absolute;
   right: 60px;
@@ -1037,6 +1051,7 @@ Recent Listing
 .recent-listing .item .right-content ul.rate li:last-child {
   margin-left: 10px;
 }
+
 
 .recent-listing .item .right-content h4 {
   font-size: 20px;
