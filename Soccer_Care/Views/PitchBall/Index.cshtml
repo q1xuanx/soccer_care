@@ -61,26 +61,26 @@
                                 <div class="menu">
                                     <div class="first-thumb active">
                                         <div class="thumb">
-                                            <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                                            Apartments
+                                            <span class="icon"><img src="assets/images/stadium (4).png" alt=""></span>
+                                            Sân bóng
                                         </div>
                                     </div>
                                     <div>
                                         <div class="thumb">
-                                            <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                                            Food &amp; Life
+                                            <span class="icon"><img src="assets/images/24-hours-support.png" alt=""></span>
+                                            Dịch vụ
                                         </div>
                                     </div>
                                     <div>
                                         <div class="thumb">
-                                            <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                                            Cars
+                                            <span class="icon"><img src="assets/images/promotion.png" alt=""></span>
+                                            Truyền Thông
                                         </div>
                                     </div>
                                     <div class="last-thumb">
                                         <div class="thumb">
-                                            <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                                            Traveling
+                                            <span class="icon"><img src="assets/images/event.png" alt=""></span>
+                                            Sự kiện
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                                                 <div class="col-lg-12">
                                                                     <div class="listing-item">
                                                                         <div class="left-image">
-                                                                            <a href="#"><img src="/images/@item.HinhAnhDaiDien" height="400" width="440" alt=""></a>
+                                                                            <a href="#"><img class="avatar-football" src="/images/@item.HinhAnhDaiDien" style="width: 480px; height: 380px" alt=""></a>
                                                                             <div class="hover-content">
                                                                                 <div class="main-white-button">
                                                                                     <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt Sân</a>
@@ -130,14 +130,16 @@
                                                                                     }
                                                                                 </button>
                                                                             </div>
-                                                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> @item.Gia đ</span>
+                                                                            <span class="price"><div class="icon"><img src="assets/images/tag.png" alt=""></div> @item.Gia đ</span>
                                                                             <span class="details">Địa chỉ: <em>@item.Address</em></span>
                                                                             @{
                                                                                 List<ListFieldModel> list = item.ListField;
                                                                                 int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
                                                                                 int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
                                                                             }
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> @count5 Sân 5<br><img src="assets/images/listing-icon-03.png" alt=""> @count7 Sân 7</span>
+                                                                            <span class="info">
+                                                                                <img src="assets/images/stadium (1).png" alt=""> @count5 Sân 5<br>
+                                                                                <img src="assets/images/stadium (2).png" alt=""> @count7 Sân 7</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

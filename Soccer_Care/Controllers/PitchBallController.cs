@@ -64,6 +64,7 @@ namespace Soccer_Care.Controllers
             var getUserId = _userManager.GetUserAsync(HttpContext.User);
             if (getUserId.Result == null) return View("ListPitchComponent", pitch);
             ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId.Result.Id).ToList();
+
             return View(pitch);
         }
         [Authorize(Roles = "Admin,Partner,User")]

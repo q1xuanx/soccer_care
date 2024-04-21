@@ -76,7 +76,7 @@
                                                 </li>
                                             </ul>
                                             
-                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+                                            <span class="price"><div class="icon"><img src="assets/images/stadium (3).png" alt=""></div> Sân đẹp</span>
                                     
                                             <ul class="info">
                                                 @{
@@ -85,8 +85,8 @@
                                                     int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
                                                 }
 
-                                                <li><img src="/assets/images/listing-icon-02.png" alt=""/>Số sân 5: @count5</li>
-                                                <li><img src="/assets/images/listing-icon-03.png" alt=""/>Số sân 7: @count7</li>
+                                                <li><img src="/assets/images/stadium (1).png" alt=""/>Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/stadium (2).png" alt=""/>Số sân 7: @count7</li>
                                             </ul>
                                             <div class="main-white-button">
                                                 <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt ngay</a>
@@ -120,21 +120,29 @@
                                                 <li>(@item.ratings.Count()) Đánh Giá</li>
                                                 <li>
                                                     <button type="submit" class="box-btn">
-                                                        @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                        @if (userLike != null)
                                                         {
-                                                            <input data-idField="@item.IDFootBallField" hidden />
-                                                            <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                            @if (userLike.FirstOrDefault(i => i.IDFootballField == item.IDFootBallField) != null)
+                                                            {
+                                                                <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
+                                                                <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
+                                                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                                            }
                                                         }
                                                         else
                                                         {
-                                                            <input data-idField="@item.IDFootBallField" hidden />
+                                                            <input class="idFieldInput" data-idField="@item.IDFootBallField" hidden />
                                                             <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
                                                         }
                                                     </button>
                                                 </li>
                                             </ul>
                                            
-                                            <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Sân đẹp</span>
+                                            <span class="price"><div class="icon"><img src="assets/images/stadium (3).png" alt=""></div> Sân đẹp</span>
 
                                             <ul class="info">
                                                 @{
@@ -142,8 +150,8 @@
                                                     int count5 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "2").Count();
                                                     int count7 = list.Where(i => i.IDFootballField == item.IDFootBallField && i.IDType == "3").Count();
                                                 }
-                                                <li><img src="/assets/images/listing-icon-02.png" alt="" />Số sân 5: @count5</li>
-                                                <li><img src="/assets/images/listing-icon-03.png" alt="" />Số sân 7: @count7</li>
+                                                <li><img src="/assets/images/stadium (1).png" alt="" />Số sân 5: @count5</li>
+                                                <li><img src="/assets/images/stadium (2).png" alt="" />Số sân 7: @count7</li>
                                             </ul>
                                             <div class="main-white-button">
                                                 <a asp-action="DS" asp-controller="PitchBall" asp-route-id="@item.IDFootBallField"><i class="fa fa-eye"></i> Đặt ngay</a>
