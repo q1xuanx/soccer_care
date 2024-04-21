@@ -25,6 +25,8 @@ namespace Soccer_Care.Controllers
             _roleManager = roleManager;
         }
 
+        
+
         [HttpGet]
         public async Task<List<object>> GetTotals()
         {
