@@ -1,0 +1,180 @@
+﻿<div id="displayUser">
+    <div class="col-12 tm-block-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+            <h2 class="tm-block-title">Danh sách người dùng đặt sân</h2>
+            <input type="date" id="getUserOrderDate" class="tm-block-settings" placeholder="@DateTime.Now" />
+            <div id="tableContent">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mã đặt sân.</th>
+                            <th scope="col">Tên Sân</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col">Tên người đặt</th>
+                            <th scope="col">Ngày đặt</th>
+                            <th scope="col">Giờ Đặt</th>
+                            <th scope="col">Thanh Toán</th>
+                            <th scope="col">Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (DetailsOrderModel detailsOrderModel in Model)
+                        {
+                            <tr>
+                                <th scope="row"><b>@detailsOrderModel.IDDetails</b></th>
+                                <td>@detailsOrderModel.Order.FootBall.Name | @detailsOrderModel.Order.ListField.NameField</td>
+
+                                @if (detailsOrderModel.Order != null)
+                                {
+                                    <td>@detailsOrderModel.Order.SoDienThoai</td>
+                                }
+                                <td>@detailsOrderModel.Order.User.FullName</td>
+                                <td>@detailsOrderModel.DateTime.ToString("dd/MM/yyyy")</td>
+                                <td>@detailsOrderModel.StartTime</td>
+                                @if (detailsOrderModel.isThanhToan == 1)
+                                {
+
+                                    <td>
+                                        <div class="tm-status-circle moving">
+                                        </div>Thanh Toán VNPAY
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        <div class="tm-status-circle pending">
+                                        </div>Thanh Toán Tại Sân
+                                    </td>
+                                }
+                                @if (detailsOrderModel.Status == "Đang Đến")
+                                {
+                                    <td>
+                                        <select class="confirmUser">
+                                            <option value="Đang Đến" selected>Đang Đến</option>
+                                            <option value="Đã Đến">Đã Đến</option>
+                                            <option value="Đã Hủy">Đã Hủy</option>
+                                        </select>
+                                        <input data-idorder="@detailsOrderModel.IDOrder" hidden>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>@detailsOrderModel.Status</td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="/admin_folder/js/moment.min.js"></script>
+<script src="/admin_folder/js/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/admin_folder/js/bootstrap.min.js"></script>
+<script src="/admin_folder/js/tooplate-scripts.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Admin/Admin/GetTotals",
+            data: "",
+            contextType: "aplication/json, charset=utf8",
+            dataType: "json",
+            success: OnSuccess,
+        });
+        function OnSuccess(data) {
+            const barChart = document.getElementById('myChart');
+            var _data = data;
+            var _labels = _data[0];
+            var _chartData = _data[1];
+            var colors = ['Blue'];
+            new Chart(barChart, {
+                type: 'bar',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        label: 'Doanh thu hôm nay', backgroundColor: colors, data: [_chartData], borderWidth: 2
+                    }]
+                }
+            });
+        }
+        $(".confirmUser").change(function () {
+            var selectedValue = $(this).val();
+            var getID = $(this).siblings("input[data-idorder]").data('idorder');
+            $.ajax({
+                url: '/Admin/Admin/UpdateStatus',
+                type: 'GET',
+                data: { id: getID, value: selectedValue },
+                success: function (data) {
+                    $("#tableContent").html(data);
+                    if (selectValue == "Đã Đến") {
+                        $.ajax({
+                            type: "GET",
+                            url: "/Admin/Admin/GetTotals",
+                            data: "",
+                            contextType: "aplication/json, charset=utf8",
+                            dataType: "json",
+                            success: OnSuccess,
+                        });
+                        $.ajax({
+                            type: "GET",
+                            url: "/Admin/Admin/GetTotalsOfMonth",
+                            data: "",
+                            contextType: "aplication/json, charset=utf8",
+                            dataType: "json",
+                            success: OnSuccess2,
+                        });
+                    }
+                },
+                error: function (xhr) {
+                    alert(xhr.response);
+                }
+            })
+        });
+        $.ajax({
+            type: "GET",
+            url: "/Admin/Admin/GetTotalsOfMonth",
+            data: "",
+            contextType: "aplication/json, charset=utf8",
+            dataType: "json",
+            success: OnSuccess2,
+        });
+        function OnSuccess2(data) {
+            const barChart = document.getElementById('lineChart');
+            var _data = data;
+            var _labels = _data[0];
+            var _chartData = _data[1];
+            new Chart(barChart, {
+                type: 'line',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        label: 'Doanh thu tháng này',
+                        data: _chartData,
+                        fill: false,
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                }
+            });
+        }
+        $("#getUserOrderDate").change(function () {
+            var selectedValue = $(this).val();
+            $.ajax({
+                url: '/Admin/Admin/GetExactDate',
+                type: 'GET', 
+                date: {date: selectedValue},
+                success: function (data) {
+                    $("#tableContent").html(data);
+                },
+                error: function (xhr) {
+                    alert(xhr.response);
+                }
+            });
+        });
+    });
+</script>

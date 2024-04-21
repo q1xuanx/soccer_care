@@ -38,7 +38,6 @@
                 @if (SignInManager.IsSignedIn(User) && !User.IsInRole("User"))
                 {
                     <a href="/admin/admin/Index" class="truncate">Quản trị viên</a>
-
                 }
                 <a>
                     <form id="logoutForm" class="truncate" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">

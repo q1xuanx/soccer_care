@@ -47,7 +47,13 @@ namespace Soccer_Care.Controllers
             }
             else
             {
-                List<string> listOrder = _context.DetailsOrder.Where(i => i.DateTime == DateTime.Today && i.Order.IDUser == gerCurrUser.Id && i.isThanhToan == 1 || i.Status == "Đã Đến").Select(i => i.IDOrder).ToList();
+                List<DetailsOrderModel> details = _context.DetailsOrder.ToList();
+                foreach(DetailsOrderModel detailsOrder in details)
+                {
+                    detailsOrder.Order = _context.OrderField.FirstOrDefault(i => i.IDOrder == detailsOrder.IDOrder);
+                    detailsOrder.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == detailsOrder.Order.IDFootballField);
+                }
+                List<string> listOrder = details.Where(i => i.DateTime == DateTime.Today && i.Order.FootBall.IDUserOwner == gerCurrUser.Id && (i.isThanhToan == 1 || i.Status == "Đã Đến")).Select(i => i.IDOrder).ToList();
                 double total = 0;
                 foreach(string order in listOrder)
                 {
@@ -59,15 +65,117 @@ namespace Soccer_Care.Controllers
             }
             return list;
         }
-        public IActionResult UpdateStatus(String id, String value)
+        
+        public async Task<List<object>> GetTotalsOfMonth()
         {
-            var getOrder = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == id); 
-            if(getOrder != null)
+            List<object> list = new List<object>();
+            List<string> dayOfMonth = new List<string>();
+            var gerCurrUser = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            var getRoleOfUser = await _userManager.IsInRoleAsync(gerCurrUser, "Admin");
+            int endDayOfMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            int month = DateTime.Now.Month;
+            string months = "";
+            if (month % 10 == month)
             {
-                getOrder.Status = value;
-                _context.DetailsOrder.Update(getOrder);
-                _context.SaveChanges();
-                var find = _context.DetailsOrder.ToList();
+                months = "0" + month.ToString();
+            } else months = month.ToString();
+            for (int i = 1; i <= endDayOfMonth; i++)
+            {
+                if (i % 10 == i)
+                {
+                    dayOfMonth.Add("0"+i.ToString()+"/"+months+ "/" + DateTime.Now.Year.ToString());
+                }
+                else dayOfMonth.Add(i.ToString() + "/" + months + "/" + DateTime.Now.Year.ToString());
+            }
+            list.Add(dayOfMonth);
+            List<DetailsOrderModel> listOrder = _context.DetailsOrder.ToList();
+            foreach(DetailsOrderModel details in listOrder)
+            {
+                details.Order = _context.OrderField.FirstOrDefault(i => i.IDOrder == details.IDOrder);
+                details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+            }
+            if (getRoleOfUser)
+            {
+                List<double> total = new List<double>();
+                foreach (string order in dayOfMonth)
+                {
+                    var getDays = listOrder.Where(i => i.DateTime.Date.ToString("dd/MM/yyyy") == order && (i.isThanhToan == 1 || i.Status == "Đã Đến"));
+                    double tempTotalsOfDay = 0;
+                    if (getDays != null)
+                    {
+                        foreach(DetailsOrderModel details in getDays)
+                        {
+                            var getIDOrder = _context.OrderField.FirstOrDefault(i => i.IDOrder == details.IDOrder);
+                            if (getIDOrder != null)
+                            {
+                                getIDOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == getIDOrder.IDChildField);
+                                tempTotalsOfDay += getIDOrder.ListField.Gia * 1.5;
+                            }
+                        }
+                        total.Add(tempTotalsOfDay);
+                    }
+                }
+                list.Add(total);
+            }
+            else
+            {
+                List<double> total = new List<double>();
+                foreach (string order in dayOfMonth)
+                {
+                    var getDays = listOrder.Where(i => i.DateTime.Date.ToShortDateString() == order && i.isThanhToan == 1 || i.Status == "Đã Đến" && i.Order.FootBall.IDUserOwner == gerCurrUser.Id);
+                    double tempTotalsOfDay = 0;
+                    if (getDays != null)
+                    {
+                        foreach (DetailsOrderModel details in getDays)
+                        {
+                            var getIDOrder = _context.OrderField.FirstOrDefault(i => i.IDOrder == details.IDOrder);
+                            if (getIDOrder != null)
+                            {
+                                getIDOrder.ListField = _context.listFields.FirstOrDefault(i => i.IDField == getIDOrder.IDChildField);
+                                tempTotalsOfDay += getIDOrder.ListField.Gia * 1.5;
+                            }
+                        }
+                        total.Add(tempTotalsOfDay);
+                    }
+                }
+                list.Add(total);
+            }
+            return list; 
+        }
+        public IActionResult GetExactDate(DateTime date)
+        {
+            if (date.ToString("dd/MM/yyyy") == "01/01/0001")
+            {
+                var findz = _context.DetailsOrder.ToList();
+                if (User.IsInRole("Admin"))
+                {
+                    foreach (DetailsOrderModel details in findz)
+                    {
+                        details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                        details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                        details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                        details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                    }
+                    return PartialView("UpdateStatus", findz);
+                }
+                else
+                {
+                    foreach (DetailsOrderModel details in findz)
+                    {
+                        details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                        details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                        details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                        details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                    }
+                    var getCurrUser = _userManager.GetUserAsync(HttpContext.User).Result;
+                    var getExactField = findz.Where(i => i.Order.FootBall.IDUserOwner == getCurrUser.Id).ToList();
+                    return PartialView("UpdateStatus", getExactField);
+                }
+                
+            }
+            var find = _context.DetailsOrder.Where(i => i.DateTime == date).ToList();
+            if (User.IsInRole("Admin"))
+            {
                 foreach (DetailsOrderModel details in find)
                 {
                     details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
@@ -77,25 +185,95 @@ namespace Soccer_Care.Controllers
                 }
                 return PartialView("UpdateStatus", find);
             }
+            else
+            {
+                foreach (DetailsOrderModel details in find)
+                {
+                    details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                    details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                    details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                    details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                }
+                var getCurrUser = _userManager.GetUserAsync(HttpContext.User).Result;
+                var getExactField = find.Where(i => i.Order.FootBall.IDUserOwner == getCurrUser.Id).ToList();
+                return PartialView("UpdateStatus", getExactField);
+            }
+        }
+        public IActionResult UpdateStatus(String id, String value)
+        {
+            var getOrder = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == id); 
+            if(getOrder != null)
+            {
+                getOrder.Status = value;
+                _context.DetailsOrder.Update(getOrder);
+                _context.SaveChanges();
+                var find = _context.DetailsOrder.ToList();
+                if (User.IsInRole("Admin"))
+                {
+
+                    foreach (DetailsOrderModel details in find)
+                    {
+                        details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                        details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                        details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                        details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                    }
+                }
+                else
+                {
+                    foreach (DetailsOrderModel details in find)
+                    {
+                        details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                        details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                        details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                        details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                    }
+                    var getCurrUser = _userManager.GetUserAsync(HttpContext.User).Result;
+                    var getExactField = find.Where(i => i.Order.FootBall.IDUserOwner == getCurrUser.Id).ToList();
+                }
+                return PartialView("UpdateStatus", find);
+            }
             return NotFound();
         }
         public IActionResult Index()
         {
-            var find = _context.DetailsOrder.ToList();
-            foreach (DetailsOrderModel details in find)
+            if (User.IsInRole("Admin"))
             {
-                details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
-                details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
-                details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
-                details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                var find = _context.DetailsOrder.ToList();
+                foreach (DetailsOrderModel details in find)
+                {
+                    details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                    details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                    details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                    details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                }
+                return View(find);
             }
-                  
-            return View(find);
+            else
+            {
+                var find = _context.DetailsOrder.ToList();
+                foreach (DetailsOrderModel details in find)
+                {
+                    details.Order = _context.OrderField.Where(i => i.IDOrder == details.IDOrder).FirstOrDefault();
+                    details.Order.User = _context.Users.Where(i => i.Id == details.Order.IDUser).FirstOrDefault();
+                    details.Order.FootBall = _context.FootBallFields.FirstOrDefault(i => i.IDFootBallField == details.Order.IDFootballField);
+                    details.Order.ListField = _context.listFields.FirstOrDefault(i => i.IDField == details.Order.IDChildField);
+                }
+                var getCurrUser = _userManager.GetUserAsync(HttpContext.User).Result;
+                var getExactField = find.Where(i => i.Order.FootBall.IDUserOwner == getCurrUser.Id).ToList();
+                return View(getExactField);
+            }
         }
-        public IActionResult ManagePitch()
+        public async Task<IActionResult> ManagePitch()
         {
-            var listPitch = _context.FootBallFields.Where(i => i.isDisable == 0).ToList();
-            return View(listPitch);
+            var getCurUser = await _userManager.GetUserAsync(HttpContext.User);
+            if (User.IsInRole("Admin"))
+            {
+                var listPitch = _context.FootBallFields.Where(i => i.isDisable == 0).ToList();
+                return View(listPitch);
+            }
+            var listField = _context.FootBallFields.Where(i => i.isDisable == 0 && i.IDUserOwner == getCurUser.Id);
+            return View(listField);
         }
 
         public IActionResult ManageUser()

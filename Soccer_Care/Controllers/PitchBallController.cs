@@ -96,28 +96,37 @@ namespace Soccer_Care.Controllers
         {
             
             TimeSpan timeCurrent = DateTime.Parse(BeginTime).TimeOfDay;
-            DateTime futureTime = DateTime.Parse(BeginTime).AddHours(1).AddMinutes(30); 
-            if (timeCurrent.Hours >= 21 || futureTime.Hour >= 21)
+            DateTime futureTime = DateTime.Parse(BeginTime).AddHours(1).AddMinutes(30);
+            TimeSpan timeDiff = timeCurrent - DateTime.Now.TimeOfDay;
+
+            if (timeCurrent.Hours >= 21 || futureTime.Hour >= 21 || timeCurrent.Hours <= 7)
             {
                 TempData["LoiDatSan"] = "Quá giờ đặt sân";
                 var pitch = _context.listFields.FirstOrDefault(f => f.IDField == id);
                 pitch.FootBall = _context.FootBallFields.Where(f => f.IDFootBallField == pitch.IDFootballField).FirstOrDefault();
                 return View("DatSan", pitch);
+            }else if (Math.Abs(timeDiff.TotalMinutes) <= 30)
+            {
+                TempData["LoiDatSan"] = "Giờ đặt sân không hợp lệ vui lòng đặt sân sớm hơn 30 phút";
+                var pitch = _context.listFields.FirstOrDefault(f => f.IDField == id);
+                pitch.FootBall = _context.FootBallFields.Where(f => f.IDFootBallField == pitch.IDFootballField).FirstOrDefault();
+                return View("DatSan", pitch);
             }
-            var getIDOrder = _context.OrderField.Where(i => i.IDFootballField == id).Select(i => i.IDOrder).ToList();
+            var getIDOrder = _context.OrderField.Where(i => i.IDFootballField == idParentField && i.IDChildField == id).Select(i => i.IDOrder).ToList();
             if (getIDOrder != null) {
                 foreach (var IdOrder in getIDOrder)
                 {
                     var find = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == IdOrder);
                     if (find.DateTime == Date)
                     {
-
                         var getBeforeBegin = DateTime.Parse(find.StartTime).AddHours(-1).AddMinutes(-30).TimeOfDay;
                         var getAfterBegin = DateTime.Parse(find.StartTime).AddHours(1).AddMinutes(30).TimeOfDay;
-                        if ((timeCurrent < getAfterBegin && timeCurrent > getBeforeBegin))
+                        if ((timeCurrent < getAfterBegin && timeCurrent > getBeforeBegin) || (DateTime.Parse(BeginTime) == DateTime.Parse(find.StartTime)) || DateTime.Parse(BeginTime) >= DateTime.Parse(find.StartTime) && DateTime.Parse(BeginTime) <= DateTime.Parse(find.StartTime).AddHours(1).AddMinutes(30))
                         {
-                            TempData["LoiDatSan"] = "Giờ Đặt Sân Không Hợp Lệ";
-                            return View("DatSan", idParentField);
+                            TempData["LoiDatSan"] = "Giờ Đặt Sân Không Hợp Lệ, Đã có người đặt sân trong khung giờ này";
+                            var pitch = _context.listFields.FirstOrDefault(f => f.IDField == id);
+                            pitch.FootBall = _context.FootBallFields.Where(f => f.IDFootBallField == pitch.IDFootballField).FirstOrDefault();
+                            return View("DatSan", pitch);
                         }
                     }
                     else continue;

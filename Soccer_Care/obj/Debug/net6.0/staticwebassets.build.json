@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QtZIlZHwVJHbD60wGTtUEP58pUOuK4511y3RObE8QU8=",
+  "Hash": "yWmbpw7aoFYESRMj6r7s7fbr3TO0Zp8DQvfQyPhxtjw=",
   "Source": "Soccer_Care",
   "BasePath": "_content/Soccer_Care",
   "Mode": "Default",
@@ -3094,6 +3094,23 @@
       "OriginalItemSpec": "wwwroot\\images\\28aa7b3f-e539-4f8b-a5c5-5e8b0abed7e1.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\494f5055-4a78-4319-b7a7-6c23942987bf.jpg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/494f5055-4a78-4319-b7a7-6c23942987bf.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\494f5055-4a78-4319-b7a7-6c23942987bf.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\66b6c790-a835-4fba-9621-5538ae484c05.jpg",
       "SourceId": "Soccer_Care",
       "SourceType": "Discovered",
@@ -3126,6 +3143,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\66b6c790-a835-4fba-9621-5538ae484c05.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\70135f04-061a-462c-80ad-1b5095f6570e.jpeg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/70135f04-061a-462c-80ad-1b5095f6570e.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\70135f04-061a-462c-80ad-1b5095f6570e.jpeg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\b00dee9d-b824-4609-8d91-3667caa675a9.jpg",
@@ -3228,6 +3262,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\e900a070-f184-4407-87c1-d655369906c0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\f1d84ca8-1302-4146-a710-d2f488f94c28.jpg",
+      "SourceId": "Soccer_Care",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\",
+      "BasePath": "_content/Soccer_Care",
+      "RelativePath": "images/f1d84ca8-1302-4146-a710-d2f488f94c28.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f1d84ca8-1302-4146-a710-d2f488f94c28.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Soccer_Care\\Soccer_Care\\wwwroot\\images\\toilanhanne.jpeg",
