@@ -124,7 +124,7 @@ namespace Soccer_Care.Controllers
                 List<double> total = new List<double>();
                 foreach (string order in dayOfMonth)
                 {
-                    var getDays = listOrder.Where(i => i.DateTime.Date.ToShortDateString() == order && i.isThanhToan == 1 || i.Status == "Đã Đến" && i.Order.FootBall.IDUserOwner == gerCurrUser.Id);
+                    var getDays = listOrder.Where(i => i.DateTime.Date.ToString("dd/MM/yyyy") == order && (i.isThanhToan == 1 || i.Status == "Đã Đến") && i.Order.FootBall.IDUserOwner == gerCurrUser.Id);
                     double tempTotalsOfDay = 0;
                     if (getDays != null)
                     {

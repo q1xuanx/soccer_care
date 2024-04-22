@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Soccer_Care.Models;
 using Soccer_Care.Services;
+using System.Reflection.Metadata;
 using System.Xml.Linq;
 
 
@@ -62,9 +63,8 @@ namespace Soccer_Care.Controllers
                 field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
             }
             var getUserId = _userManager.GetUserAsync(HttpContext.User);
-            if (getUserId.Result == null) return View("ListPitchComponent", pitch);
+            if (getUserId.Result == null) return View("Index", pitch);
             ViewBag.ListFieldLike = _context.FieldLike.Where(i => i.Username == getUserId.Result.Id).ToList();
-
             return View(pitch);
         }
         [Authorize(Roles = "Admin,Partner,User")]
@@ -81,12 +81,17 @@ namespace Soccer_Care.Controllers
             if (field != null)
             {
                 field.ListField = _context.listFields.Where(i => i.IDFootballField.Equals(field.IDFootBallField)).ToList();
+                foreach(ListFieldModel fields in field.ListField)
+                {
+                    fields.Type = _context.TypeFields.FirstOrDefault(i => i.IDType == fields.IDType);
+                }
                 field.ratings = _context.Ratings.Where(i => i.IDField == field.IDFootBallField).ToList();
                 foreach (RatingModel rate in field.ratings)
                 {
                     rate.User = _context.User.FirstOrDefault(i => i.Id == rate.Username);
                 }
                 field.ratings.OrderByDescending(i => i.Diem).ToList();
+                
                 return View(field);
             }
             return NotFound();
@@ -118,7 +123,7 @@ namespace Soccer_Care.Controllers
                 foreach (var IdOrder in getIDOrder)
                 {
                     var find = _context.DetailsOrder.FirstOrDefault(i => i.IDOrder == IdOrder);
-                    if (find.DateTime == Date)
+                    if (find.DateTime == Date && find.Status == "Đang Đến")
                     {
                         var getBeforeBegin = DateTime.Parse(find.StartTime).AddHours(-1).AddMinutes(-30).TimeOfDay;
                         var getAfterBegin = DateTime.Parse(find.StartTime).AddHours(1).AddMinutes(30).TimeOfDay;
