@@ -5,7 +5,10 @@
 + Comment on Stadiums: Leave feedback or comments on stadiums after booking.
 + Revenue Management: Track and manage revenue efficiently.
 ## Technologies Used
-## Image UI
++ Back End: ASP.NET
++ Front End: HTML, CSS
++ Database: MySQL
+## UI
 ![Screenshot 2024-04-27 110212](https://github.com/q1xuanx/soccer_care/assets/93658293/4f5948cc-462c-4114-b150-d332a523602b)
 
 ![Screenshot 2024-04-27 110147](https://github.com/q1xuanx/soccer_care/assets/93658293/5e3a48b1-099a-4de3-85ea-64ad1c9b76cb)
