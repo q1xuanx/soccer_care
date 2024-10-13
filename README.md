@@ -1,4 +1,10 @@
-# Soccer Care 
+# Soccer Care
+    Online Stadium Booking: Allows users to easily browse and choose their preferred stadium on the website, and book it once they've made their selection.
+## Features 
++ Online Stadium Booking: Book stadiums easily through the platform.
++ Comment on Stadiums: Leave feedback or comments on stadiums after booking.
++ Revenue Management: Track and manage revenue efficiently.
+## Technologies Used
 ## Image UI
 ![Screenshot 2024-04-27 110212](https://github.com/q1xuanx/soccer_care/assets/93658293/4f5948cc-462c-4114-b150-d332a523602b)
 
